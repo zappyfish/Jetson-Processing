@@ -17,7 +17,7 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
     } else if (board == rpi) {
 #ifdef __linux__
         m_spi = new rpi_spi(rpi_spi::SPI_DEVICE_DEFAULT, rpi_spi::CHIP_SELECT_DEFAULT);
-        m_ce = new rpi_gpio(ce_pin, gpio::direction::output);
+        m_ce = new rpi_gpio(ce_pin, uav_gpio::direction::output);
 #endif
     } else if (board == dummy){
         m_spi = new dummy_spi();
@@ -86,7 +86,7 @@ void nrf_handler::send_packet(rf_packet &packet) {
 
 void nrf_handler::set_mode(nrf_handler::mode md) {
     // SPI stuff
-    m_ce->set_pin_state(gpio::state::low); // standby mode so we can write registers
+    m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
     if (md == nrf_handler::mode::RX) {
         uint8_t dummy_read[2];
         uint8_t config_byte = CONFIG_BYTE | READ_MODE; // initially RX
@@ -111,7 +111,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
         config_write[1] = 0b0000011;
 
-        m_ce->set_pin_state(gpio::state::high); // start listening
+        m_ce->set_pin_state(uav_gpio::state::high); // start listening
 
         reset_irq();
     } else if (md == nrf_handler::mode::TX) {
@@ -127,9 +127,9 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
 }
 
 void nrf_handler::pulse_CE() {
-    m_ce->set_pin_state(gpio::state::high);
+    m_ce->set_pin_state(uav_gpio::state::high);
     std::this_thread::sleep_for(std::chrono::milliseconds(nrf_handler::CE_PULSE_TIME));
-    m_ce->set_pin_state(gpio::state::low);
+    m_ce->set_pin_state(uav_gpio::state::low);
 }
 
 void nrf_handler::reset_irq() {
