@@ -20,7 +20,7 @@ void rpi_gpio::set_pin_state(uav_gpio::state ste) {
     char value[RPI_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
-    int len = std::sprintf(buf, sizeof(buf), "%d", ste);
+    int len = std::snprintf(buf, sizeof(buf), "%d", ste);
     if(!file_write(value, buf, len)) {
         log_pin_error(std::string("could not set gpio value"), std::string("set_pin_state"));
     }
@@ -33,7 +33,7 @@ uav_gpio::state rpi_gpio::read_pin_state() {
 
     char ch;
 
-    int fd = std::open(buf, O_RDONLY);
+    int fd = open(buf, O_RDONLY);
     if (fd < 0) {
         log_pin_error(std::string("could not read gpio value"), std::string("read_pin_value"));
     }
@@ -95,7 +95,7 @@ bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
     char open_buf[RPI_MAX_BUF];
     int len1 = sizeof(RPI_SYSFS_GPIO_DIR);
     for(int i = 0; i < len1; i++) {
-        open_buf[i] = JETSON_SYSFS_GPIO_DIR[i];
+        open_buf[i] = RPI_SYSFS_GPIO_DIR[i];
     }
 
     int len2 = sizeof(path);
