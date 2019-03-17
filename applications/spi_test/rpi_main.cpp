@@ -6,7 +6,7 @@
 // Created by Liam Kelly on 3/13/19.
 //
 
-#include "gpio.h"
+#include "uav_gpio.h"
 #include "spi_bus.h"
 #include "nrf_handler.h"
 #include "rf_packet.h"

@@ -9,9 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h" afterDir="false" />
-    </list>
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +63,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="26" />
-          <entry key="cpp" value="16952" />
-          <entry key="h" value="11372" />
+          <entry key="cpp" value="17006" />
+          <entry key="h" value="11424" />
           <entry key="txt" value="413" />
         </counts>
       </usages-collector>
@@ -74,78 +72,27 @@
         <counts>
           <entry key="CMakeLists.txt" value="413" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="28345" />
+          <entry key="ObjectiveC" value="28451" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="c" value="5" />
-          <entry key="cpp" value="117" />
-          <entry key="h" value="125" />
+          <entry key="cpp" value="122" />
+          <entry key="h" value="132" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="9" />
-          <entry key="ObjectiveC" value="247" />
+          <entry key="ObjectiveC" value="259" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applications/spi_test/dummy_main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/capture/raspicamera.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="e#63#1157#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="e#62#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,15 +103,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-388">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <folding>
+                <element signature="e#429#455#0" expanded="true" />
+                <element signature="e#519#660#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -174,21 +179,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.cpp">
+        <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.cpp">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1393">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding>
-                <element signature="e#429#455#0" expanded="true" />
-                <element signature="e#519#660#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -226,6 +218,7 @@
       <find>read_mode</find>
       <find>send_Data</find>
       <find>system</find>
+      <find>gpio</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,7 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/images/processing/target/reference_frame.h" />
         <option value="$PROJECT_DIR$/tests/images/processing/target/reference_frame_tester.h" />
         <option value="$PROJECT_DIR$/logging/target_entry.h" />
         <option value="$PROJECT_DIR$/logging/target_entry.cpp" />
@@ -264,15 +256,11 @@
         <option value="$PROJECT_DIR$/systems/subscale_2_system.cpp" />
         <option value="$PROJECT_DIR$/tests/tests.cpp" />
         <option value="$PROJECT_DIR$/tests/communications/pixhawk/packets/ack_packet_tester.h" />
-        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp" />
-        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h" />
-        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/gpio.h" />
-        <option value="$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h" />
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.h" />
@@ -282,9 +270,14 @@
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/dummy_spi.h" />
         <option value="$PROJECT_DIR$/applications/spi_test/dummy_main.cpp" />
         <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp" />
         <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.h" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.h" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp" />
       </list>
     </option>
   </component>
@@ -550,12 +543,12 @@
       <workItem from="1551655397208" duration="479000" />
       <workItem from="1551883131872" duration="100000" />
       <workItem from="1552494676072" duration="7679000" />
-      <workItem from="1552603527545" duration="1338000" />
+      <workItem from="1552603527545" duration="1601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77002000" />
+    <option name="totallyTimeSpent" value="77265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -689,9 +682,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/dummy_spi.cpp" />
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/gpio.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -711,27 +701,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="873">
           <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#88#2877#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/dummy_gpio.cpp" />
     <entry file="file://$PROJECT_DIR$/applications/spi_test/build/rpi_main.cpp" />
     <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/dummy_gpio.h">
@@ -800,16 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="39" selection-end-column="2" />
-          <folding>
-            <element signature="e#123#778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,21 +795,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#62#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1393">
+        <state relative-caret-position="15">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding>
             <element signature="e#429#455#0" expanded="true" />
             <element signature="e#519#660#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -867,28 +866,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#62#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-388">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -896,6 +875,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
