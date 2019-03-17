@@ -8,11 +8,12 @@
 #ifdef __linux__
 
 #include "uav_gpio.h"
-#include "libsoc_gpio.h"
+#include "data_logger.h"
+#include "soft_error_entry.h"
+#include <cstdio>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <cstdio>
 #include <unistd.h>
 #include <string>
 
