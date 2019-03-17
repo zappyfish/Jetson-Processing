@@ -6,7 +6,7 @@
 
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -llibsoc")
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -llibsoc.so")
  find_package( OpenCV REQUIRED )
  find_package(Boost COMPONENTS system filesystem REQUIRED)
 
