@@ -20,7 +20,7 @@ void jetson_gpio::set_pin_state(uav_gpio::state ste) {
     char value[JETSON_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
-    int len = std::sprintf(buf, sizeof(buf), "%d", ste);
+    int len = std::snprintf(buf, sizeof(buf), "%d", ste);
     if(!file_write(value, buf, len)) {
         log_pin_error(std::string("could not set gpio value"), std::string("set_pin_state"));
     }
@@ -54,7 +54,9 @@ void jetson_gpio::export_gpio(unsigned int pin_num) {
     char buf[JETSON_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
 
-    if (!file_write("/export", buf, len)) {
+    char *path = "/export";
+
+    if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not export gpio"), std::string("export_gpio"));
     }
 }
@@ -63,8 +65,9 @@ void jetson_gpio::unexport_gpio(unsigned int pin_num) {
     int len;
     char buf[JETSON_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
+    char* path = "/unexport";
 
-    if (!file_write("/unexport", buf, len)) {
+    if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not unexport gpio"), std::string("unexport_gpio"));
     }
 }
