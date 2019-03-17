@@ -6,7 +6,7 @@
 #define PROJECT_DUMMY_GPIO_H
 
 #ifndef __linux__
-#include "gpio.h"
+#include "uav_gpio.h"
 #include <iostream>
 
 class dummy_gpio : public gpio {

@@ -13,7 +13,7 @@
 #define RPI_SYSFS_GPIO_DIR "/sys/class/gpio"
 #define RPI_MAX_BUF 64
 
-class rpi_gpio : public gpio {
+class rpi_gpio : public uav_gpio {
 
 public:
 

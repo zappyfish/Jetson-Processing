@@ -9,6 +9,7 @@
 #define DUMMY_BYTE 0xFF
 
 #include <vector>
+#include <stdint.h>
 
 class spi_bus {
 

@@ -9,8 +9,8 @@
 const int rpi_spi::CHIP_SELECT_DEFAULT = 1;
 const int rpi_spi::SPI_DEFICE_DEVAULT = 0;
 
-rpi_spi::rpi_spi() {
-    init_spi_bus();
+rpi_spi::rpi_spi(int spi_device, int chip_select) {
+    init_spi_bus(spi_device, chip_select);
     if (m_spi_bus == nullptr) {
         // TODO: log soft error here
         std::string category = "rpi_spi";

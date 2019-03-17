@@ -8,7 +8,7 @@
 #ifdef __linux__
 
 #include "spi_bus.h"
-#include "libsoc.h"
+#include "libsoc_spi.h"
 
 class jetson_spi : public spi_bus {
 

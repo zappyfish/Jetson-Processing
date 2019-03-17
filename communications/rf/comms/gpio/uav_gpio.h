@@ -6,11 +6,11 @@
 #define PROJECT_GPIO_H
 
 
-class gpio {
+class uav_gpio {
 
 public:
 
-    virtual ~gpio() {}
+    virtual ~uav_gpio() {}
 
     enum direction {
         output = 1,

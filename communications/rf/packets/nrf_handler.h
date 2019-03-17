@@ -11,7 +11,7 @@
 #include "rf_packet.h"
 #include "spi_bus.h"
 #include "rpi_spi.h"
-#include "gpio.h"
+#include "uav_gpio.h"
 #include "jetson_spi.h"
 #include "rpi_gpio.h"
 #include "jetson_gpio.h"
@@ -73,7 +73,7 @@ public:
 private:
 
     spi_bus* m_spi;
-    gpio* m_ce;
+    uav_gpio* m_ce;
 
 
     uint8_t m_send_buf[PIPE_SIZE];

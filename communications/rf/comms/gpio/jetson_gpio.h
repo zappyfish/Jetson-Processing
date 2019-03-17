@@ -15,7 +15,7 @@
 #include "soft_error_entry.h"
 #include <cstdio>
 
-class jetson_gpio : public gpio {
+class jetson_gpio : public uav_gpio {
 
 public:
 
