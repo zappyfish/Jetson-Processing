@@ -90,7 +90,7 @@ void jetson_gpio::set_pin_direction(uav_gpio::direction dir) {
     }
 }
 
-bool jetson_gpio::file_write(char *path, char* write_buf, int len) {
+bool jetson_gpio::file_write(char const*path, char* write_buf, int len) {
     int fd;
 
     char open_buf[JETSON_MAX_BUF];

@@ -36,7 +36,7 @@ private:
 
     void set_pin_direction(direction dir);
 
-    bool file_write(char* path, char* write_buf, int len);
+    bool file_write(char const* path, char* write_buf, int len);
 
     void log_pin_error(std::string description, std::string method);
 
