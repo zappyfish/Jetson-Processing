@@ -6,6 +6,7 @@
 #define NVIDIA_RF_PACKET_H
 
 #include <vector>
+#include <unistd.h>
 
 using namespace std;
 

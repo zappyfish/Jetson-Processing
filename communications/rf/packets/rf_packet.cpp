@@ -7,8 +7,8 @@
 const uint8_t rf_packet::OFFSET = 100;
 
 rf_packet::rf_packet(int gps_x, int gps_y) {
-    m_x = gps_x + OFFSET;
-    m_y = gps_y + OFFSET;
+    m_x = (uint8_t)((gps_x + OFFSET) & 0xff);
+    m_y = (uint8_t)((gps_y + OFFSET) & 0xff);
 }
 
 rf_packet::rf_packet(uint8_t *buf_data, uint8_t len) {
