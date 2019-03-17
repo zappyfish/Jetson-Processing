@@ -7,7 +7,7 @@
 #ifdef __linux__
 
 const int rpi_spi::CHIP_SELECT_DEFAULT = 1;
-const int rpi_spi::SPI_DEFICE_DEVAULT = 0;
+const int rpi_spi::SPI_DEFICE_DEFAULT = 0;
 
 rpi_spi::rpi_spi(int spi_device, int chip_select) {
     init_spi_bus(spi_device, chip_select);
@@ -24,7 +24,7 @@ rpi_spi::rpi_spi(int spi_device, int chip_select) {
 }
 
 rpi_spi::~rpi_spi() {
-    libsoc_spi_free(m_spi_bus)
+    libsoc_spi_free(m_spi_bus);
 }
 
 void rpi_spi::write_read_bytes(uint8_t *write, uint8_t *read, int len) {
