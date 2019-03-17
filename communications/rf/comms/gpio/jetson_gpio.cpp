@@ -33,14 +33,14 @@ uav_gpio::state jetson_gpio::read_pin_state() {
 
     char ch;
 
-    int fd = std::open(buf, O_RDONLY);
+    int fd = open(buf, O_RDONLY);
     if (fd < 0) {
         log_pin_error(std::string("could not read gpio value"), std::string("read_pin_value"));
     }
 
-    std::read(fd, &ch, 1);
+    read(fd, &ch, 1);
 
-    std::close(fd);
+    close(fd);
 
     if (ch != '0') {
         return uav_gpio::state::high;
@@ -73,7 +73,7 @@ void jetson_gpio::set_pin_direction(uav_gpio::direction dir) {
     int len;
     char buf[JETSON_MAX_BUF];
     char direction[JETSON_MAX_BUF];
-    std::snprintf(direction, sizeof(direction), "/gpio%d/direction", m_pin_num)
+    std::snprintf(direction, sizeof(direction), "/gpio%d/direction", m_pin_num);
 
 
     if (dir == input) {
