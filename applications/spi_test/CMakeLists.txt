@@ -6,7 +6,7 @@
 
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -llibsoc.so")
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
  find_package( OpenCV REQUIRED )
  find_package(Boost COMPONENTS system filesystem REQUIRED)
 
@@ -14,7 +14,7 @@
      set(raspicam_DIR "/usr/local/lib/cmake")
      find_package(raspicam REQUIRED)
      find_package(OpenCV)
-     find_library(LIBSOC libsoc)
+     find_library(LIBSOC libsoc.so)
      IF  ( OpenCV_FOUND AND raspicam_CV_FOUND)
          MESSAGE(STATUS "FOUND RASPICAM AND OPENCV")
      ENDIF()
