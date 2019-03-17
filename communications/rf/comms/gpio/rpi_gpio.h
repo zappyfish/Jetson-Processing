@@ -12,6 +12,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #define RPI_SYSFS_GPIO_DIR "/sys/class/gpio"
 #define RPI_MAX_BUF 64

@@ -106,8 +106,8 @@ bool rpi_gpio::file_write(char *path, char* write_buf, int len) {
         return false;
     }
 
-    std::write(fd, write_buf, len);
-    std::close(fd);
+    write(fd, write_buf, len);
+    close(fd);
     return true;
 }
 
