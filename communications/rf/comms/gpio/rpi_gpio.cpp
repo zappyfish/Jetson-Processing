@@ -75,7 +75,7 @@ void rpi_gpio::set_pin_direction(uav_gpio::direction dir) {
     int len;
     char buf[RPI_MAX_BUF];
     char direction[RPI_MAX_BUF];
-    std::snprintf(direction, sizeof(direction), "/gpio%d/direction", m_pin_num)
+    std::snprintf(direction, sizeof(direction), "/gpio%d/direction", m_pin_num);
 
 
     if (dir == input) {
@@ -92,8 +92,8 @@ void rpi_gpio::set_pin_direction(uav_gpio::direction dir) {
 bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
     int fd;
 
-    char open_buf[JETSON_MAX_BUF];
-    int len1 = sizeof(JETSON_SYSFS_GPIO_DIR);
+    char open_buf[RPI_MAX_BUF];
+    int len1 = sizeof(RPI_SYSFS_GPIO_DIR);
     for(int i = 0; i < len1; i++) {
         open_buf[i] = JETSON_SYSFS_GPIO_DIR[i];
     }
