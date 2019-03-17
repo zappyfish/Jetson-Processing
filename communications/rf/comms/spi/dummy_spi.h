@@ -5,8 +5,6 @@
 #ifndef PROJECT_DUMMY_SPI_H
 #define PROJECT_DUMMY_SPI_H
 
-#ifndef __linux__
-
 #include "spi_bus.h"
 #include <iostream>
 
@@ -32,7 +30,5 @@ private:
 
     uint8_t dummy_buf[2];
 };
-
-#endif
 
 #endif //PROJECT_DUMMY_SPI_H

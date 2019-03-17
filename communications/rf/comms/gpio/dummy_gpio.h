@@ -5,7 +5,6 @@
 #ifndef PROJECT_DUMMY_GPIO_H
 #define PROJECT_DUMMY_GPIO_H
 
-#ifndef __linux__
 #include "uav_gpio.h"
 #include <iostream>
 
@@ -36,7 +35,5 @@ private:
     }
 
 };
-
-#endif
 
 #endif //PROJECT_DUMMY_GPIO_H
