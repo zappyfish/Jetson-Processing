@@ -38,9 +38,9 @@ uav_gpio::state rpi_gpio::read_pin_state() {
         log_pin_error(std::string("could not read gpio value"), std::string("read_pin_value"));
     }
 
-    std::read(fd, &ch, 1);
+    read(fd, &ch, 1);
 
-    std::close(fd);
+    close(fd);
 
     if (ch != '0') {
         return uav_gpio::state::high;
@@ -54,7 +54,8 @@ void rpi_gpio::export_gpio(unsigned int pin_num) {
     char buf[RPI_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
 
-    if (!file_write("/export", buf, len)) {
+    char *path = "/export";
+    if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not export gpio"), std::string("export_gpio"));
     }
 }
@@ -64,7 +65,8 @@ void rpi_gpio::unexport_gpio(unsigned int pin_num) {
     char buf[RPI_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
 
-    if (!file_write("/unexport", buf, len)) {
+    char *path = "/unexport";
+    if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not unexport gpio"), std::string("unexport_gpio"));
     }
 }
@@ -101,7 +103,7 @@ bool rpi_gpio::file_write(char *path, char* write_buf, int len) {
         open_buf[i] = path[i - len1];
     }
 
-    fd = std::open(open_buf, O_WRONLY);
+    fd = open(open_buf, O_WRONLY);
     if (fd < 0) {
         return false;
     }
