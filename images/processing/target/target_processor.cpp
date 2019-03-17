@@ -179,54 +179,54 @@ bool target_processor::is_square(cv::Mat&bin_img, int area, int x_center, int y_
     return (intersection_count / area >= thresh);
 }
 
-void target_processor::kmeans(cv::Mat &src) {
-
-    blur(src,src,Size(15,15));
-
-    Mat p = Mat::zeros(src.cols*src.rows, 5, CV_32F);
-    Mat bestLabels, centers, clustered, Lab;
-    vector<Mat> bgr;
-    vector<Mat> L_a_b;
-    cvtColor(src, Lab, COLOR_BGR2Lab);
-    //cv::split(src, bgr);
-    split(Lab,L_a_b);
-    for(int i=0; i<src.cols*src.rows; i++) {
-        p.at<float>(i,0) = (i/src.cols) / src.rows;
-        p.at<float>(i,1) = (i%src.cols) / src.cols;
-        p.at<float>(i,2) = L_a_b[0].data[i] / 255.0;
-        p.at<float>(i,3) = L_a_b[1].data[i] / 255.0;
-        p.at<float>(i,4) = L_a_b[2].data[i] / 255.0;
-    }
-
-    int K = 2;
-    cv::kmeans(p, K, bestLabels,
-               TermCriteria( CV_TERMCRIT_EPS+CV_TERMCRIT_ITER, 10, 1.0),
-               3, KMEANS_PP_CENTERS, centers);
-
-    int colors[K];
-    for(int i=0; i<K; i++) {
-        colors[i] = 255/(i+1);
-    }
-
-    clustered = Mat(src.rows, src.cols, CV_32F);
-    for(int i=0; i<src.cols*src.rows; i++) {
-        clustered.at<float>(i/src.cols, i%src.cols) = (float)(colors[bestLabels.at<int>(0,i)]);
-    }
-
-    clustered.convertTo(clustered, CV_8U);
-
-}
-
-void target_processor::check_square(cv::Mat&bin_img, int x_center, int y_center, int side_length, double &count) {
-    int half_side = side_length / 2;
-    for (int i = x_center - half_side; i < x_center + half_side; i++) {
-        for (int j = y_center - half_side; j < y_center + half_side; j++) {
-            if (in_bounds(bin_img, j, i) && bin_img.at<uchar>(j, i) == 1) {
-                count++;
-            }
-        }
-    }
-}
+//void target_processor::kmeans(cv::Mat &src) {
+//
+//    blur(src,src,Size(15,15));
+//
+//    Mat p = Mat::zeros(src.cols*src.rows, 5, CV_32F);
+//    Mat bestLabels, centers, clustered, Lab;
+//    vector<Mat> bgr;
+//    vector<Mat> L_a_b;
+//    cvtColor(src, Lab, COLOR_BGR2Lab);
+//    //cv::split(src, bgr);
+//    split(Lab,L_a_b);
+//    for(int i=0; i<src.cols*src.rows; i++) {
+//        p.at<float>(i,0) = (i/src.cols) / src.rows;
+//        p.at<float>(i,1) = (i%src.cols) / src.cols;
+//        p.at<float>(i,2) = L_a_b[0].data[i] / 255.0;
+//        p.at<float>(i,3) = L_a_b[1].data[i] / 255.0;
+//        p.at<float>(i,4) = L_a_b[2].data[i] / 255.0;
+//    }
+//
+//    int K = 2;
+//    cv::kmeans(p, K, bestLabels,
+//               TermCriteria( CV_TERMCRIT_EPS+CV_TERMCRIT_ITER, 10, 1.0),
+//               3, KMEANS_PP_CENTERS, centers);
+//
+//    int colors[K];
+//    for(int i=0; i<K; i++) {
+//        colors[i] = 255/(i+1);
+//    }
+//
+//    clustered = Mat(src.rows, src.cols, CV_32F);
+//    for(int i=0; i<src.cols*src.rows; i++) {
+//        clustered.at<float>(i/src.cols, i%src.cols) = (float)(colors[bestLabels.at<int>(0,i)]);
+//    }
+//
+//    clustered.convertTo(clustered, CV_8U);
+//
+//}
+//
+//void target_processor::check_square(cv::Mat&bin_img, int x_center, int y_center, int side_length, double &count) {
+//    int half_side = side_length / 2;
+//    for (int i = x_center - half_side; i < x_center + half_side; i++) {
+//        for (int j = y_center - half_side; j < y_center + half_side; j++) {
+//            if (in_bounds(bin_img, j, i) && bin_img.at<uchar>(j, i) == 1) {
+//                count++;
+//            }
+//        }
+//    }
+//}
 
 void target_processor::set_flight_data(flight_packet &packet) {
     m_last_roll = packet.get_roll();

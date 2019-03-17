@@ -56,7 +56,7 @@ private:
 
     bool find_target(cv::Mat &img);
     void cleanup_processing_thread();
-    void kmeans(cv::Mat &src);
+//    void kmeans(cv::Mat &src);
 
     double m_last_location[2];
     double m_last_area_percentage;
