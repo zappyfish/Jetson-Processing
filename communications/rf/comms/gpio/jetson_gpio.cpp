@@ -20,13 +20,13 @@ void jetson_gpio::set_pin_state(uav_gpio::state ste) {
     char value[JETSON_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
-    len = std::sprintf(buf, sizeof(buf), "%d", ste);
+    int len = std::sprintf(buf, sizeof(buf), "%d", ste);
     if(!file_write(value, buf, len)) {
         log_pin_error(std::string("could not set gpio value"), std::string("set_pin_state"));
     }
 }
 
-state jetson_gpio::read_pin_state() {
+uav_gpio::state jetson_gpio::read_pin_state() {
     char buf[JETSON_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
@@ -42,9 +42,9 @@ state jetson_gpio::read_pin_state() {
     close(fd);
 
     if (ch != '0') {
-        return high;
+        return uav_gpio::state::high;
     } else {
-        return low;
+        return uav_gpio::state::low;
     }
 }
 
@@ -68,7 +68,7 @@ void jetson_gpio::unexport_gpio(unsigned int pin_num) {
     }
 }
 
-void jetson_gpio::set_pin_direction(gpio::direction dir) {
+void jetson_gpio::set_pin_direction(uav_gpio::direction dir) {
     int len;
     char buf[JETSON_MAX_BUF];
     char direction[JETSON_MAX_BUF];

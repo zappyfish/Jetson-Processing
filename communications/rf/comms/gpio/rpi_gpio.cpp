@@ -15,18 +15,18 @@ rpi_gpio::~rpi_gpio() {
     unexport_gpio(m_pin_num);
 }
 
-void rpi_gpio::set_pin_state(gpio::state ste) {
+void rpi_gpio::set_pin_state(uav_gpio::state ste) {
     char buf[RPI_MAX_BUF];
     char value[RPI_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
-    len = std::sprintf(buf, sizeof(buf), "%d", ste);
+    int len = std::sprintf(buf, sizeof(buf), "%d", ste);
     if(!file_write(value, buf, len)) {
         log_pin_error(std::string("could not set gpio value"), std::string("set_pin_state"));
     }
 }
 
-state rpi_gpio::read_pin_state() {
+uav_gpio::state rpi_gpio::read_pin_state() {
     char buf[RPI_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
@@ -42,9 +42,9 @@ state rpi_gpio::read_pin_state() {
     close(fd);
 
     if (ch != '0') {
-        return high;
+        return uav_gpio::state::high;
     } else {
-        return low;
+        return uav_gpio::state::low;
     }
 }
 
@@ -68,7 +68,7 @@ void rpi_gpio::unexport_gpio(unsigned int pin_num) {
     }
 }
 
-void rpi_gpio::set_pin_direction(gpio::direction dir) {
+void rpi_gpio::set_pin_direction(uav_gpio::direction dir) {
     int len;
     char buf[RPI_MAX_BUF];
     char direction[RPI_MAX_BUF];
