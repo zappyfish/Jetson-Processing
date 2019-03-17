@@ -14,7 +14,7 @@ class rf_packet {
 
 public:
 
-    static const uint8_t OFFSET;
+    static const int OFFSET;
 
     /**
      * NOTE: these should be scaled -100 to 100
