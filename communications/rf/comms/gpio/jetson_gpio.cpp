@@ -28,16 +28,17 @@ void jetson_gpio::set_pin_state(uav_gpio::state ste) {
 
 uav_gpio::state jetson_gpio::read_pin_state() {
     char buf[JETSON_MAX_BUF];
+    char value[JETSON_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
     char ch;
 
-    fd = open(buf, O_RDONLY);
+    int fd = std::open(buf, O_RDONLY);
     if (fd < 0) {
         log_pin_error(std::string("could not read gpio value"), std::string("read_pin_value"));
     }
 
-    read(fd, &ch, 1);
+    std::read(fd, &ch, 1);
 
     close(fd);
 

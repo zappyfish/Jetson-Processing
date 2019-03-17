@@ -28,18 +28,19 @@ void rpi_gpio::set_pin_state(uav_gpio::state ste) {
 
 uav_gpio::state rpi_gpio::read_pin_state() {
     char buf[RPI_MAX_BUF];
+    char value[RPI_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
 
     char ch;
 
-    fd = open(buf, O_RDONLY);
+    int fd = std::open(buf, O_RDONLY);
     if (fd < 0) {
         log_pin_error(std::string("could not read gpio value"), std::string("read_pin_value"));
     }
 
-    read(fd, &ch, 1);
+    std::read(fd, &ch, 1);
 
-    close(fd);
+    std::close(fd);
 
     if (ch != '0') {
         return uav_gpio::state::high;
@@ -89,13 +90,13 @@ void rpi_gpio::set_pin_direction(uav_gpio::direction dir) {
 bool rpi_gpio::file_write(char *path, char* write_buf, int len) {
     int fd;
 
-    fd = open(RPI_SYSFS_GPIO_DIR path, O_WRONLY);
+    fd = std::open(RPI_SYSFS_GPIO_DIR path, O_WRONLY);
     if (fd < 0) {
         return fals;
     }
 
-    write(fd, buf, len);
-    close(fd);
+    std::write(fd, buf, len);
+    std::close(fd);
     return true;
 }
 
