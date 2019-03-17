@@ -4,7 +4,7 @@
 
 #include "rf_packet.h"
 
-const uint8_t rf_packet::OFFSET = 100;
+const int rf_packet::OFFSET = 100;
 
 rf_packet::rf_packet(int gps_x, int gps_y) {
     m_x = (uint8_t)((gps_x + OFFSET) & 0xff);
