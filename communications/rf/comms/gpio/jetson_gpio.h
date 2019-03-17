@@ -10,7 +10,7 @@
 #define JETSON_SYSFS_GPIO_DIR "/sys/class/gpio"
 #define JETSON_MAX_BUF 64
 
-#include "gpio.h"
+#include "uav_gpio.h"
 #include "data_logger.h"
 #include "soft_error_entry.h"
 #include <cstdio>

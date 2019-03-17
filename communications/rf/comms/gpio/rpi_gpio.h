@@ -7,7 +7,7 @@
 
 #ifdef __linux__
 
-#include "gpio.h"
+#include "uav_gpio.h"
 #include "libsoc_gpio.h"
 
 #define RPI_SYSFS_GPIO_DIR "/sys/class/gpio"
