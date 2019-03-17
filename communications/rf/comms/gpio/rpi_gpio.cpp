@@ -7,8 +7,8 @@
 #ifdef __linux__
 
 rpi_gpio::rpi_gpio(unsigned int pin_num, direction dir) : m_pin_num(pin_num) {
-    export_gpio(m_pin_num)
-    set_pin_direction(dir)
+    export_gpio(m_pin_num);
+    set_pin_direction(dir);
 }
 
 rpi_gpio::~rpi_gpio() {

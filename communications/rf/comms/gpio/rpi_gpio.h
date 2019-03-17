@@ -20,7 +20,7 @@ public:
     rpi_gpio(unsigned int pin_num, direction dir);
     ~rpi_gpio();
 
-    void set_pin_state(state ste);
+    void set_pin_state(uav_gpio::state ste);
     state read_pin_state();
 
 private:

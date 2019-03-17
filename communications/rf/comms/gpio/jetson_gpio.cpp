@@ -7,15 +7,15 @@
 #ifdef __linux__
 
 jetson_gpio::jetson_gpio(unsigned int pin_num, direction dir) : m_pin_num(pin_num) {
-    export_gpio(m_pin_num)
-    set_pin_direction(dir)
+    export_gpio(m_pin_num);
+    set_pin_direction(dir);
 }
 
 jetson_gpio::~jetson_gpio() {
     unexport_gpio(m_pin_num);
 }
 
-void jetson_gpio::set_pin_state(gpio::state ste) {
+void jetson_gpio::set_pin_state(uav_gpio::state ste) {
     char buf[JETSON_MAX_BUF];
     char value[JETSON_MAX_BUF];
     std::snprintf(value, sizeof(value), "/gpio%d/value", m_pin_num);
