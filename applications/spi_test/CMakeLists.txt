@@ -14,6 +14,7 @@
      set(raspicam_DIR "/usr/local/lib/cmake")
      find_package(raspicam REQUIRED)
      find_package(OpenCV)
+     find_library(LIBSOC libsoc)
      IF  ( OpenCV_FOUND AND raspicam_CV_FOUND)
          MESSAGE(STATUS "FOUND RASPICAM AND OPENCV")
      ENDIF()
@@ -81,7 +82,7 @@
 
  if(LINUX)
      add_definitions(-std=c++0x -L/home/pi/wiringPi/wiringPi -lwiringPi )
-     target_link_libraries( rpi_main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${raspicam_CV_LIBS} wiringPi ${CMAKE_THREAD_LIBS_INIT})
+     target_link_libraries( rpi_main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${raspicam_CV_LIBS} wiringPi ${CMAKE_THREAD_LIBS_INIT} ${LIBSOC})
  else()
      target_link_libraries( rpi_main ${OpenCV_LIBS} ${Boost_LIBRARIES})
  endif()
