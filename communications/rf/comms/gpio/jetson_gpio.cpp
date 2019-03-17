@@ -54,7 +54,7 @@ void jetson_gpio::export_gpio(unsigned int pin_num) {
     char buf[JETSON_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
 
-    char *path = "/export";
+    char const*path = "/export";
 
     if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not export gpio"), std::string("export_gpio"));
@@ -65,7 +65,7 @@ void jetson_gpio::unexport_gpio(unsigned int pin_num) {
     int len;
     char buf[JETSON_MAX_BUF];
     len = std::snprintf(buf, sizeof(buf), "%d", pin_num);
-    char* path = "/unexport";
+    char const* path = "/unexport";
 
     if (!file_write(path, buf, len)) {
         log_pin_error(std::string("could not unexport gpio"), std::string("unexport_gpio"));

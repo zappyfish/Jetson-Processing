@@ -18,6 +18,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string>
 
 class jetson_gpio : public uav_gpio {
 
