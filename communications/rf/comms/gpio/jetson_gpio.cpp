@@ -40,7 +40,7 @@ uav_gpio::state jetson_gpio::read_pin_state() {
 
     std::read(fd, &ch, 1);
 
-    close(fd);
+    std::close(fd);
 
     if (ch != '0') {
         return uav_gpio::state::high;
@@ -90,13 +90,25 @@ void jetson_gpio::set_pin_direction(uav_gpio::direction dir) {
 bool jetson_gpio::file_write(char *path, char* write_buf, int len) {
     int fd;
 
-    fd = open(JETSON_SYSFS_GPIO_DIR path, O_WRONLY);
-    if (fd < 0) {
-        return fals;
+    char open_buf[JETSON_MAX_BUF];
+    int len1 = sizeof(JETSON_SYSFS_GPIO_DIR);
+    for(int i = 0; i < len1; i++) {
+        open_buf[i] = JETSON_SYSFS_GPIO_DIR[i];
     }
 
-    write(fd, buf, len);
-    close(fd);
+    int len2 = sizeof(path);
+    for (int i = len1; i < len1 + len2; i++) {
+        open_buf[i] = path[i - len1];
+    }
+
+
+    fd = std::open(open_buf, O_WRONLY);
+    if (fd < 0) {
+        return false;
+    }
+
+    std::write(fd, write_buf, len);
+    std::close(fd);
     return true;
 }
 

@@ -90,12 +90,23 @@ void rpi_gpio::set_pin_direction(uav_gpio::direction dir) {
 bool rpi_gpio::file_write(char *path, char* write_buf, int len) {
     int fd;
 
-    fd = std::open(RPI_SYSFS_GPIO_DIR path, O_WRONLY);
-    if (fd < 0) {
-        return fals;
+    char open_buf[JETSON_MAX_BUF];
+    int len1 = sizeof(JETSON_SYSFS_GPIO_DIR);
+    for(int i = 0; i < len1; i++) {
+        open_buf[i] = JETSON_SYSFS_GPIO_DIR[i];
     }
 
-    std::write(fd, buf, len);
+    int len2 = sizeof(path);
+    for (int i = len1; i < len1 + len2; i++) {
+        open_buf[i] = path[i - len1];
+    }
+
+    fd = std::open(open_buf, O_WRONLY);
+    if (fd < 0) {
+        return false;
+    }
+
+    std::write(fd, write_buf, len);
     std::close(fd);
     return true;
 }
