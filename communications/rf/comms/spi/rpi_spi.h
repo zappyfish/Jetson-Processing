@@ -27,7 +27,7 @@ private:
 
     spi* m_spi_bus;
 
-    void init_spi_bus(int spi device, int chip_select);
+    void init_spi_bus(int spi_device, int chip_select);
 
 };
 

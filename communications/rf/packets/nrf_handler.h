@@ -70,6 +70,8 @@ public:
 
     void set_mode(mode md);
 
+    void verify_spi();
+
 private:
 
     spi_bus* m_spi;
@@ -87,7 +89,6 @@ private:
     uint8_t get_bytes_available();
 
     bool data_available();
-    void verify_spi();
 
     void (*m_callback)(rf_packet);
 };
