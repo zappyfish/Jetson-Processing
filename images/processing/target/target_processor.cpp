@@ -217,16 +217,16 @@ bool target_processor::is_square(cv::Mat&bin_img, int area, int x_center, int y_
 //
 //}
 //
-//void target_processor::check_square(cv::Mat&bin_img, int x_center, int y_center, int side_length, double &count) {
-//    int half_side = side_length / 2;
-//    for (int i = x_center - half_side; i < x_center + half_side; i++) {
-//        for (int j = y_center - half_side; j < y_center + half_side; j++) {
-//            if (in_bounds(bin_img, j, i) && bin_img.at<uchar>(j, i) == 1) {
-//                count++;
-//            }
-//        }
-//    }
-//}
+void target_processor::check_square(cv::Mat&bin_img, int x_center, int y_center, int side_length, double &count) {
+    int half_side = side_length / 2;
+    for (int i = x_center - half_side; i < x_center + half_side; i++) {
+        for (int j = y_center - half_side; j < y_center + half_side; j++) {
+            if (in_bounds(bin_img, j, i) && bin_img.at<uchar>(j, i) == 1) {
+                count++;
+            }
+        }
+    }
+}
 
 void target_processor::set_flight_data(flight_packet &packet) {
     m_last_roll = packet.get_roll();
