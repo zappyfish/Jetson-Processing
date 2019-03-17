@@ -8,7 +8,7 @@
 #include "uav_gpio.h"
 #include <iostream>
 
-class dummy_gpio : public gpio {
+class dummy_gpio : public uav_gpio {
 
 public:
 
@@ -20,17 +20,17 @@ public:
 
     }
 
-    void set_pin_state(state ste) {
+    void set_pin_state(uav_gpio::state ste) {
         std::cout << "setting state\n";
     }
     state read_pin_state() {
         std::cout << "reading state\n";
-        return gpio::state::low;
+        return uav_gpio::state::low;
     }
 
 private:
 
-    void set_pin_direction(direction dir) {
+    void set_pin_direction(uav_gpio::direction dir) {
 
     }
 
