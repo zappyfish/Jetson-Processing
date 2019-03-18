@@ -5,6 +5,7 @@
 #ifndef PROJECT_GPIO_H
 #define PROJECT_GPIO_H
 
+#include <iostream>
 
 class uav_gpio {
 

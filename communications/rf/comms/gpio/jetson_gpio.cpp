@@ -103,6 +103,8 @@ bool jetson_gpio::file_write(char const*path, char* write_buf, int len) {
     for (int i = len1; i < len1 + len2; i++) {
         open_buf[i] = path[i - len1];
     }
+    open_buf[len1 + len2] = '\0';
+    std::cout << open_buf << std::endl;
 
 
     fd = open(open_buf, O_WRONLY);
