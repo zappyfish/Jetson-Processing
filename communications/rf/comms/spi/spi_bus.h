@@ -5,7 +5,7 @@
 #ifndef PROJECT_SPI_H
 #define PROJECT_SPI_H
 
-#define SPI_CLOCK 1000000
+#define SPI_CLOCK 100000
 #define DUMMY_BYTE 0xFF
 
 #include <vector>
