@@ -93,7 +93,7 @@ bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
     int fd;
 
     char open_buf[RPI_MAX_BUF];
-    int len1 = sizeof(RPI_SYSFS_GPIO_DIR);
+    int len1 = sizeof(RPI_SYSFS_GPIO_DIR) - 1; // skip null terminating
     for(int i = 0; i < len1; i++) {
         open_buf[i] = RPI_SYSFS_GPIO_DIR[i];
     }
@@ -104,7 +104,6 @@ bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
         open_buf[i] = path[i - len1];
     }
 
-    open_buf[len1 + len2] = '\0';
     std::cout << open_buf << std::endl;
 
     fd = open(open_buf, O_WRONLY);
