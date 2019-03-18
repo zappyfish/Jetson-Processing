@@ -11,7 +11,7 @@
 
 const int jetson_camera::DEFAULT_HEIGHT = 1000;
 const int jetson_camera::DEFAULT_WIDTH = 1000;
-const int jetson_camera::DEFAULT_FPS = 30;
+const int jetson_camera::DEFAULT_FPS = 60;
 
 jetson_camera::jetson_camera(int width, int height, int fps) : m_capture_camera(get_tegra_pipeline(width, height, fps), cv::CAP_GSTREAMER) {
     if (!m_capture_camera.isOpened()) {
