@@ -44,7 +44,8 @@
 
  file(GLOB SOURCE
          ../../communications/pixhawk/packets/*.cpp
-         ../../communications/pixhawk/uart/*.cpp
+         ../../communications/pixhawk/uart/jetson_uart.cpp
+         ../../communications/pixhawk/uart/uart.cpp
          ../../communications/rf/*.cpp
          ../../communications/rf/comms/gpio/*.cpp
          ../../communications/rf/comms/spi/*.cpp
@@ -60,7 +61,8 @@
          ../../logging/files/*.cpp
          ../../logging/time/*.cpp
          ../../communications/pixhawk/packets/*.h
-         ../../communications/pixhawk/uart/*.h
+         ../../communications/pixhawk/uart/jetson_uart.h
+         ../../communications/pixhawk/uart/uart.h
          ../../communications/rf/*.h
          ../../communications/rf/comms/gpio/*.h
          ../../communications/rf/comms/spi/*.h
@@ -79,7 +81,6 @@
  add_executable( main main.cpp ${SOURCE})
 
  if(LINUX)
-     add_definitions(-std=c++0x -L/home/pi/wiringPi/wiringPi -lwiringPi )
      target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${LIBSOC})
  else()
      target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES})

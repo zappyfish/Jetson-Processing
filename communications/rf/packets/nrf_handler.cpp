@@ -165,7 +165,7 @@ void nrf_handler::flush_tx() {
 
 void nrf_handler::verify_spi() {
     uint8_t test[2];
-    test[0] = (SETUP_AW & REGISTER_MASK) | R_MASK;
+    test[0] = (CONFIG & REGISTER_MASK) | R_MASK;
     test[1] = 0xff;
     uint8_t dat[2];
     m_spi->write_read_bytes(test, dat, 2);
