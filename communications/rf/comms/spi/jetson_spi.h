@@ -14,14 +14,19 @@ class jetson_spi : public spi_bus {
 
 public:
 
-    jetson_spi();
+    static const int SPI_DEVICE_DEFAULT;
+    static const int CHIP_SELECT_DEFAULT;
+
+    jetson_spi(int spi_device, int chip_select);
     ~jetson_spi();
 
     void write_read_bytes(uint8_t* write, uint8_t *read, int len);
 
 private:
 
+    spi* m_spi_bus;
 
+    void init_spi_bus(int spi_device, int chip_select);
 
 };
 

@@ -94,18 +94,18 @@ bool jetson_gpio::file_write(char const*path, char* write_buf, int len) {
     int fd;
 
     char open_buf[JETSON_MAX_BUF];
-    int len1 = sizeof(JETSON_SYSFS_GPIO_DIR);
-    for(int i = 0; i < len1; i++) {
+    int len1 = sizeof(JETSON_SYSFS_GPIO_DIR) - 1; // skip null terminating
+    int i;
+    for(i = 0; i < len1; i++) {
         open_buf[i] = JETSON_SYSFS_GPIO_DIR[i];
     }
 
-    int len2 = sizeof(path);
-    for (int i = len1; i < len1 + len2; i++) {
+    while (path[i - len1] != '\0') {
         open_buf[i] = path[i - len1];
+        i++;
     }
-    open_buf[len1 + len2] = '\0';
-    std::cout << open_buf << std::endl;
 
+    open_buf[i] = '\0';
 
     fd = open(open_buf, O_WRONLY);
     if (fd < 0) {
