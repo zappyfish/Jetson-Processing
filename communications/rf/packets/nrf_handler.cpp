@@ -111,6 +111,8 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
         config_write[1] = 0b0000011;
 
+        verify_spi();
+
         m_ce->set_pin_state(uav_gpio::state::high); // start listening
 
         reset_irq();
@@ -167,7 +169,7 @@ void nrf_handler::verify_spi() {
     test[1] = 0xff;
     uint8_t dat[2];
     m_spi->write_read_bytes(test, dat, 2);
-    std::cout << "config read is: " << unsigned(dat[1]) << std::endl;
+    std::cout << "byte, config read is: " << unsigned(dat[1]) << std::endl;
 }
 
 uint8_t nrf_handler::get_bytes_available() {
