@@ -6,7 +6,7 @@
 
 #ifdef __linux__
 
-const int rpi_spi::CHIP_SELECT_DEFAULT = 1;
+const int rpi_spi::CHIP_SELECT_DEFAULT = 0;
 const int rpi_spi::SPI_DEVICE_DEFAULT = 0;
 
 rpi_spi::rpi_spi(int spi_device, int chip_select) {
