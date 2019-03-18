@@ -52,7 +52,8 @@
          ../../communications/rf/packets/*.cpp
          ../../images/*.cpp
          ../../images/buffer/*.cpp
-         ../../images/capture/*.cpp
+         ../../images/capture/jetson_camera.cpp
+         ../../images/capture/camera.cpp
          ../../images/processing/*.cpp
          ../../images/processing/target/*.cpp
          ../../images/processing/uav/accel/*.cpp
@@ -69,7 +70,8 @@
          ../../communications/rf/packets/*.h
          ../../images/*.h
          ../../images/buffer/*.h
-         ../../images/capture/*.h
+         ../../images/capture/jetson_camera.h
+         ../../images/capture/camera.h
          ../../images/processing/*.h
          ../../images/processing/target/*.h
          ../../images/processing/uav/accel/*.h
