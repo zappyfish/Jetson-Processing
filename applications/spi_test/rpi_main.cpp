@@ -21,7 +21,9 @@ int main() {
 
     nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::TX, 8, &callback);
 
-    handler.verify_spi();
+    while (true) {
+        handler.verify_spi();
+    }
 
     rf_packet test_packet(-5, 1);
 
