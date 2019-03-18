@@ -19,7 +19,7 @@ int main() {
     rpi_file_manager *f_manager = new rpi_file_manager();
     data_logger::get_instance().start_flight_session(f_manager);
 
-    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::TX, 24, &callback);
+    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::TX, 8, &callback);
 
     handler.verify_spi();
 
