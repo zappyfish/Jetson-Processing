@@ -169,7 +169,8 @@ void nrf_handler::verify_spi() {
     test[1] = 0xff;
     uint8_t dat[2];
     m_spi->write_read_bytes(test, dat, 2);
-    std::cout << unsigned(dat[0]) << " address, config read is: " << unsigned(dat[1]) << std::endl;
+    std::cout << unsigned(test[0]) << " write address, dummy byte is: " << unsigned(test[1]) << std::endl;
+    std::cout << unsigned(dat[0]) << " first byte, setup_aw read is: " << unsigned(dat[1]) << std::endl;
 }
 
 uint8_t nrf_handler::get_bytes_available() {
