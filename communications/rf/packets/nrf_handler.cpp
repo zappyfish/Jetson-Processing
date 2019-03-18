@@ -13,6 +13,8 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
     if (board == jetson) {
 #ifdef __linux__
         // TODO: create jetson_spi
+        m_spi = new jetson_spi(jetson_spi::SPI_DEVICE_DEFAULT, jetson_spi::CHIP_SELECT_DEFAULT);
+        m_ce = new jetson_gpio(ce_pin, uav_gpio::direction::output);
 #endif
     } else if (board == rpi) {
 #ifdef __linux__
