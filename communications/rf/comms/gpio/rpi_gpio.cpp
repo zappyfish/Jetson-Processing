@@ -99,15 +99,12 @@ bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
         open_buf[i] = RPI_SYSFS_GPIO_DIR[i];
     }
 
-    std::cout << path << std::endl;
     while (path[i - len1] != '\0') {
         open_buf[i] = path[i - len1];
         i++;
     }
 
     open_buf[i] = '\0';
-
-    std::cout << open_buf << std::endl;
 
     fd = open(open_buf, O_WRONLY);
     if (fd < 0) {
