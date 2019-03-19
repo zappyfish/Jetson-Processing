@@ -60,6 +60,8 @@ void nrf_handler::check_packets() {
             uint8_t read_buf[1 + PIPE_SIZE];
             m_spi->write_read_bytes(write, read_buf, bytes_available);
 
+            reset_irq();
+
             // Create rf_packet, invoke callback
             rf_packet packet(&(read_buf[4]), bytes_available);
 
