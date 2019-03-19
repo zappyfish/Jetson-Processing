@@ -3,7 +3,6 @@
 //
 
 #include "rpi_spi.h"
-#include <iostream>
 
 #ifdef __linux__
 
@@ -29,11 +28,6 @@ rpi_spi::~rpi_spi() {
 }
 
 void rpi_spi::write_read_bytes(uint8_t *write, uint8_t *read, int len) {
-    // debug remove me
-    for (int i = 0; i < len; i++) {
-        std::cout << unsigned(read[i]);
-    }
-    std::cout << std::endl;
     if (m_spi_bus != nullptr) {
         libsoc_spi_rw(m_spi_bus, write, read, len);
     }
