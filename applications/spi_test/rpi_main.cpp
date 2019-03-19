@@ -23,9 +23,11 @@ int main() {
 
     handler.verify_spi();
 
+    rf_packet start_packet(0, 0);
     rf_packet test_packet(-5, 1);
 
     while (true) {
+        handler.send_packet(start_packet);
         handler.send_packet(test_packet);
     }
 
