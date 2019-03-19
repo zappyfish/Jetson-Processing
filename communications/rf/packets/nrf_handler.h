@@ -37,9 +37,9 @@
 #define READ_MODE 0x01
 #define WRITE_MODE 0x00
 
-#define CONFIG_BYTE 0b00001010
+#define CONFIG_BYTE 0x0A
 
-#define REUSE_TX 0b11100011
+#define REUSE_TX 0xE3
 
 // pipe size
 #define PIPE_SIZE 32
