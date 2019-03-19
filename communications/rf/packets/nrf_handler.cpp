@@ -156,7 +156,7 @@ bool nrf_handler::data_available() {
     uint8_t read[2];
     m_spi->write_read_bytes(write, read, 2);
     uint8_t rx_interrupt = (1 << 6);
-    std::cout << "read: " << unsigned(read[1]) << std::endl;
+    verify_spi();
     return (rx_interrupt & read[1]) == rx_interrupt;
 }
 
