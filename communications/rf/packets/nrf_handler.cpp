@@ -199,7 +199,8 @@ uint8_t nrf_handler::get_bytes_available() {
 
 void nrf_handler::resend_last_packet() {
     reset_irq();
-    uint8_t cmd[1] = REUSE_TX;
+    uint8_t cmd[1];
+    cmd[0] = REUSE_TX;
     uint8_t d;
     m_spi->write_read_bytes(cmd, &d, 1);
 }

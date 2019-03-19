@@ -38,7 +38,6 @@
 #define WRITE_MODE 0x00
 
 #define CONFIG_BYTE 0x0A
-
 #define REUSE_TX 0xE3
 
 // pipe size

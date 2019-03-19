@@ -226,6 +226,7 @@
       <find>std::</find>
       <find>gpio</find>
       <find>kmeans</find>
+      <find>flush_tx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
