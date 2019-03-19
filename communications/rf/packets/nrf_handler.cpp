@@ -203,4 +203,5 @@ void nrf_handler::resend_last_packet() {
     cmd[0] = REUSE_TX;
     uint8_t d;
     m_spi->write_read_bytes(cmd, &d, 1);
+    pulse_CE();
 }
