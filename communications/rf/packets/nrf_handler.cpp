@@ -121,9 +121,12 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     } else if (md == nrf_handler::mode::TX) {
         uint8_t tx_mode[2];
         tx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        tx_mode[1] = 0b01001010; // ugly but w/e
+        uint8_t config_byte = (CONFIG_BYTE | WRITE_MODE);
+        tx_mode[1] = (config_byte & REGISTER_MASK) | W_MASK;
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(tx_mode, dummy_read, 2);
+        std::cout << "set to tx mode\n";
+        verify_spi();
         flush_tx();
     }
 
