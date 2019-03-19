@@ -28,6 +28,8 @@ int main() {
 
     int cnt = 0;
 
+    std::cout << "starting loop\n";
+
     while (true) {
         rf_packet start_packet(cnt, cnt);
         cnt++;
