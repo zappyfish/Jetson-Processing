@@ -76,7 +76,7 @@ void nrf_handler::send_packet(rf_packet &packet) {
     uint16_t len = serialized.size();
     if (len + TAG_LENGTH < PIPE_SIZE) {
         for (uint16_t i = 1; i <= len; i++) {
-            m_send_buf[i + TAG_LENGTH] = serialized.at(i  - 1);
+            m_send_buf[i + TAG_LENGTH] = serialized.at(i - 1);
         }
         // TODO: put in TX mode
         if (m_mode != mode::TX) {
@@ -156,6 +156,7 @@ bool nrf_handler::data_available() {
     uint8_t read[2];
     m_spi->write_read_bytes(write, read, 2);
     uint8_t rx_interrupt = (1 << 6);
+    std::cout << "read: " << unsigned(read[1]) << std::endl;
     return (rx_interrupt & read[1]) == rx_interrupt;
 }
 
