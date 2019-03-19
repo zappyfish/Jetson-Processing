@@ -80,7 +80,7 @@ void nrf_handler::send_packet(rf_packet &packet) {
             set_mode(mode::TX);
         }
         // TODO: send message
-        send_data(m_send_buf, PIPE_SIZE);
+        send_data(m_send_buf, PIPE_SIZE + 1);
 
         // TODO: pulse CE
         pulse_CE();
