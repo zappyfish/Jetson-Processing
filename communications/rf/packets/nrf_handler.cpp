@@ -60,7 +60,8 @@ void nrf_handler::check_packets() {
             uint8_t read_buf[1 + PIPE_SIZE];
             m_spi->write_read_bytes(write, read_buf, bytes_available);
 
-            reset_irq();
+            // reset_irq();
+            flush_rx();
 
             // Create rf_packet, invoke callback
             rf_packet packet(&(read_buf[5]), bytes_available);
@@ -168,6 +169,13 @@ void nrf_handler::flush_tx() {
     uint8_t wrt[1];
     uint8_t dummy[1];
     wrt[0] = 0b11100001;
+    m_spi->write_read_bytes(wrt, dummy, 1);
+}
+
+void nrf_handler::flush_rx() {
+    uint8_t wrt[1];
+    uint8_t dummy[1];
+    wrt[0] = 0b11100010;
     m_spi->write_read_bytes(wrt, dummy, 1);
 }
 

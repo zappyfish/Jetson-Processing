@@ -9,9 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +64,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="26" />
-          <entry key="cpp" value="19254" />
+          <entry key="cpp" value="19287" />
           <entry key="h" value="11717" />
           <entry key="txt" value="497" />
         </counts>
@@ -75,7 +73,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="497" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="30992" />
+          <entry key="ObjectiveC" value="31025" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -99,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="450">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -559,12 +557,12 @@
       <workItem from="1551883131872" duration="100000" />
       <workItem from="1552494676072" duration="7679000" />
       <workItem from="1552603527545" duration="9659000" />
-      <workItem from="1552887536774" duration="6851000" />
+      <workItem from="1552887536774" duration="7037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92174000" />
+    <option name="totallyTimeSpent" value="92360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -903,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="450">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
         </state>
       </provider>
     </entry>

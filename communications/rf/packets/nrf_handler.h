@@ -86,6 +86,7 @@ private:
     void send_data(uint8_t* buf, int len);
     void reset_irq();
     void flush_tx();
+    void flush_rx();
     uint8_t get_bytes_available();
 
     bool data_available();
