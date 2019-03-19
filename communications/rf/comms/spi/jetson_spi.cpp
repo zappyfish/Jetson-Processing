@@ -7,7 +7,7 @@
 #include "jetson_spi.h"
 
 const int jetson_spi::CHIP_SELECT_DEFAULT = 0;
-const int jetson_spi::SPI_DEVICE_DEFAULT = 1;
+const int jetson_spi::SPI_DEVICE_DEFAULT = 3;
 
 jetson_spi::jetson_spi(int spi_device, int chip_select) {
     init_spi_bus(spi_device, chip_select);
