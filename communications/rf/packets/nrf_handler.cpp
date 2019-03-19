@@ -62,6 +62,12 @@ void nrf_handler::check_packets() {
 
             // Create rf_packet, invoke callback
             rf_packet packet(&(read_buf[1]), bytes_available);
+
+            for (int i = 0; i < bytes_available; i++) {
+                std::cout << read_buf[i +1];
+            }
+            std::cout << std::endl;
+
             m_callback(packet);
         }
     }
@@ -126,8 +132,6 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         tx_mode[1] = (config_byte & REGISTER_MASK);
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(tx_mode, dummy_read, 2);
-        std::cout << "set to tx mode\n";
-        verify_spi();
         flush_tx();
     }
 
