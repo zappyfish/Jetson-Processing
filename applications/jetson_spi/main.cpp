@@ -17,17 +17,17 @@ int main() {
 
     nrf_handler handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, &callback);
 
-    while (true) {
-        handler.verify_spi();
-    }
+    handler.verify_spi();
 
     rf_packet test_packet(-5, 1);
 
     handler.send_packet(test_packet);
 
-    handler.set_mode(nrf_handler::mode::TX);
+    handler.set_mode(nrf_handler::mode::RX);
 
-    handler.check_packets();
+    while (true) {
+        handler.check_packets();
+    }
 
 }
 
