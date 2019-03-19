@@ -23,10 +23,17 @@ int main() {
 
     handler.verify_spi();
 
-    rf_packet start_packet(0, 0);
+
     rf_packet test_packet(-5, 1);
 
+    int cnt = 0;
+
     while (true) {
+        rf_packet start_packet(cnt, cnt);
+        cnt++;
+        if (cnt > 100) {
+            cnt = -100;
+        }
         handler.send_packet(start_packet);
         handler.send_packet(test_packet);
     }
