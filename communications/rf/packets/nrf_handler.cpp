@@ -63,12 +63,7 @@ void nrf_handler::check_packets() {
             reset_irq();
 
             // Create rf_packet, invoke callback
-            rf_packet packet(&(read_buf[4]), bytes_available);
-
-            for (int i = 4; i < bytes_available; i++) {
-                std::cout << (unsigned(read_buf[i]) - 100);
-            }
-            std::cout << std::endl;
+            rf_packet packet(&(read_buf[5]), bytes_available);
 
             m_callback(packet);
         }
