@@ -61,10 +61,10 @@ void nrf_handler::check_packets() {
             m_spi->write_read_bytes(write, read_buf, bytes_available);
 
             // Create rf_packet, invoke callback
-            rf_packet packet(&(read_buf[1]), bytes_available);
+            rf_packet packet(&(read_buf[4]), bytes_available);
 
-            for (int i = 0; i < bytes_available; i++) {
-                std::cout << read_buf[i +1];
+            for (int i = 4; i < bytes_available; i++) {
+                std::cout << (unsigned(read_buf[i]) - 100);
             }
             std::cout << std::endl;
 
