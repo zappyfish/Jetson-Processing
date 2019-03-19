@@ -39,6 +39,8 @@
 
 #define CONFIG_BYTE 0b00001010
 
+#define REUSE_TX 0b11100011
+
 // pipe size
 #define PIPE_SIZE 32
 
@@ -67,6 +69,8 @@ public:
     void check_packets();
 
     void send_packet(rf_packet &packet);
+
+    void resend_last_packet();
 
     void set_mode(mode md);
 

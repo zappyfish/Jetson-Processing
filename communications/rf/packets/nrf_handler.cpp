@@ -60,8 +60,7 @@ void nrf_handler::check_packets() {
             uint8_t read_buf[1 + PIPE_SIZE];
             m_spi->write_read_bytes(write, read_buf, bytes_available);
 
-            // reset_irq();
-            flush_rx();
+            reset_irq();
 
             // Create rf_packet, invoke callback
             rf_packet packet(&(read_buf[5]), bytes_available);
@@ -130,7 +129,6 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         tx_mode[1] = (config_byte & REGISTER_MASK);
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(tx_mode, dummy_read, 2);
-        flush_tx();
     }
 
     m_mode = md;
@@ -197,4 +195,11 @@ uint8_t nrf_handler::get_bytes_available() {
 //    m_spi->write_read_bytes(wrt, dat, 2);
 //    return dat[1];
     return PIPE_SIZE; // TODO: see if we can change this. probably not tho
+}
+
+void nrf_handler::resend_last_packet() {
+    reset_irq();
+    uint8_t cmd[1] = REUSE_TX;
+    uint8_t d;
+    m_spi->write_read_bytes(cmd, &d, 1);
 }

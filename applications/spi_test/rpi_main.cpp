@@ -25,19 +25,12 @@ int main() {
 
 
     rf_packet test_packet(-5, 1);
-
-    int cnt = 0;
+    handler.send_packet(test_packet);
 
     std::cout << "starting loop\n";
 
     while (true) {
-        rf_packet start_packet(cnt, cnt);
-        cnt++;
-        if (cnt > 100) {
-            cnt = -100;
-        }
-        handler.send_packet(start_packet);
-        handler.send_packet(test_packet);
+        handler.resend_last_packet();
     }
 
     handler.set_mode(nrf_handler::mode::RX);
