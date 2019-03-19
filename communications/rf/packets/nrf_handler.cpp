@@ -27,7 +27,8 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
     } else {
         // TODO: log soft error? this should be impossible i think but wut is c++
     }
-    for (size_t i = 0; i < TAG_LENGTH; i++) {
+    m_send_buf[0] = W_TX_PAYLOAD;
+    for (size_t i = 1; i <= TAG_LENGTH; i++) {
         m_send_buf[i] = TAG[i];
     }
     m_callback = callback;
@@ -71,8 +72,8 @@ void nrf_handler::send_packet(rf_packet &packet) {
     vector<uint8_t> serialized = packet.serialize();
     uint16_t len = serialized.size();
     if (len + TAG_LENGTH < PIPE_SIZE) {
-        for (uint16_t i = 0; i < len; i++) {
-            m_send_buf[i + TAG_LENGTH] = serialized.at(i);
+        for (uint16_t i = 1; i <= len; i++) {
+            m_send_buf[i + TAG_LENGTH] = serialized.at(i  - 1);
         }
         // TODO: put in TX mode
         if (m_mode != mode::TX) {

@@ -78,7 +78,7 @@ private:
     uav_gpio* m_ce;
 
 
-    uint8_t m_send_buf[PIPE_SIZE];
+    uint8_t m_send_buf[PIPE_SIZE + 1];
     uint8_t m_dummy_buf[PIPE_SIZE];
     nrf_handler::mode m_mode;
 
