@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="26" />
-          <entry key="cpp" value="21656" />
+          <entry key="cpp" value="21697" />
           <entry key="h" value="12967" />
           <entry key="txt" value="497" />
         </counts>
@@ -75,7 +75,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="497" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="34644" />
+          <entry key="ObjectiveC" value="34685" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -114,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state relative-caret-position="1665">
               <caret line="111" column="46" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="46" />
             </state>
           </provider>
@@ -132,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="39">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -267,7 +267,6 @@
         <option value="$PROJECT_DIR$/applications/jetson_spi/main.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp" />
         <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
-        <option value="$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.h" />
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
@@ -277,6 +276,7 @@
         <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp" />
       </list>
     </option>
   </component>
@@ -484,12 +484,12 @@
       <workItem from="1552494676072" duration="7679000" />
       <workItem from="1552603527545" duration="9659000" />
       <workItem from="1552887536774" duration="8340000" />
-      <workItem from="1553191606248" duration="6209000" />
+      <workItem from="1553191606248" duration="6965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99872000" />
+    <option name="totallyTimeSpent" value="100628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -800,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -837,8 +830,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="1665">
           <caret line="111" column="46" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
