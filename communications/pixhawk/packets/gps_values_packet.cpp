@@ -9,7 +9,7 @@ const char* gps_values_packet::PACKET_NAME = "gps_values";
 const char* gps_values_packet::X_KEY = "x";
 const char* gps_values_packet::Y_KEY = "y";
 
-const uint8_t directions_packet::PRECISION = 10;
+const uint8_t gps_values_packet::PRECISION = 10;
 
 gps_values_packet::gps_values_packet(int x, int y) : m_x(x), m_y(y) {
     m_keys.push_back(X_KEY);
