@@ -62,7 +62,12 @@ public:
         RX = 0,
     };
 
-    nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, void(*callback)(rf_packet));
+    typedef struct {
+        void (*callback)(rf_packet, void* args);
+        void *args;
+    } rf_callback;
+
+    nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, rf_callback *callback);
     ~nrf_handler();
 
     void check_packets();
@@ -94,7 +99,7 @@ private:
 
     bool data_available();
 
-    void (*m_callback)(rf_packet);
+    rf_callback *m_callback;
 };
 
 

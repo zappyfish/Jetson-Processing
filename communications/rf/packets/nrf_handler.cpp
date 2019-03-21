@@ -9,7 +9,7 @@ const int nrf_handler::TAG_LENGTH = 4;
 const char* nrf_handler::TAG = "vadl";
 const int nrf_handler::CE_PULSE_TIME = 1; // pulse for 1 ms to transmit packets
 
-nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, void(*callback)(rf_packet)) {
+nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, rf_callback *callback) {
     if (board == jetson) {
 #ifdef __linux__
         // TODO: create jetson_spi
@@ -45,6 +45,9 @@ nrf_handler::~nrf_handler() {
 }
 
 void nrf_handler::check_packets() {
+    if (m_callback == nullptr) {
+        return; // For TX only systems
+    }
     if (m_mode != mode::RX) {
         set_mode(mode::RX); // Won't have anything, so end here
     } else {
@@ -62,10 +65,17 @@ void nrf_handler::check_packets() {
 
             reset_irq();
 
+            // first, verify that it is PRIMO VADL CERTIFIED:
+            for (int i = 1; i < 5; i++) {
+                if (read_buf[i] != nrf_handler::TAG[i - 1]) {
+                    return; // fuck off uncc
+                }
+            }
+
             // Create rf_packet, invoke callback
             rf_packet packet(&(read_buf[5]), bytes_available);
 
-            m_callback(packet);
+            m_callback->callback(packet, m_callback->args);
         }
     }
 }
@@ -116,8 +126,6 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
 
         config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
         config_write[1] = 0b0000011;
-
-        verify_spi();
 
         m_ce->set_pin_state(uav_gpio::state::high); // start listening
 
