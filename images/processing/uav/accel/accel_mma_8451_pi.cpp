@@ -6,7 +6,7 @@
 
 #ifdef __linux__
 
-accel_mma8451_pi::accel_mma8451_pi(float alpha) : lpf_accel(alpha), m_sensor(mma8451_initialise(1, MMA8451_DEFAULT_ADDR)) {
+accel_mma8451_pi::accel_mma8451_pi(int i2c_dev, float alpha) : lpf_accel(alpha), m_sensor(mma8451_initialise(i2c_dev, MMA8451_DEFAULT_ADDR)) {
     //configure the max range, can be 2G, 4G or 8G
     mma8451_set_range(&m_sensor, 8); //For a maximum of a 4G acceleartion vector
 }

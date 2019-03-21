@@ -14,7 +14,7 @@ class accel_mma8451_pi : public lpf_accel {
 
 public:
 
-    accel_mma8451_pi(float alpha);
+    accel_mma8451_pi(int i2c_dev, float alpha);
     ~accel_mma8451_pi();
 
 private:
