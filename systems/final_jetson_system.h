@@ -6,7 +6,7 @@
 #define PROJECT_FINAL_JETSON_SYSTEM_H
 
 #include "flight_system.h"
-#include "raspicamera.h"
+#include "jetson_camera.h"
 #include "jetson_file_manager.h"
 #include "image_buffer.h"
 #include "arming_packet.h"
