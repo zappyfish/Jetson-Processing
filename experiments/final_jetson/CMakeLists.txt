@@ -40,6 +40,7 @@
          ${CMAKE_SOURCE_DIR}/../../logging
          ${CMAKE_SOURCE_DIR}/../../logging/files
          ${CMAKE_SOURCE_DIR}/../../logging/time
+         ${CMAKE_SOURCE_DIR}/../../systems
  )
 
  file(GLOB SOURCE
@@ -61,6 +62,8 @@
          ../../logging/*.cpp
          ../../logging/files/*.cpp
          ../../logging/time/*.cpp
+         ../../systems/final_jetson_system.cpp
+         ../../systems/flight_system.cpp
          ../../communications/pixhawk/packets/*.h
          ../../communications/pixhawk/uart/jetson_uart.h
          ../../communications/pixhawk/uart/uart.h
@@ -78,6 +81,8 @@
          ../../logging/*.h
          ../../logging/files/*.h
          ../../logging/time/*.h
+         ../../systems/final_jetson_system.h
+         ../../systems/flight_system.h
          )
 
  add_executable( main main.cpp ${SOURCE})
