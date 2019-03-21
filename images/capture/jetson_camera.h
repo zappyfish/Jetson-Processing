@@ -16,6 +16,7 @@ public:
     static const int DEFAULT_FPS;
 
     jetson_camera(int width, int height, int fps);
+    jetson_camera();
     ~jetson_camera();
 
     image_ptr capture_image();

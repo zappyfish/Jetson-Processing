@@ -9,8 +9,8 @@
 #include "soft_error_entry.h"
 #include "data_logger.h"
 
-const int jetson_camera::DEFAULT_HEIGHT = 1000;
-const int jetson_camera::DEFAULT_WIDTH = 1000;
+const int jetson_camera::DEFAULT_HEIGHT = 480;
+const int jetson_camera::DEFAULT_WIDTH = 640;
 const int jetson_camera::DEFAULT_FPS = 60;
 
 jetson_camera::jetson_camera(int width, int height, int fps) : m_capture_camera(get_tegra_pipeline(width, height, fps), cv::CAP_GSTREAMER) {
@@ -24,6 +24,9 @@ jetson_camera::jetson_camera(int width, int height, int fps) : m_capture_camera(
         data_logger::get_instance().save_log_entry(s_error);
     }
 }
+
+jetson_camera::jetson_camera() : jetson_camera(jetson_camera::DEFAULT_WIDTH, jetson_camera::DEFAULT_HEIGHT,
+        jetson_camera::DEFAULT_FPS) {}
 
 jetson_camera::~jetson_camera() {}
 
