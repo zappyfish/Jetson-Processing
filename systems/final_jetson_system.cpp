@@ -132,6 +132,7 @@ void final_jetson_system::beacon_deployed_callback(const char *name, std::vector
                                                    std::vector<const char *> values, void *args) {
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
     gps_values_packet packet(keys, values);
-    system->m_nrf_handler.send_packet(packet.get_x(), packet.get_y());
+    rf_packet send_packet(packet.get_x(), packet.get_y());
+    system->m_nrf_handler.send_packet(send_packet);
     system->m_beacon_deployed = true;
 }
