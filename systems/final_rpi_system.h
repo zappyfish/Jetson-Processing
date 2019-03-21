@@ -28,7 +28,7 @@
 #include <chrono>
 #include <thread>
 
-class final_rpi_system : flight_system {
+class final_rpi_system : public flight_system {
 
 public:
 

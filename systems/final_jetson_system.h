@@ -28,7 +28,7 @@
 #include <chrono>
 #include <thread>
 
-class final_jetson_system :flight_system {
+class final_jetson_system : public flight_system {
 
 public:
 
