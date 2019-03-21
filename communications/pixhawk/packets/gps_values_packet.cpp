@@ -5,9 +5,9 @@
 #include "gps_values_packet.h"
 
 
-const char* gps_values::PACKET_NAME = "gps_values";
-const char* gps_values::X_KEY = "x";
-const char* gps_values::Y_KEY = "y";
+const char* gps_values_packet::PACKET_NAME = "gps_values";
+const char* gps_values_packet::X_KEY = "x";
+const char* gps_values_packet::Y_KEY = "y";
 
 const uint8_t directions_packet::PRECISION = 10;
 
