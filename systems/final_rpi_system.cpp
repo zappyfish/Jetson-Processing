@@ -90,7 +90,7 @@ void final_rpi_system::send_gps() {
     packet_manager::get_instance().set_packet_callback(&m_gps_ack_callback);
 
     while (!m_gps_received_by_pixhawk.load()) {
-        gps_values_packet packet(m_destination_x, m_destination_y);
+        gps_values_packet *packet = new gps_values_packet(m_destination_x, m_destination_y);
         packet_manager::get_instance().send_packet(packet);
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
@@ -150,7 +150,7 @@ void final_rpi_system::rf_callback(rf_packet packet, void*args) {
 //    system->m_destination_y = packet.get_gps_y();
 //    system->m_has_received_destination = true;
 //    system->m_gps_received_by_pixhawk = false;
-    gps_values_packet packet(packet.get_gps_x(), packet.get_gps_y());
+    gps_values_packet *packet = new gps_values_packet(packet.get_gps_x(), packet.get_gps_y());
     packet_manager::get_instance().send_packet(packet); // Should probably do ack stuff here but....
 }
 
