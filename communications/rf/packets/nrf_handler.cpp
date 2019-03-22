@@ -196,6 +196,7 @@ void nrf_handler::flush_rx() {
 }
 
 void nrf_handler::verify_spi() {
+    m_ce->set_pin_state(uav_gpio::state::low);
     uint8_t test[2];
     test[0] = (CONFIG & REGISTER_MASK) | R_MASK;
     test[1] = 0xff;
