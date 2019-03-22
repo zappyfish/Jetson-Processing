@@ -73,10 +73,8 @@ bool packet_manager::parse_for_packet_data() {
     bool got_name = false;
     bool is_key = true;
     char c;
-    std::cout << std::endl;
     while (!m_buffer_data.empty()) {
         c = m_buffer_data.front();
-        std::cout << c;
         m_buffer_data.pop();
         if (!got_name) {
             if (c != pixhawk_packet::PACKET_START) {
