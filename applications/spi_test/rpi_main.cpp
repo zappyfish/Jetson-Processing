@@ -18,7 +18,7 @@ int main() {
 
     nrf_handler::rf_callback cb;
 
-    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::TX, 25, &cb);
+    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::RX, 25, &cb);
 
     cb.callback = &callback;
 
