@@ -76,8 +76,10 @@
          ../../logging/*.h
          ../../logging/files/*.h
          ../../logging/time/*.h
-         ../../systems/*.h
-         ../../systems/*.cpp
+         ../../systems/final_rpi_system.h
+         ../../systems/flight_system.h
+         ../../systems/final_rpi_system.cpp
+         ../../systems/flight_system.cpp
          )
 
  add_executable( main main.cpp ${SOURCE})
