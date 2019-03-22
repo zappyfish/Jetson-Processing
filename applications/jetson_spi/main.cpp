@@ -23,10 +23,9 @@ int main() {
 
     handler.send_packet(test_packet);
 
-    handler.set_mode(nrf_handler::mode::RX);
 
     while (true) {
-        handler.check_packets();
+        handler.resend_last_packet();
     }
 
 }
