@@ -9,6 +9,7 @@
 
 #include "soft_error_entry.h"
 #include "data_logger.h"
+#include <iostream>
 
 const char* jetson_uart::UART_MAIN = "/dev/ttyS0";
 const speed_t jetson_uart::DEFAULT_SPEED = B115200;
@@ -74,10 +75,11 @@ void jetson_uart::read_buffer(std::vector<char> &read_data) {
         char buf[50]; // read 50 at a time
         int bytes_read = read(m_fd, buf, 50);
         while (bytes_read > 0) {
-            std::cout << bytes_read << std::endl;
             for (int i = 0; i < bytes_read; i++) {
+                std::cout << buf[i];
                 read_data.push_back(buf[i]);
             }
+            std::cout << std::endl;
             bytes_read = read(m_fd, buf, 50);
         }
     }
