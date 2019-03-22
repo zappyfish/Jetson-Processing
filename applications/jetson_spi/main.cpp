@@ -19,14 +19,14 @@ int main() {
 
     handler.verify_spi();
 
-//    rf_packet test_packet(-5, 1);
-//
-//    handler.send_packet(test_packet);
-//
-//
+    rf_packet test_packet(-5, 1);
+
+    handler.send_packet(test_packet);
+
+
     while (true) {
-        // handler.resend_last_packet();
-        handler.check_packets();
+        handler.resend_last_packet();
+        // handler.check_packets();
     }
 
 

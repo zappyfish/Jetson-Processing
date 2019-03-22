@@ -18,7 +18,7 @@ int main() {
 
     nrf_handler::rf_callback cb;
 
-    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::TX, 25, &cb);
+    nrf_handler handler(nrf_handler::board_type::rpi, nrf_handler::mode::RX, 25, &cb);
 
     cb.callback = &callback;
 
@@ -27,13 +27,13 @@ int main() {
 
     std::cout << "starting loop\n";
 
-    rf_packet test_packet(-5, 1);
-
-    handler.send_packet(test_packet);
+//    rf_packet test_packet(-5, 1);
+//
+//    handler.send_packet(test_packet);
 
     while (true) {
-        // handler.check_packets();
-        handler.resend_last_packet();
+        handler.check_packets();
+        // handler.resend_last_packet();
     }
 
     handler.set_mode(nrf_handler::mode::RX);
