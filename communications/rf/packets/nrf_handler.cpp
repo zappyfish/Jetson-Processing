@@ -145,6 +145,8 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         m_spi->write_read_bytes(rx_mode, dummy_read, 2);
         std::cout << "setting into rx mode \n";
 
+        verify_spi();
+
         reset_irq();
         m_ce->set_pin_state(uav_gpio::state::high); // Important!
 
