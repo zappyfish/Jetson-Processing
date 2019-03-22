@@ -108,9 +108,9 @@ void nrf_handler::init() {
     uint8_t config_write[2];
     uint8_t dummy_read[2];
 
-    config_write[0] = (REGISTER_MASK & CONFIG) | W_MASK;
-    config_write[1] = 0x0C;
-    m_spi->write_read_bytes(config_write, dummy_read, 2);
+//    config_write[0] = (REGISTER_MASK & CONFIG) | W_MASK;
+//    config_write[1] = 0x0C;
+//    m_spi->write_read_bytes(config_write, dummy_read, 2);
 
     config_write[0] = (EN_AA & REGISTER_MASK) | W_MASK;
     config_write[1] = 0x01;
@@ -135,6 +135,7 @@ void nrf_handler::init() {
 void nrf_handler::set_mode(nrf_handler::mode md) {
     // SPI stuff
     m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
+    std::this_thread::sleep_for(std::chrono::milliseconds(nrf_handler::CE_PULSE_TIME)); // let it settle
     if (md == nrf_handler::mode::RX) {
         uint8_t rx_mode[2];
         rx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
