@@ -10,8 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rpi_final/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +70,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="83" />
-          <entry key="cpp" value="23040" />
+          <entry key="cpp" value="23136" />
           <entry key="h" value="13013" />
           <entry key="txt" value="567" />
         </counts>
@@ -77,32 +79,55 @@
         <counts>
           <entry key="CMakeLists.txt" value="567" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="36131" />
+          <entry key="ObjectiveC" value="36227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="c" value="8" />
-          <entry key="cpp" value="196" />
+          <entry key="cpp" value="198" />
           <entry key="h" value="199" />
-          <entry key="txt" value="15" />
+          <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="15" />
-          <entry key="ObjectiveC" value="403" />
+          <entry key="CMakeLists.txt" value="16" />
+          <entry key="ObjectiveC" value="405" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
+            <state relative-caret-position="1058">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="152" column="54" selection-start-line="152" selection-start-column="54" selection-end-line="152" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiments/rpi_final/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,15 +160,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/capture/jetson_camera.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="23" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="103">
@@ -165,28 +181,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/final_jetson/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
               <caret line="77" selection-start-line="77" selection-end-line="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/uart.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -230,8 +228,8 @@
       <find>capture</find>
       <find>pi</find>
       <find>send_packet</find>
-      <find>gps_values</find>
       <find>cout</find>
+      <find>gps_values</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -240,7 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/vector_3.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/vector_3.h" />
         <option value="$PROJECT_DIR$/systems/subscale_2_system.h" />
@@ -285,12 +282,13 @@
         <option value="$PROJECT_DIR$/applications/jetson_spi/main.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h" />
-        <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
+        <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
+        <option value="$PROJECT_DIR$/experiments/rpi_final/main.cpp" />
       </list>
     </option>
   </component>
@@ -385,52 +383,6 @@
             <path>
               <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-              <item name="uart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="rf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="rf" type="462c0819:PsiDirectoryNode" />
-              <item name="comms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="rf" type="462c0819:PsiDirectoryNode" />
-              <item name="comms" type="462c0819:PsiDirectoryNode" />
-              <item name="spi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -443,70 +395,18 @@
               <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="nvidia" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi_final" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
               <item name="subscale2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="capture" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="processing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="processing" type="462c0819:PsiDirectoryNode" />
-              <item name="uav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="processing" type="462c0819:PsiDirectoryNode" />
-              <item name="uav" type="462c0819:PsiDirectoryNode" />
-              <item name="accel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
               <item name="systems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -557,12 +457,12 @@
       <workItem from="1552603527545" duration="9659000" />
       <workItem from="1552887536774" duration="8340000" />
       <workItem from="1553191606248" duration="11091000" />
-      <workItem from="1553277201393" duration="3673000" />
+      <workItem from="1553277201393" duration="4167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108427000" />
+    <option name="totallyTimeSpent" value="108921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -596,16 +496,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/test_packet.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/pose_packet.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -751,13 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -913,8 +796,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
+        <state relative-caret-position="1058">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="152" column="54" selection-start-line="152" selection-start-column="54" selection-end-line="152" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rpi_final/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
