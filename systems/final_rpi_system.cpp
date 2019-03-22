@@ -141,7 +141,8 @@ void final_rpi_system::mode_packet_callback(const char *name, std::vector<const 
 
 void final_rpi_system::gps_ack_callback(const char *name, std::vector<const char *> keys,
                                         std::vector<const char *> values, void *args) {
-    m_gps_received_by_pixhawk = true;
+    // m_gps_received_by_pixhawk = true;
+    // TODO: complete me
 }
 
 void final_rpi_system::rf_callback(rf_packet packet, void*args) {
