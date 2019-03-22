@@ -33,6 +33,8 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
     }
     m_callback = callback;
     init();
+    std::cout << "first verify\n";
+    verify_spi();
     set_mode(m_mode);
 }
 
