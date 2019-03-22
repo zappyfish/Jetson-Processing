@@ -31,28 +31,29 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
             data_logger::get_instance().save_log_entry(s_error);
     }
 
+
+    cfmakeraw(&tty);
     cfsetospeed(&tty, baud_rate);
     cfsetispeed(&tty, baud_rate);
 
-//    tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8;     // 8-bit chars
-//    // disable IGNBRK for mismatched speed tests; otherwise receive break
-//    // as \000 chars
-//    tty.c_iflag &= ~IGNBRK;         // disable break processing
-//    tty.c_lflag = 0;                // no signaling chars, no echo,
-//                                    // no canonical processing
-//    tty.c_oflag = 0;                // no remapping, no delays
-//    tty.c_cc[VMIN]  = 0;            // read doesn't block
-//    tty.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
-//
-//    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
-//
-//    tty.c_cflag |= (CLOCAL | CREAD);// ignore modem controls,
-//                                    // enable reading
-//    tty.c_cflag &= ~PARENB;      // shut off parity
-//    tty.c_cflag &= ~CSTOPB;
-//    tty.c_cflag &= ~CRTSCTS;
+    tty.c_cflag |= (CLOCAL | CREAD);
+    tty.c_cflag &= ~PARENB;
+    tty.c_cflag &= ~CSTOPB;
+    tty.c_cflag &= ~CSIZE;
+    tty.c_cflag |= CS8;
+    tty.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG);
+    tty.c_oflag &= ~OPOST;
 
-    cfmakeraw(&tty);
+    options.c_cc [VMIN]  =   0;
+    options.c_cc [VTIME] = 100;	// Ten seconds (100 deciseconds)
+
+    int status;
+    ioctl (fd, TIOCMGET, &status);
+
+    status |= TIOCM_DTR;
+    status |= TIOCM_RTS;
+
+    ioctl (fd, TIOCMSET, &status);
 
     if (tcsetattr(m_fd, TCSANOW, &tty) != 0) {
         // TODO: log soft error

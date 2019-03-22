@@ -67,7 +67,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="83" />
-          <entry key="cpp" value="22830" />
+          <entry key="cpp" value="22885" />
           <entry key="h" value="13013" />
           <entry key="txt" value="567" />
         </counts>
@@ -76,7 +76,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="567" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="35921" />
+          <entry key="ObjectiveC" value="35976" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -118,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="494">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -136,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
+            <state relative-caret-position="298">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
@@ -548,12 +548,12 @@
       <workItem from="1552603527545" duration="9659000" />
       <workItem from="1552887536774" duration="8340000" />
       <workItem from="1553191606248" duration="11091000" />
-      <workItem from="1553277201393" duration="2082000" />
+      <workItem from="1553277201393" duration="2362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106836000" />
+    <option name="totallyTimeSpent" value="107116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -894,15 +894,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
+        <state relative-caret-position="298">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="494">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
