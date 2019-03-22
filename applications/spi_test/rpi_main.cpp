@@ -44,7 +44,7 @@ int main() {
 
 }
 
-void callback(rf_packet packet) {
+void callback(rf_packet packet, void *args) {
     std::cout << "callback on a packet\n";
     std::cout << packet.get_gps_x() << ", " << packet.get_gps_y() << std::endl;
 }
