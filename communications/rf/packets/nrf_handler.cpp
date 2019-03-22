@@ -127,6 +127,7 @@ void nrf_handler::init() {
 
     config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
     config_write[1] = 3; // TODO: make this clearer later
+    m_spi->write_read_bytes(config_write, dummy_read, 2);
 
     reset_irq();
 }
