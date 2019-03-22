@@ -52,6 +52,8 @@ void final_jetson_system::flight_setup() {
     m_beacon_deployed_callback.callback = &final_jetson_system::beacon_deployed_callback;
     m_beacon_deployed_callback.args = this;
 
+    packet_manager::get_instance().set_packet_callback(&m_beacon_deployed_callback);
+
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
 }
