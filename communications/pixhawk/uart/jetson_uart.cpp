@@ -7,6 +7,9 @@
 
 #ifdef __linux__
 
+#include "soft_error_entry.h"
+#include "data_logger.h"
+
 const char* jetson_uart::UART_MAIN = "/dev/ttyS0";
 const speed_t jetson_uart::DEFAULT_SPEED = B115200;
 
@@ -18,6 +21,13 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     if (tcgetattr(m_fd, &tty) != 0)
     {
            // TODO: log soft error
+           std::string category = "jetson uart";
+            std::string description = "could not open uart";
+            std::map<std::string, std::string> metadata;
+            metadata["file"] = "jetson_uart.cpp";
+            metadata["method"] = "constructor";
+            soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
+            data_logger::get_instance().save_log_entry(s_error);
     }
 
     cfsetospeed(&tty, baud_rate);
