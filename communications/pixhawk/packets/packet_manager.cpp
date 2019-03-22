@@ -55,6 +55,7 @@ size_t packet_manager::check_packets() {
     size_t success_count = 0;
 
     while (packets_to_parse > 0) {
+        std::cout << "parsing\n";
         if (parse_for_packet_data()) {
             success_count++;
         }
