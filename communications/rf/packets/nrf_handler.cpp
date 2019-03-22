@@ -32,6 +32,7 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
         m_send_buf[i] = TAG[i];
     }
     m_callback = callback;
+    init();
     set_mode(m_mode);
 }
 
@@ -102,6 +103,9 @@ void nrf_handler::send_packet(rf_packet &packet) {
 
 void nrf_handler::init() {
     m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
+
+    uint8_t config_write[2];
+    uint8_t dummy_read[2];
 
     config_write[0] = (EN_AA & REGISTER_MASK) | W_MASK;
     config_write[1] = 0x01;
