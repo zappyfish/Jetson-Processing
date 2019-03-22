@@ -130,6 +130,7 @@ void final_jetson_system::mode_packet_callback(const char *name, std::vector<con
 
 void final_jetson_system::beacon_deployed_callback(const char *name, std::vector<const char *> keys,
                                                    std::vector<const char *> values, void *args) {
+    std::cout << "beacon\n";
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
     gps_values_packet packet(keys, values);
     rf_packet send_packet(packet.get_x(), packet.get_y());
