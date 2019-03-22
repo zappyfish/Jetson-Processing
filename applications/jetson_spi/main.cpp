@@ -11,9 +11,6 @@ void callback(rf_packet packet, void *args);
 
 int main() {
 
-    rpi_file_manager *f_manager = new rpi_file_manager();
-    data_logger::get_instance().start_flight_session(f_manager);
-
     nrf_handler::rf_callback cb;
 
     nrf_handler handler(nrf_handler::board_type::jetson, nrf_handler::mode::RX, 254, nullptr);

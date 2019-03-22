@@ -10,14 +10,11 @@
 #include "spi_bus.h"
 #include "nrf_handler.h"
 #include "rf_packet.h"
-#include "rpi_file_manager.h"
 
 void callback(rf_packet packet, void *args);
 
 int main() {
 
-    rpi_file_manager *f_manager = new rpi_file_manager();
-    data_logger::get_instance().start_flight_session(f_manager);
 
     nrf_handler::rf_callback cb;
 
