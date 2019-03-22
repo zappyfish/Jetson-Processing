@@ -13,7 +13,7 @@ int main() {
 
     nrf_handler::rf_callback cb;
 
-    nrf_handler handler(nrf_handler::board_type::jetson, nrf_handler::mode::RX, 254, nullptr);
+    nrf_handler handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, nullptr);
 
     cb.callback = &callback;
 
