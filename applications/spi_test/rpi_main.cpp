@@ -12,7 +12,7 @@
 #include "rf_packet.h"
 #include "rpi_file_manager.h"
 
-void callback(rf_packet packet);
+void callback(rf_packet packet, void *args);
 
 int main() {
 
