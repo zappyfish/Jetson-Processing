@@ -76,6 +76,7 @@ void jetson_uart::read_buffer(std::vector<char> &read_data) {
         int bytes_read = read(m_fd, buf, 50);
         while (bytes_read > 0) {
             for (int i = 0; i < bytes_read; i++) {
+                std::cout << buf[i];
                 read_data.push_back(buf[i]);
             }
             bytes_read = read(m_fd, buf, 50);
