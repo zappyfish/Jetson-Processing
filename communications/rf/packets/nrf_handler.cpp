@@ -33,8 +33,6 @@ nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, un
     }
     m_callback = callback;
     init();
-    std::cout << "first verify\n";
-    verify_spi();
     set_mode(m_mode);
 }
 
@@ -133,9 +131,8 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
     if (md == nrf_handler::mode::RX) {
         uint8_t rx_mode[2];
-        rx_mode[0] = (CONFIG & REGISTER_MASK) | R_MASK;
-        uint8_t config_byte = (CONFIG_BYTE | WRITE_MODE);
-        rx_mode[1] = (config_byte & REGISTER_MASK);
+        rx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
+        uint8_t config_byte = 0b000001011;
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(rx_mode, dummy_read, 2);
 
@@ -146,7 +143,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     } else if (md == nrf_handler::mode::TX) {
         uint8_t tx_mode[2];
         tx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        tx_mode[1] = 0b00001011; // make this clearer later
+        tx_mode[1] = 0b00001010; // make this clearer later
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(tx_mode, dummy_read, 2);
     }
