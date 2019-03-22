@@ -45,7 +45,6 @@ size_t packet_manager::check_packets() {
     size_t packets_to_parse = 0;
     for (size_t i = 0; i < buffer_data.size(); i++) {
         char c = buffer_data.at(i);
-        std::cout << c << std::endl;
         if (c == pixhawk_packet::PACKET_END) {
             packets_to_parse++;
         } else {
@@ -74,10 +73,8 @@ bool packet_manager::parse_for_packet_data() {
     bool got_name = false;
     bool is_key = true;
     char c;
-    std::cout << std::endl;
     while (!m_buffer_data.empty()) {
         c = m_buffer_data.front();
-        std::cout << c;
         m_buffer_data.pop();
         if (!got_name) {
             if (c != pixhawk_packet::PACKET_START) {

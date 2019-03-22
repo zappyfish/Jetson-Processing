@@ -11,7 +11,7 @@
 #include "data_logger.h"
 #include <iostream>
 
-const char* jetson_uart::UART_MAIN = "/dev/ttyS0";
+const char* jetson_uart::UART_MAIN = "/dev/ttyTHS1";
 const speed_t jetson_uart::DEFAULT_SPEED = B115200;
 
 jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
