@@ -35,6 +35,9 @@
          ${CMAKE_SOURCE_DIR}/../../images/processing
          ${CMAKE_SOURCE_DIR}/../../images/processing/target
          ${CMAKE_SOURCE_DIR}/../../images/processing/uav/accel
+         ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/gpio
+         ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/spi
+         ${CMAKE_SOURCE_DIR}/../../communications/rf/packets
          ${CMAKE_SOURCE_DIR}/../../logging
          ${CMAKE_SOURCE_DIR}/../../logging/files
          ${CMAKE_SOURCE_DIR}/../../logging/time
@@ -45,6 +48,9 @@
          ../../communications/pixhawk/packets/*.cpp
          ../../communications/pixhawk/uart/*.cpp
          ../../communications/rf/*.cpp
+         ../../communications/rf/comms/gpio/*.cpp
+         ../../communications/rf/comms/spi/*.cpp
+         ../../communications/rf/packets/*.cpp
          ../../images/*.cpp
          ../../images/buffer/*.cpp
          ../../images/capture/*.cpp
@@ -58,6 +64,9 @@
          ../../communications/pixhawk/packets/*.h
          ../../communications/pixhawk/uart/*.h
          ../../communications/rf/*.h
+         ../../communications/rf/comms/gpio/*.h
+         ../../communications/rf/comms/spi/*.h
+         ../../communications/rf/packets/*.h
          ../../images/*.h
          ../../images/buffer/*.h
          ../../images/capture/*.h
