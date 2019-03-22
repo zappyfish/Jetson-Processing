@@ -93,6 +93,8 @@ void final_jetson_system::sample_accel_thread() {
         m_lpf_accel.get_accel(accel_vect);
         m_last_accel.copy_vals(accel_vect);
         std::this_thread::sleep_for(std::chrono::milliseconds(3)); // sample at ~300hz
+        std::cout << accel_vect.x << std::endl;
+        std::cout << accel_vect.y << std::endl;
         std::cout << accel_vect.z << std::endl;
     }
 }
