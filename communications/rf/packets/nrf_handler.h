@@ -95,6 +95,7 @@ private:
     void reset_irq();
     void flush_tx();
     void flush_rx();
+    void init();
     uint8_t get_bytes_available();
 
     bool data_available();

@@ -100,36 +100,43 @@ void nrf_handler::send_packet(rf_packet &packet) {
     }
 }
 
+void nrf_handler::init() {
+    m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
+
+    config_write[0] = (EN_AA & REGISTER_MASK) | W_MASK;
+    config_write[1] = 0x01;
+    m_spi->write_read_bytes(config_write, dummy_read, 2); // enable auto-ack on pipe 0
+
+    config_write[0] = (EN_RX_ADDR & REGISTER_MASK) | W_MASK;
+    config_write[1] = 0x01; // enable pipe 0
+    m_spi->write_read_bytes(config_write, dummy_read, 2);
+
+    config_write[0] = (RX_PW_P0 & REGISTER_MASK) | W_MASK;
+    config_write[1] = PIPE_SIZE;
+    m_spi->write_read_bytes(config_write, dummy_read, 2); // PIPE_SIZE bytes in rx payload
+
+
+    config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
+    config_write[1] = 0b0000011;
+
+    reset_irq();
+}
+
 void nrf_handler::set_mode(nrf_handler::mode md) {
     // SPI stuff
     m_ce->set_pin_state(uav_gpio::state::low); // standby mode so we can write registers
     if (md == nrf_handler::mode::RX) {
+        uint8_t rx_mode[2];
+        rx_mode[0] = (CONFIG & REGISTER_MASK) | R_MASK;
+        uint8_t config_byte = (CONFIG_BYTE | WRITE_MODE);
+        rx_mode[1] = (config_byte & REGISTER_MASK);
         uint8_t dummy_read[2];
-        uint8_t config_byte = CONFIG_BYTE | READ_MODE; // initially RX
-        uint8_t config_write[2];
-        config_write[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        config_write[1] = config_byte;
-        m_spi->write_read_bytes(config_write, dummy_read, 2);
-
-        config_write[0] = (EN_AA & REGISTER_MASK) | W_MASK;
-        config_write[1] = 0x01;
-        m_spi->write_read_bytes(config_write, dummy_read, 2); // enable auto-ack on pipe 0
-
-        config_write[0] = (EN_RX_ADDR & REGISTER_MASK) | W_MASK;
-        config_write[1] = 0x01; // enable pipe 0
-        m_spi->write_read_bytes(config_write, dummy_read, 2);
-
-        config_write[0] = (RX_PW_P0 & REGISTER_MASK) | W_MASK;
-        config_write[1] = PIPE_SIZE;
-        m_spi->write_read_bytes(config_write, dummy_read, 2); // PIPE_SIZE bytes in rx payload
-
-
-        config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
-        config_write[1] = 0b0000011;
-
-        m_ce->set_pin_state(uav_gpio::state::high); // start listening
+        m_spi->write_read_bytes(rx_mode, dummy_read, 2);
 
         reset_irq();
+        m_ce->set_pin_state(uav_gpio::state::high); // Important!
+
+
     } else if (md == nrf_handler::mode::TX) {
         uint8_t tx_mode[2];
         tx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
