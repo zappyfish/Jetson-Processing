@@ -125,6 +125,9 @@ void nrf_handler::init() {
     config_write[1] = PIPE_SIZE;
     m_spi->write_read_bytes(config_write, dummy_read, 2); // PIPE_SIZE bytes in rx payload
 
+    config_write[0] = (RETRY & REGISTER_MASK) | W_MASK;
+    config_write[1] = 0xff;
+    m_spi->write_read_bytes(config_write, dummy_read, 2);
 
     config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
     config_write[1] = 3; // TODO: make this clearer later

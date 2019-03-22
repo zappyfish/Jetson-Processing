@@ -33,6 +33,8 @@
 #define RX_PW_P0 0x11 // the number of bytes available in RX
 #define SETUP_AW 0x03
 #define STATUS 0x07
+#define RETRY 0x04
+
 
 #define READ_MODE 0x01
 #define WRITE_MODE 0x00
