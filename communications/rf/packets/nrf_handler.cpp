@@ -30,7 +30,7 @@ m_mode(md) {
     }
     m_send_buf[0] = W_TX_PAYLOAD;
     for (size_t i = 1; i <= TAG_LENGTH; i++) {
-        m_send_buf[i] = TAG[i];
+        m_send_buf[i] = TAG[i - 1];
     }
     m_callback = callback;
     init();
