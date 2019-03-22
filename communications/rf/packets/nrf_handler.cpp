@@ -54,6 +54,7 @@ void nrf_handler::check_packets() {
         set_mode(mode::RX); // Won't have anything, so end here
     } else {
         if (data_available()) {
+            std::cout << "data available\n";
             uint8_t write[1 + PIPE_SIZE];
             write[0] = R_RX_PAYLOAD;
             for(uint8_t i = 1; i < 1 + PIPE_SIZE; ++i) {
