@@ -33,6 +33,8 @@ int main() {
 
     while (true) {
         handler.check_packets();
+        std::this_thread::sleep_for(std::chrono::milliseconds(50)); // let it settle
+
         // handler.resend_last_packet();
     }
 

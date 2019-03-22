@@ -5,6 +5,7 @@
 #include "uav_gpio.h"
 #include "spi_bus.h"
 #include "nrf_handler.h"
+#include <thread>
 #include "rf_packet.h"
 
 void callback(rf_packet packet, void *args);
@@ -26,6 +27,7 @@ int main() {
 
     while (true) {
         handler.resend_last_packet();
+
         // handler.check_packets();
     }
 
