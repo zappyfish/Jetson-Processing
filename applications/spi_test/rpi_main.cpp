@@ -28,10 +28,6 @@ int main() {
 
     handler.verify_spi();
 
-
-    rf_packet test_packet(-5, 1);
-    handler.send_packet(test_packet);
-
     std::cout << "starting loop\n";
 
     while (true) {
