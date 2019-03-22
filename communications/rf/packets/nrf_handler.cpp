@@ -133,7 +133,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     if (md == nrf_handler::mode::RX) {
         uint8_t rx_mode[2];
         rx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        uint8_t config_byte = 7;
+        uint8_t config_byte = 11;
         rx_mode[1] = config_byte; // TODO: make clearer
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(rx_mode, dummy_read, 2);
