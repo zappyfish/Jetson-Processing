@@ -3,7 +3,7 @@
 
 #include "mma8451_pi.h"
 #include <linux/i2c.h>
-#include <linux/i2c-dev.h>
+// #include <linux/i2c-dev.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -37,7 +37,7 @@ void mma8451_write_byte(mma8451* handle, int reg, char data)
     //Send to the bus
     if(ioctl(handle->file, I2C_RDWR, &packets) < 0) 
     {
-        perror("Unable to send data");
+        // perror("Unable to send data");
     }
 
 }
@@ -68,7 +68,7 @@ char mma8451_read_byte(mma8451* handle, int reg)
     //Send to the bus
     if(ioctl(handle->file, I2C_RDWR, &packets) < 0) 
     {
-        perror("Unable to send data");
+        // perror("Unable to send data");
     }
 
     //return the value
@@ -103,7 +103,7 @@ void mma8451_read_multibyte(mma8451* handle, int reg, char* output, size_t len)
     //Send to the bus
     if(ioctl(handle->file, I2C_RDWR, &packets) < 0) 
     {
-        perror("Unable to send data");
+        // perror("Unable to send data");
     }
 }
 
