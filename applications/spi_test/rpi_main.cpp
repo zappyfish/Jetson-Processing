@@ -23,7 +23,7 @@ int main() {
     cb.callback = &callback;
 
 
-    // andler.verify_spi();
+    handler.verify_spi();
 
     std::cout << "starting loop\n";
 
