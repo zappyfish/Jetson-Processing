@@ -45,6 +45,7 @@ size_t packet_manager::check_packets() {
     size_t packets_to_parse = 0;
     for (size_t i = 0; i < buffer_data.size(); i++) {
         char c = buffer_data.at(i);
+        std::cout << c << std::endl;
         if (c == pixhawk_packet::PACKET_END) {
             packets_to_parse++;
         } else {
@@ -55,7 +56,6 @@ size_t packet_manager::check_packets() {
     size_t success_count = 0;
 
     while (packets_to_parse > 0) {
-        std::cout << "parsing\n";
         if (parse_for_packet_data()) {
             success_count++;
         }
