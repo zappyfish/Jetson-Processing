@@ -68,6 +68,12 @@ void nrf_handler::check_packets() {
 
             reset_irq();
 
+            for (int i = 0; i < 10; i++) {
+                std::cout << read_buf[i];
+            }
+
+            std::cout << std::endl;
+
             // first, verify that it is PRIMO VADL CERTIFIED:
             for (int i = 1; i < 5; i++) {
                 if (read_buf[i] != nrf_handler::TAG[i - 1]) {
