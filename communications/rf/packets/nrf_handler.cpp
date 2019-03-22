@@ -70,6 +70,7 @@ void nrf_handler::check_packets() {
 
             // first, verify that it is PRIMO VADL CERTIFIED:
             for (int i = 1; i < 5; i++) {
+                std::cout << read_buf[i];
                 if (read_buf[i] != nrf_handler::TAG[i - 1]) {
                     return; // fuck off uncc
                 }
