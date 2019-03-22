@@ -108,6 +108,9 @@ void nrf_handler::init() {
     uint8_t config_write[2];
     uint8_t dummy_read[2];
 
+    config_write[0] = (REGISTER_MASK & CONFIG) | W_MASK;
+    config_write[1] = 0x0C;
+
     config_write[0] = (EN_AA & REGISTER_MASK) | W_MASK;
     config_write[1] = 0x01;
     m_spi->write_read_bytes(config_write, dummy_read, 2); // enable auto-ack on pipe 0

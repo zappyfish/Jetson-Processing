@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +68,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="c" value="108" />
-          <entry key="cpp" value="23938" />
-          <entry key="h" value="13031" />
+          <entry key="cpp" value="23996" />
+          <entry key="h" value="13035" />
           <entry key="txt" value="585" />
         </counts>
       </usages-collector>
@@ -77,7 +77,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="585" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="37072" />
+          <entry key="ObjectiveC" value="37134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,13 +101,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1136">
+            <state relative-caret-position="135">
               <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -116,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1373">
-              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+            <state relative-caret-position="375">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -128,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
+            <state relative-caret-position="315">
+              <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
               <folding>
                 <element signature="e#424#616#0" expanded="true" />
                 <element signature="e#680#825#0" expanded="true" />
@@ -141,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/jetson_spi/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -232,8 +232,8 @@
       <find>gps_ack_callback</find>
       <find>rf_callback</find>
       <find>verify_spi</find>
-      <find>send_gps</find>
       <find>config</find>
+      <find>send_gps</find>
       <find>gps_values</find>
       <find>set_mode</find>
     </findStrings>
@@ -291,10 +291,10 @@
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
+        <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
         <option value="$PROJECT_DIR$/applications/jetson_spi/main.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" />
-        <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
       </list>
     </option>
   </component>
@@ -509,18 +509,18 @@
       <workItem from="1552603527545" duration="9659000" />
       <workItem from="1552887536774" duration="8340000" />
       <workItem from="1553191606248" duration="11091000" />
-      <workItem from="1553277201393" duration="8736000" />
+      <workItem from="1553277201393" duration="9031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113490000" />
+    <option name="totallyTimeSpent" value="113785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15873016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15873016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -832,13 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1373">
-          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -848,26 +841,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/jetson_spi/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1136">
+        <state relative-caret-position="135">
           <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
-          <folding>
-            <element signature="e#424#616#0" expanded="true" />
-            <element signature="e#680#825#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,6 +857,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
+          <folding>
+            <element signature="e#424#616#0" expanded="true" />
+            <element signature="e#680#825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>
