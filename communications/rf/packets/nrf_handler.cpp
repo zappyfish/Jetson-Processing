@@ -139,6 +139,10 @@ void nrf_handler::init() {
     config_write[1] = 3; // TODO: make this clearer later
     m_spi->write_read_bytes(config_write, dummy_read, 2);
 
+    config_write[0] = (RF_SETUP & REGISTER_MASK) | W_MASK;
+    config_write[1] = 0x07; // TODO: make this clearer later
+    m_spi->write_read_bytes(config_write, dummy_read, 2);
+
     reset_irq();
 }
 

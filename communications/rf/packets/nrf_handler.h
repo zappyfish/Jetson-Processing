@@ -34,6 +34,7 @@
 #define SETUP_AW 0x03
 #define STATUS 0x07
 #define RETRY 0x04
+#define RF_SETUP 0x06
 
 
 #define READ_MODE 0x01
