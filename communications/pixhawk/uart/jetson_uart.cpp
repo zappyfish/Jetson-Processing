@@ -7,7 +7,7 @@
 
 #ifdef __linux__
 
-const char* jetson_uart::UART_MAIN = "/dev/ttyS2";
+const char* jetson_uart::UART_MAIN = "/dev/ttyS0";
 const speed_t jetson_uart::DEFAULT_SPEED = B115200;
 
 jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
@@ -43,6 +43,7 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
 
     if (tcsetattr(m_fd, TCSANOW, &tty) != 0) {
         // TODO: log soft error
+
     }
 }
 
