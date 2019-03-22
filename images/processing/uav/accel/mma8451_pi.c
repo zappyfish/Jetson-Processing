@@ -2,7 +2,9 @@
 #ifdef __linux__
 
 #include "mma8451_pi.h"
-// #include <linux/i2c.h>
+#ifdef RPI
+#include <linux/i2c.h>
+#endif
 #include <linux/i2c-dev.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
