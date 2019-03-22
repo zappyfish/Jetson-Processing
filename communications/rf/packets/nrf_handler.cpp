@@ -121,7 +121,7 @@ void nrf_handler::init() {
 
 
     config_write[0] = (SETUP_AW & REGISTER_MASK) | W_MASK;
-    config_write[1] = 0b0000011;
+    config_write[1] = 3; // TODO: make this clearer later
 
     reset_irq();
 }
@@ -132,7 +132,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     if (md == nrf_handler::mode::RX) {
         uint8_t rx_mode[2];
         rx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        uint8_t config_byte = 0b000001011;
+        uint8_t config_byte = 11; // TODO: make clearer
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(rx_mode, dummy_read, 2);
 
@@ -143,7 +143,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
     } else if (md == nrf_handler::mode::TX) {
         uint8_t tx_mode[2];
         tx_mode[0] = (CONFIG & REGISTER_MASK) | W_MASK;
-        tx_mode[1] = 0b00001010; // make this clearer later
+        tx_mode[1] = 10; // make this clearer later
         uint8_t dummy_read[2];
         m_spi->write_read_bytes(tx_mode, dummy_read, 2);
     }
