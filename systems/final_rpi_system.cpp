@@ -6,8 +6,7 @@
 
 final_rpi_system::final_rpi_system() : m_is_armed(false), m_lpf_accel(1, 0.05), m_should_sample_accel(true),
                                        m_accel_thread(&final_rpi_system::sample_accel_thread, this),
-                                       m_has_received_destination(false),
-                                       m_gps_received(false) {
+                                       m_has_received_destination(false), {
     m_nrf_handler.verify_spi();
     m_rf_callback.callback = &final_rpi_system::rf_callback;
     m_nrf_handler = nrf_handler(nrf_handler::board_type::rpi, nrf_handler::mode::RX, 25, &m_rf_callback);
