@@ -14,6 +14,8 @@ public:
     gps_entry(int x, int y);
     ~gps_entry();
 
+    std::string get_name();
+
 private:
 
     static const std::string ENTRY_ID;
