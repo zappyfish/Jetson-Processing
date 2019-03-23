@@ -10,6 +10,7 @@
 
 #include "uart.h"
 #include <termios.h>
+#include <sys/ioctl.h>
 #include <fcntl.h>
 #include <unistd.h>
 
