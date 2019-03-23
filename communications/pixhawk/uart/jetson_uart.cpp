@@ -38,18 +38,23 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     cfsetospeed(&tty, baud_rate);
     cfsetispeed(&tty, baud_rate);
 
-    tty.c_cflag |= (CLOCAL | CREAD);
-    tty.c_cflag &= ~PARENB;
-    tty.c_cflag &= ~CSTOPB;
-    tty.c_cflag &= ~CSIZE;
-    tty.c_cflag |= CS8;
-    tty.c_lflag &= ~(ICANON | ECHO | ECHOE |
-                   ECHOK | ECHONL |
-                   ISIG | IEXTEN);
-    tty.c_oflag &= ~(OPOST | ONLCR | OCRNL);
-    tty.c_iflag &= ~(INLCR | IGNCR | ICRNL | IGNBRK);
-    tty.c_iflag &= ~(INPCK | ISTRIP);
-    tty.c_cflag &= ~(PARENB | PARODD | CMSPAR);
+//    tty.c_cflag |= (CLOCAL | CREAD);
+//    tty.c_cflag &= ~PARENB;
+//    tty.c_cflag &= ~CSTOPB;
+//    tty.c_cflag &= ~CSIZE;
+//    tty.c_cflag |= CS8;
+//    tty.c_lflag &= ~(ICANON | ECHO | ECHOE |
+//                   ECHOK | ECHONL |
+//                   ISIG | IEXTEN);
+//    tty.c_oflag &= ~(OPOST | ONLCR | OCRNL);
+//    tty.c_iflag &= ~(INLCR | IGNCR | ICRNL | IGNBRK);
+//    tty.c_iflag &= ~(INPCK | ISTRIP);
+//    tty.c_cflag &= ~(PARENB | PARODD | CMSPAR);
+
+    tty.c_cflag = 7346; // Senpai, forgive me
+    tty.c_oflag = 0;
+    tty.c_iflag = 0;
+    tty.c_lflag = 0;
 
     int status;
     ioctl (m_fd, TIOCMGET, &status);
