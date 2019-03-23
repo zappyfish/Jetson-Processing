@@ -31,9 +31,6 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
             data_logger::get_instance().save_log_entry(s_error);
     }
 
-    std::cout << "c: " << tty.c_cflag << ", o: " << tty.c_oflag << ", i: " << tty.c_iflag << ", l: " << tty.c_lflag << std::endl;
-
-
     cfmakeraw(&tty);
     cfsetospeed(&tty, baud_rate);
     cfsetispeed(&tty, baud_rate);
