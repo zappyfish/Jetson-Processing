@@ -43,11 +43,11 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     tty.c_cflag |= CS8;
     tty.c_lflag &= ~(ICANON | ECHO | ECHOE |
                    ECHOK | ECHONL |
-                   ISIG | IEXTEN)
+                   ISIG | IEXTEN);
     tty.c_oflag &= ~(OPOST | ONLCR | OCRNL);
     tty.c_iflag &= ~(INLCR | IGNCR | ICRNL | IGNBRK);
     tty.c_iflag &= ~(INPCK | ISTRIP);
-    tty.c_cflag &= ~(PARENB | PARODD | CMSPAR)
+    tty.c_cflag &= ~(PARENB | PARODD | CMSPAR);
 
     int status;
     ioctl (m_fd, TIOCMGET, &status);
