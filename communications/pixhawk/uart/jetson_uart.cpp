@@ -15,7 +15,7 @@ const char* jetson_uart::UART_MAIN = "/dev/ttyTHS1";
 const speed_t jetson_uart::DEFAULT_SPEED = B115200;
 
 jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
-    m_fd = open(device, O_RDWR | O_NOCTTY | O_NDELAY | O_NONBLOCK);
+    m_fd = open(device, O_RDWR | O_NOCTTY | O_NONBLOCK);
 
     struct termios tty;
     std::memset(&tty, 0, sizeof tty);
@@ -41,8 +41,13 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     tty.c_cflag &= ~CSTOPB;
     tty.c_cflag &= ~CSIZE;
     tty.c_cflag |= CS8;
-    tty.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG);
-    tty.c_oflag &= ~OPOST;
+    tty.c_lflag &= ~(ICANON | ECHO | ECHOE |
+                   ECHOK | ECHONL |
+                   ISIG | IEXTEN)
+    tty.c_oflag &= ~(OPOST | ONLCR | OCRNL);
+    tty.c_iflag &= ~(INLCR | IGNCR | ICRNL | IGNBRK);
+    tty.c_iflag &= ~(INPCK | ISTRIP);
+    tty.c_cflag &= ~(PARENB | PARODD | CMSPAR)
 
     int status;
     ioctl (m_fd, TIOCMGET, &status);
