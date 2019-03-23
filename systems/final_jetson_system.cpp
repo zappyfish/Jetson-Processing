@@ -76,11 +76,11 @@ void final_jetson_system::perform_flight() {
         if (m_beacon_deployed.load()) { // TODO: check this
             m_nrf_handler.resend_last_packet();
         } else {
-            image_ptr img = m_image_buffer.retrieve_image();
-            data_logger::get_instance().log_image(img);
-            cv::Mat copy = img->get_mat_copy();
-            // TODO: Image processing here
-            m_target_detector.send_for_processing(copy, img->get_timestamp());
+//            image_ptr img = m_image_buffer.retrieve_image();
+//            data_logger::get_instance().log_image(img);
+//            cv::Mat copy = img->get_mat_copy();
+//            // TODO: Image processing here
+//            m_target_detector.send_for_processing(copy, img->get_timestamp());
         }
     }
 }
