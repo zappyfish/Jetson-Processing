@@ -22,6 +22,7 @@
 #include "mode_entry.h"
 #include "mode_packet.h"
 #include "accel_mma_8451_pi.h"
+#include "gps_entry.h"
 #include "nrf_handler.h"
 #include "rf_packet.h"
 #include <atomic>
