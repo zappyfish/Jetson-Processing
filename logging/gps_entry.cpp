@@ -4,6 +4,8 @@
 
 #include "gps_entry.h"
 
+const std::string gps_entry::ENTRY_ID = "beacon_gps";
+
 gps_entry::gps_entry(int x, int y) {
     add_data("x", x);
     add_data("y", y);
