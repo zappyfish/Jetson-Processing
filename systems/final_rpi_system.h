@@ -23,6 +23,7 @@
 #include "mode_packet.h"
 #include "accel_mma_8451_pi.h"
 #include "nrf_handler.h"
+#include "gps_entry.h"
 #include "rf_packet.h"
 #include <atomic>
 #include <chrono>
@@ -60,6 +61,7 @@ private:
     static void flight_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
     static void mode_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
     static void gps_ack_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
+    static void beacon_deployed_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
 
     // RF Callback
     static void rf_callback(rf_packet packet, void *args);
@@ -89,6 +91,8 @@ private:
     packet_manager::packet_callback m_flight_data_callback;
     packet_manager::packet_callback m_mode_callback;
     packet_manager::packet_callback m_gps_ack_callback;
+
+    packet_manager::packet_callback m_beacon_deployed_callback;
 
 };
 
