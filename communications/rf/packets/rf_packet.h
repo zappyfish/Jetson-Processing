@@ -14,8 +14,6 @@ class rf_packet {
 
 public:
 
-    static const int OFFSET;
-
     /**
      * NOTE: these should be scaled -100 to 100
      */
@@ -30,8 +28,8 @@ public:
 
 private:
 
-    uint8_t m_x;
-    uint8_t m_y;
+    int m_x;
+    int m_y;
 
     uint8_t m_buf_write_buf[2];
 };
