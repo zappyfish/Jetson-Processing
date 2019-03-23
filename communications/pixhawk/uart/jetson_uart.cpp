@@ -45,12 +45,12 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     tty.c_oflag &= ~OPOST;
 
     int status;
-    ioctl (fd, TIOCMGET, &status);
+    ioctl (m_fd, TIOCMGET, &status);
 
     status |= TIOCM_DTR;
     status |= TIOCM_RTS;
 
-    ioctl (fd, TIOCMSET, &status);
+    ioctl (m_fd, TIOCMSET, &status);
 
     usleep (10000) ;	// 10mS
 
