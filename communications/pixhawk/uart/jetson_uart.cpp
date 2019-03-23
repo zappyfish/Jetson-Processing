@@ -44,13 +44,15 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
     tty.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG);
     tty.c_oflag &= ~OPOST;
 
-//    int status;
-//    ioctl (fd, TIOCMGET, &status);
-//
-//    status |= TIOCM_DTR;
-//    status |= TIOCM_RTS;
-//
-//    ioctl (fd, TIOCMSET, &status);
+    int status;
+    ioctl (fd, TIOCMGET, &status);
+
+    status |= TIOCM_DTR;
+    status |= TIOCM_RTS;
+
+    ioctl (fd, TIOCMSET, &status);
+
+    usleep (10000) ;	// 10mS
 
     if (tcsetattr(m_fd, TCSANOW, &tty) != 0) {
         // TODO: log soft error
