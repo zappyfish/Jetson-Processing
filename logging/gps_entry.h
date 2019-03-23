@@ -7,7 +7,7 @@
 
 #include "log_entry.h"
 
-class gps_entry: public log_entry{
+class gps_entry: public log_entry {
 
 public:
 
