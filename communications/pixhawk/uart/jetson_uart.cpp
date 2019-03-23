@@ -56,6 +56,9 @@ jetson_uart::jetson_uart(const char* device, speed_t baud_rate) {
         // TODO: log soft error
 
     }
+
+    sleep(2); //required to make flush work, for some reason
+    tcflush(m_fd,TCIOFLUSH);
 }
 
 jetson_uart::~jetson_uart() {
