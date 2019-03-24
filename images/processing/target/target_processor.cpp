@@ -4,6 +4,9 @@
 
 #include "target_processor.h"
 #include <opencv2/opencv.hpp>
+#include <iostream>
+#include <stdio.h>
+#include <time.h>
 #include <math.h>
 
 using namespace std;
@@ -113,46 +116,48 @@ void target_processor::handle_target_error_data(double error_x, double error_y, 
 
 bool target_processor::find_target(cv::Mat &img) {
 
-    cv::Mat lab_space_img;
-    cv::cvtColor(img, lab_space_img, cv::COLOR_BGR2Lab);
+    Mat gray_img;
 
-    cv::Mat thresholded(img.rows, img.cols, CV_8UC1);
+    cvtColor(img, gray_img, CV_BGR2GRAY);
 
-    long long x_avg = 0;
-    long long y_avg = 0;
-    int is_target_pixel_count = 0;
+    Mat ret, blur;
+
+    GaussianBlur(gray_img, blur, Size(5,5), 0);
+    threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
 
 
-    for (int i = 0; i < lab_space_img.rows; i++) {
-        for (int j = 0; j < lab_space_img.cols; j++) {
-            Vec3b intensity = lab_space_img.at<Vec3b>(i, j);
-            uint8_t lightness = intensity.val[0];
-            uint8_t b_val = intensity.val[2];
-            if (lightness >= LIGHTNESS_THRESH && b_val >= B_THRESH_MIN) {
-                thresholded.at<uchar>(i, j) = 1;
-                x_avg += j;
-                y_avg += i;
-                is_target_pixel_count++;
-            } else {
-                thresholded.at<uchar>(i, j) = 0;
-            }
+    Mat structure_element1 = getStructuringElement(MORPH_RECT,Size(20,20));
+    Mat structure_element2 = getStructuringElement(MORPH_RECT,Size(10,10));
+    dilate(ret, ret, structure_element2);
+    erode(ret, ret, structure_element1);
+
+    vector<vector<Point> >contours;
+    vector<Vec4i>hierarchy;
+    int savedContour = -1;
+    double maxArea = 0.0;
+    findContours(ret, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
+
+    for (int i = 0; i< contours.size(); i++)
+    {
+        double area = contourArea(contours[i]);
+        if (area > maxArea)
+        {
+            maxArea = area;
+            savedContour = i;
         }
     }
 
-
-    if (is_target_pixel_count < 100) { // TODO: look into me
-        return false;
-    }
-
-    x_avg = x_avg / is_target_pixel_count;
-    y_avg = y_avg / is_target_pixel_count;
-
-
-    m_last_area_percentage = is_target_pixel_count / (m_image_to_process.rows * m_image_to_process.cols);
-
-    if (is_square(thresholded, is_target_pixel_count, x_avg, y_avg)) {
-        m_last_location[0] = x_avg - (img.cols / 2);
-        m_last_location[1] = (img.rows / 2) - y_avg;
+    double epsilon = 0.1*arcLength(contours[savedContour], true);
+    Mat approx;
+    approxPolyDP(contours[savedContour],approx,epsilon,true);
+    if (approx.rows == 4 && contours.size() < 5) {
+        polylines(ret, approx, true, Scalar(0,0,255), 2);
+        Moments m = moments(contours[savedContour]);
+        Point2f cpt = Point2f( m.m10/m.m00 , m.m01/m.m00 );
+        double r_center = img.rows/2;
+        double c_center = img.cols/2;
+        m_last_location[0] = r_center - cpt.x;
+        m_last_location[1] = cpt.y - c_center;
         return true;
     } else {
         return false;
