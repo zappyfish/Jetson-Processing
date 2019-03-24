@@ -10,8 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/communications/rf/packets/rf_packet.h" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/rf_packet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,6 +104,36 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1617625149">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ObjectiveC" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="113" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ObjectiveC" value="113" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -107,83 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
+        <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/final_jetson/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="916">
-              <caret line="89" column="131" selection-start-line="89" selection-start-column="131" selection-end-line="89" selection-end-column="131" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging/gps_entry.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging/gps_entry.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="-1808">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -249,7 +216,6 @@
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/dummy_spi.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/dummy_gpio.h" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.h" />
-        <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
         <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp" />
@@ -288,6 +254,7 @@
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/packets/rf_packet.h" />
         <option value="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
       </list>
     </option>
   </component>
@@ -298,10 +265,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="210" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="967" />
+    <option name="width" value="1230" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -348,126 +316,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic_thresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic_thresh" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="jetson_spi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="spi_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
-              <item name="uart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="rf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="communications" type="462c0819:PsiDirectoryNode" />
-              <item name="rf" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="final_jetson" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="rpi_final" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic_thresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic_thresh" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic_thresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic_thresh" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="processing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic_thresh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic_thresh" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="processing" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="processing" type="462c0819:PsiDirectoryNode" />
-              <item name="uav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="processing" type="462c0819:PsiDirectoryNode" />
-              <item name="uav" type="462c0819:PsiDirectoryNode" />
-              <item name="accel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
-              <item name="systems" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,17 +393,19 @@
       <workItem from="1552887536774" duration="8340000" />
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18263000" />
+      <workItem from="1553459665731" duration="1504000" />
+      <workItem from="1553461895145" duration="153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123017000" />
+    <option name="totallyTimeSpent" value="124674000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="210" y="23" width="1230" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15873016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1919192" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -608,9 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding>
-            <element signature="e#94#673#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,9 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#18#1437#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,9 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#106#819#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,9 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#84#1242#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,16 +595,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp" />
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h" />
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/directions_packet.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -791,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1204">
-          <caret line="111" column="1" lean-forward="true" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -812,31 +665,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging/gps_entry.h">
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/final_jetson/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
+        <state relative-caret-position="1170">
           <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
+        <state relative-caret-position="1335">
           <caret line="89" column="131" selection-start-line="89" selection-start-column="131" selection-end-line="89" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="54" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -847,17 +700,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+    <entry file="file://$PROJECT_DIR$/logging/gps_entry.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h">
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="195">
+          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -868,17 +721,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1808">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

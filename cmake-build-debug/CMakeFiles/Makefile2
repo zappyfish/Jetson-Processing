@@ -59,10 +59,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/emherron/Documents/VADL_AutoUAV
+CMAKE_SOURCE_DIR = /Users/emherron/Documents/dynamic_thresh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/emherron/Documents/VADL_AutoUAV/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/emherron/Documents/dynamic_thresh/cmake-build-debug
 
 #=============================================================================
 # Special targets to cleanup operation of make.
