@@ -19,7 +19,7 @@ public:
     static const char* IN_MANUAL;
     static const char* IN_GPS;
 
-    mode_packet(bool is_autonomous);
+    mode_packet(bool is_autonomous, bool is_target);
     mode_packet(std::vector<const char*> keys, std::vector<const char*> values);;
     ~mode_packet();
 
