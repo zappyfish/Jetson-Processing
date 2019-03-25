@@ -30,7 +30,7 @@ mode_packet::mode_packet(std::vector<const char *> keys, std::vector<const char 
             m_values.push_back(IN_TARGET);
             m_is_autonomous = true;
             m_is_target = true;
-        } else if (std::strlen(values.at(0) && values.at(0)[0] == 'g')) {
+        } else if (std::strlen(values.at(0)) > 0 && values.at(0)[0] == 'g') {
             m_values.push_back(IN_GPS);
             m_is_autonomous = true;
             m_is_target = false;
