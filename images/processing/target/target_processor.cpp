@@ -156,8 +156,8 @@ bool target_processor::find_target(cv::Mat &img) {
         cv::Point2f cpt = cv::Point2f( m.m10/m.m00 , m.m01/m.m00 );
         double r_center = img.rows/2;
         double c_center = img.cols/2;
-        m_last_location[0] = r_center - cpt.x;
-        m_last_location[1] = cpt.y - c_center;
+        m_last_location[0] = cpt.x - c_center;
+        m_last_location[1] = r_center - cpt.y;
         return true;
     } else {
         return false;

@@ -5,7 +5,7 @@ from math import atan2, sqrt, pow, exp
 
 class PoseKalmanFilter:
 
-    PROCESS_ERROR_COVARIANCE = 0.1 # TODO: fine tune this
+    PROCESS_ERROR_COVARIANCE = 0.001 # TODO: fine tune this
 
     def __init__(self, processed_folder, process_error=PROCESS_ERROR_COVARIANCE):
         self.imu_data = json.load(open(join(processed_folder, 'data.json')))
