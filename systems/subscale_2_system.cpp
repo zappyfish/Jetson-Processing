@@ -113,6 +113,6 @@ void subscale2_system::flight_packet_callback(const char *name, std::vector<cons
 void subscale2_system::mode_packet_callback(const char *name, std::vector<const char *> keys,
                                             std::vector<const char *> values, void *args) {
     mode_packet packet(keys, values);
-    mode_entry* entry = new mode_entry(packet.get_is_autonomous());
+    mode_entry* entry = new mode_entry(packet.get_is_autonomous(), packet.get_is_target());
     data_logger::get_instance().save_log_entry(entry);
 }

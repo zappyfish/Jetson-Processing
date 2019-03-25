@@ -22,6 +22,7 @@ private:
     static const std::string MODE_KEY;
     static const std::string AUTONOMOUS;
     static const std::string MANUAL;
+    static const std::string GPS;
 };
 
 

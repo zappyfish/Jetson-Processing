@@ -17,18 +17,21 @@ public:
     static const char* AUTONOMOUS_KEY;
     static const char* IN_AUTONOMOUS;
     static const char* IN_MANUAL;
+    static const char* IN_GPS;
 
     mode_packet(bool is_autonomous);
     mode_packet(std::vector<const char*> keys, std::vector<const char*> values);;
     ~mode_packet();
 
     bool get_is_autonomous();
+    bool get_is_target();
 
     const char* get_packet_type();
 
 private:
 
     bool m_is_autonomous;
+    bool m_is_target;
 
 };
 
