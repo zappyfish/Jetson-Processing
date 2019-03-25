@@ -15,7 +15,7 @@ public:
 
     static const char* PACKET_NAME;
     static const char* AUTONOMOUS_KEY;
-    static const char* IN_AUTONOMOUS;
+    static const char* IN_TARGET;
     static const char* IN_MANUAL;
     static const char* IN_GPS;
 
