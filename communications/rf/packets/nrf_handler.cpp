@@ -34,6 +34,8 @@ m_mode(md) {
     }
     m_callback = callback;
     init();
+    flush_rx();
+    reset_irq();
     set_mode(m_mode);
 }
 
