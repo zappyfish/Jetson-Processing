@@ -118,24 +118,24 @@ bool target_processor::find_target(cv::Mat &img) {
 
     Mat gray_img;
 
-    cvtColor(img, gray_img, CV_BGR2GRAY);
+    cv::cvtColor(img, gray_img, cv::CV_BGR2GRAY);
 
-    Mat ret, blur;
+    cv::Mat ret, blur;
 
-    GaussianBlur(gray_img, blur, Size(5,5), 0);
-    threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
+    cv::GaussianBlur(gray_img, blur, Size(5,5), 0);
+    cv::threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
 
 
-    Mat structure_element1 = getStructuringElement(MORPH_RECT,Size(20,20));
-    Mat structure_element2 = getStructuringElement(MORPH_RECT,Size(10,10));
-    dilate(ret, ret, structure_element2);
-    erode(ret, ret, structure_element1);
+    cv::Mat structure_element1 = cv::getStructuringElement(MORPH_RECT,Size(20,20));
+    cv::Mat structure_element2 = cv::getStructuringElement(MORPH_RECT,Size(10,10));
+    cv::dilate(ret, ret, structure_element2);
+    cv::erode(ret, ret, structure_element1);
 
-    vector<vector<Point> >contours;
-    vector<Vec4i>hierarchy;
+    std::vector<std::vector<cv::Point> >contours;
+    std::vector<cv::Vec4i>hierarchy;
     int savedContour = -1;
     double maxArea = 0.0;
-    findContours(ret, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
+    cv::findContours(ret, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
 
     for (int i = 0; i< contours.size(); i++)
     {
@@ -148,12 +148,12 @@ bool target_processor::find_target(cv::Mat &img) {
     }
 
     double epsilon = 0.1*arcLength(contours[savedContour], true);
-    Mat approx;
-    approxPolyDP(contours[savedContour],approx,epsilon,true);
+    cv::Mat approx;
+    cv::approxPolyDP(contours[savedContour],approx,epsilon,true);
     if (approx.rows == 4 && contours.size() < 5) {
-        polylines(ret, approx, true, Scalar(0,0,255), 2);
-        Moments m = moments(contours[savedContour]);
-        Point2f cpt = Point2f( m.m10/m.m00 , m.m01/m.m00 );
+        cv::polylines(ret, approx, true, Scalar(0,0,255), 2);
+        cv::Moments m = cv::moments(contours[savedContour]);
+        cv::Point2f cpt = cv::Point2f( m.m10/m.m00 , m.m01/m.m00 );
         double r_center = img.rows/2;
         double c_center = img.cols/2;
         m_last_location[0] = r_center - cpt.x;
