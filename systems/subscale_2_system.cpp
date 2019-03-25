@@ -4,7 +4,7 @@
 
 #include "subscale_2_system.h"
 
-subscale2_system::subscale2_system() : m_is_armed(false), m_lpf_accel(0.05), m_should_sample_accel(true),
+subscale2_system::subscale2_system() : m_is_armed(false), m_lpf_accel(1, 0.05), m_should_sample_accel(true),
 m_accel_thread(&subscale2_system::sample_accel_thread, this) {
 }
 
