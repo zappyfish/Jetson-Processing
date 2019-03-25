@@ -27,7 +27,7 @@ mode_packet::mode_packet(std::vector<const char *> keys, std::vector<const char 
     if (keys.size() > 0 && values.size() > 0) {
         m_keys.push_back(AUTONOMOUS_KEY);
         if (std::strlen(values.at(0)) > 0 && values.at(0)[0] == 't') {
-            m_values.push_back(IN_AUTONOMOUS);
+            m_values.push_back(IN_TARGET);
             m_is_autonomous = true;
             m_is_target = true;
         } else if (std::strlen(values.at(0) && values.at(0)[0] == 'g')) {
