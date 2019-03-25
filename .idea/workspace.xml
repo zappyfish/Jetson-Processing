@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,36 +25,29 @@
         <counts>
           <entry key="cpp" value="2" />
           <entry key="h" value="1" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CMakeLists.txt" value="1" />
           <entry key="ObjectiveC" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="103" />
+          <entry key="cpp" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="103" />
+          <entry key="ObjectiveC" value="115" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,11 +87,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+            <state relative-caret-position="8">
+              <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -139,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/tests.cpp" />
         <option value="$PROJECT_DIR$/tests/communications/pixhawk/packets/ack_packet_tester.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/gpio.h" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.h" />
@@ -190,6 +191,7 @@
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
         <option value="$PROJECT_DIR$/systems/subscale_2_system.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
+        <option value="$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -294,6 +296,12 @@
             <path>
               <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="subscale2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,12 +383,12 @@
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
-      <workItem from="1553351964057" duration="1481000" />
+      <workItem from="1553351964057" duration="1751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162000" />
+    <option name="totallyTimeSpent" value="432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -450,8 +458,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+        <state relative-caret-position="8">
+          <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>

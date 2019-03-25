@@ -44,7 +44,6 @@
  file(GLOB SOURCE
          ../../communications/pixhawk/packets/*.cpp
          ../../communications/pixhawk/uart/*.cpp
-         ../../communications/rf/*.cpp
          ../../images/*.cpp
          ../../images/buffer/*.cpp
          ../../images/capture/*.cpp
@@ -57,7 +56,6 @@
          ../../logging/time/*.cpp
          ../../communications/pixhawk/packets/*.h
          ../../communications/pixhawk/uart/*.h
-         ../../communications/rf/*.h
          ../../images/*.h
          ../../images/buffer/*.h
          ../../images/capture/*.h
