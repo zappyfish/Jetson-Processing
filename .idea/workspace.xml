@@ -9,15 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.h" beforeDir="false" afterPath="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logging/mode_entry.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/logging/mode_entry.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logging/mode_entry.h" beforeDir="false" afterPath="$PROJECT_DIR$/logging/mode_entry.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/subscale_2_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/subscale_2_system.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/systems/subscale_2_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="813">
-              <caret line="115" column="4" lean-forward="true" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="91" />
+              <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -405,12 +397,12 @@
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
-      <workItem from="1553351964057" duration="3560000" />
+      <workItem from="1553351964057" duration="3986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2241000" />
+    <option name="totallyTimeSpent" value="2667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -561,7 +553,7 @@
     <entry file="file://$PROJECT_DIR$/systems/subscale_2_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="813">
-          <caret line="115" column="4" lean-forward="true" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="91" />
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="91" />
         </state>
       </provider>
     </entry>
