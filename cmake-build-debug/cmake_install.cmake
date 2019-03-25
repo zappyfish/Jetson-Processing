@@ -1,4 +1,4 @@
-# Install script for directory: /Users/emherron/Documents/VADL_AutoUAV
+# Install script for directory: /Users/emherron/Documents/dynamic_thresh
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/emherron/Documents/VADL_AutoUAV/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/emherron/Documents/dynamic_thresh/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
