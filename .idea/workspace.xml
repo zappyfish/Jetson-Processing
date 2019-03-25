@@ -9,12 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/kalman_algo.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/kalman_algo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/pixhawk_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/pixhawk_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +21,7 @@
     <session id="-634406172">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="2" />
+          <entry key="cpp" value="3" />
           <entry key="h" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -34,34 +29,25 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="3" />
+          <entry key="ObjectiveC" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="115" />
+          <entry key="cpp" value="148" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="28" />
-          <entry key="ObjectiveC" value="115" />
+          <entry key="ObjectiveC" value="148" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+            <state relative-caret-position="997">
+              <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -108,6 +94,11 @@
               <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/subscale2/main.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -200,8 +191,8 @@
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
         <option value="$PROJECT_DIR$/systems/subscale_2_system.cpp" />
-        <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
         <option value="$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
       </list>
     </option>
   </component>
@@ -393,12 +384,12 @@
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
-      <workItem from="1553351964057" duration="2310000" />
+      <workItem from="1553351964057" duration="2799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="991000" />
+    <option name="totallyTimeSpent" value="1480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -463,15 +454,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/subscale2/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -480,10 +478,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+        <state relative-caret-position="997">
+          <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
         </state>
       </provider>
     </entry>
