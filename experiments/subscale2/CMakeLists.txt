@@ -65,8 +65,10 @@
          ../../logging/*.h
          ../../logging/files/*.h
          ../../logging/time/*.h
-         ../../systems/*.h
-         ../../systems/*.cpp
+         ../../systems/flight_system.h
+         ../../systems/subscale_2_system.h
+         ../../systems/flight_system.cpp
+         ../../systems/subscale_2_system.cpp
          )
 
  add_executable( main main.cpp ${SOURCE})
