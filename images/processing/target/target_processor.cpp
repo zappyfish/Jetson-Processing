@@ -118,7 +118,7 @@ bool target_processor::find_target(cv::Mat &img) {
 
     Mat gray_img;
 
-    cv::cvtColor(img, gray_img, cv::RGB2GRAY);
+    cv::cvtColor(img, gray_img, cv::COLOR_RGB2GRAY);
 
     cv::Mat ret, blur;
 
