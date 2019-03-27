@@ -147,6 +147,10 @@ bool target_processor::find_target(cv::Mat &img) {
         }
     }
 
+    if (savedContour < 0) {
+        return false;
+    }
+
     double epsilon = 0.1*arcLength(contours[savedContour], true);
     cv::Mat approx;
     cv::approxPolyDP(contours[savedContour],approx,epsilon,true);
