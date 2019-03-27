@@ -11,14 +11,14 @@ import numpy as np
 PRE_PROCESSED_FOLDER = "pre-processed-data"
 
 
-def create_frame(image, x, y, z, roll, pitch, yaw, time, mode,target, ego=None, initial=None):
+def create_frame(image, x_uav, y_uav, z, roll, pitch, yaw, time, mode,target, ego=None, initial=None):
     font = cv2.FONT_HERSHEY_SIMPLEX
     h, w, d = image.shape
     w = w / 2
     h = h / 2
 
     y = 50
-    text = "TIME: %d, height: %d ft" % (time, z * 0.0328084 - 5)
+    text = "TIME: %d, height: %d ft, x: %d, y: %d" % (time, z * 0.0328084, x_uav, y_uav)
     cv2.putText(image, text, (20, y), font, 0.6, (0, 0, 255), 3, cv2.LINE_AA)
     y+=50
     text = "roll: % f, pitch: % f, yaw: % f" % (roll, pitch, yaw)
