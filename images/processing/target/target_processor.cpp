@@ -15,7 +15,7 @@ using namespace cv;
 const int target_processor::MIN_FRAMES_BEFORE_SEARCH = 30; // Play around with me
 const double target_processor::TRIAL_KP = 1.5;
 const double target_processor::TRIAL_KI = 0;
-const double target_processor::TRIAL_KD = 4;
+const double target_processor::TRIAL_KD = 8;
 
 const double target_processor::LANDING_THRESHOLD = 0.5;
 
