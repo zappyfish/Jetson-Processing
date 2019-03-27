@@ -116,20 +116,36 @@ void target_processor::handle_target_error_data(double error_x, double error_y, 
 
 bool target_processor::find_target(cv::Mat &img) {
 
-    Mat gray_img;
+//    Mat gray_img;
+//
+//    cv::cvtColor(img, gray_img, cv::COLOR_RGB2GRAY);
+//
+//    cv::Mat ret, blur;
+//
+//    cv::GaussianBlur(gray_img, blur, Size(5,5), 0);
+//    cv::threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
+//
+//
+//    cv::Mat structure_element1 = cv::getStructuringElement(MORPH_RECT,Size(20,20));
+//    cv::Mat structure_element2 = cv::getStructuringElement(MORPH_RECT,Size(10,10));
+//    cv::dilate(ret, ret, structure_element2);
+//    cv::erode(ret, ret, structure_element1);
 
-    cv::cvtColor(img, gray_img, cv::COLOR_RGB2GRAY);
+    cv::Mat lab_space_img;
+    cv::cvtColor(img, lab_space_img, cv::COLOR_BGR2Lab);
+    std::vector<cv::Mat> lab_split;
+    cv::split(lab_space_img, lab_split);
 
-    cv::Mat ret, blur;
+    cv::Mat thresh1, thresh2, ret;
+    threshold(lab_split.at(0), thresh1, 0, 255, THRESH_BINARY | THRESH_OTSU);
+    threshold(lab_split.at(2), thresh2, 0, 255, THRESH_BINARY | THRESH_OTSU);
 
-    cv::GaussianBlur(gray_img, blur, Size(5,5), 0);
-    cv::threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
+    bitwise_and(thresh1, thresh2, ret);
 
-
-    cv::Mat structure_element1 = cv::getStructuringElement(MORPH_RECT,Size(20,20));
-    cv::Mat structure_element2 = cv::getStructuringElement(MORPH_RECT,Size(10,10));
-    cv::dilate(ret, ret, structure_element2);
-    cv::erode(ret, ret, structure_element1);
+    Mat structure_element1 = getStructuringElement(MORPH_RECT,Size(20,20));
+    Mat structure_element2 = getStructuringElement(MORPH_RECT,Size(7, 7));
+    dilate(ret, ret, structure_element2);
+    erode(ret, ret, structure_element1);
 
     std::vector<std::vector<cv::Point> >contours;
     std::vector<cv::Vec4i>hierarchy;
