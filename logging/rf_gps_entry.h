@@ -5,6 +5,7 @@
 #ifndef PROJECT_RF_GPS_H
 #define PROJECT_RF_GPS_H
 
+#include "log_entry.h"
 
 class rf_gps_entry : public log_entry {
 
