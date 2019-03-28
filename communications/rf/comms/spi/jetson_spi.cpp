@@ -12,14 +12,14 @@ const int jetson_spi::SPI_DEVICE_DEFAULT = 3;
 jetson_spi::jetson_spi(int spi_device, int chip_select) {
     init_spi_bus(spi_device, chip_select);
     if (m_spi_bus == nullptr) {
-        // TODO: log soft error here
-        std::string category = "jetson_spi";
-        std::string description = "could not init spi bus in constructor";
-        std::map<std::string, std::string> metadata;
-        metadata["file"] = "jetson_spi.cpp";
-        metadata["method"] = "constructor";
-        soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
-        data_logger::get_instance().save_log_entry(s_error);
+//        // TODO: log soft error here
+//        std::string category = "jetson_spi";
+//        std::string description = "could not init spi bus in constructor";
+//        std::map<std::string, std::string> metadata;
+//        metadata["file"] = "jetson_spi.cpp";
+//        metadata["method"] = "constructor";
+//        soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
+//        data_logger::get_instance().save_log_entry(s_error);
     }
 }
 

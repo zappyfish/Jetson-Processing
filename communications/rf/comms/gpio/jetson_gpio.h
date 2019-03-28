@@ -11,7 +11,7 @@
 #define JETSON_MAX_BUF 64
 
 #include "uav_gpio.h"
-#include "data_logger.h"
+// #include "data_logger.h"
 #include "soft_error_entry.h"
 #include <cstdio>
 #include <sys/types.h>

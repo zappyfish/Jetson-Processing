@@ -117,12 +117,12 @@ bool rpi_gpio::file_write(char const*path, char* write_buf, int len) {
 }
 
 void rpi_gpio::log_pin_error(std::string description, std::string method) {
-    std::string category = "rpi_gpio";
-    std::map<std::string, std::string> metadata;
-    metadata["file"] = "rpi_gpio.cpp";
-    metadata["method"] = method;
-    soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
-    data_logger::get_instance().save_log_entry(s_error);
+//    std::string category = "rpi_gpio";
+//    std::map<std::string, std::string> metadata;
+//    metadata["file"] = "rpi_gpio.cpp";
+//    metadata["method"] = method;
+//    soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
+//    data_logger::get_instance().save_log_entry(s_error);
 }
 
 #endif

@@ -118,12 +118,12 @@ bool jetson_gpio::file_write(char const*path, char* write_buf, int len) {
 }
 
 void jetson_gpio::log_pin_error(std::string description, std::string method) {
-    std::string category = "jetson_gpio";
-    std::map<std::string, std::string> metadata;
-    metadata["file"] = "jetson_gpio.cpp";
-    metadata["method"] = method;
-    soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
-    data_logger::get_instance().save_log_entry(s_error);
+//    std::string category = "jetson_gpio";
+//    std::map<std::string, std::string> metadata;
+//    metadata["file"] = "jetson_gpio.cpp";
+//    metadata["method"] = method;
+//    soft_error_entry *s_error = new soft_error_entry(category, description, metadata);
+//    data_logger::get_instance().save_log_entry(s_error);
 }
 
 #endif

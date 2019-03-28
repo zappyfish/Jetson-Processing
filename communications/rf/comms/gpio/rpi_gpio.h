@@ -8,7 +8,7 @@
 #ifdef __linux__
 
 #include "uav_gpio.h"
-#include "data_logger.h"
+// #include "data_logger.h"
 #include "soft_error_entry.h"
 #include <cstdio>
 #include <sys/types.h>
