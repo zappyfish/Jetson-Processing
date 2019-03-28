@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc3b20a-0cf6-4388-85a1-7063817c0de1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../images/processing/target/target_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../images/processing/target/target_processor.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="fbc3b20a-0cf6-4388-85a1-7063817c0de1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +12,7 @@
     <session id="650868303">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.13" value="1" />
@@ -68,60 +65,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualize.py">
+        <entry file="file://$PROJECT_DIR$/kalman_algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+            <state relative-caret-position="141">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/00531.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02193.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02191.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02185.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02172.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02170.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02134.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02105.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02080.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -199,24 +172,6 @@
             <path>
               <item name="post-processing" type="b2602c69:ProjectViewProjectNode" />
               <item name="post-processing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="post-processing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="post-processing" type="462c0819:PsiDirectoryNode" />
-              <item name="pre-processed-data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="post-processing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="post-processing" type="462c0819:PsiDirectoryNode" />
-              <item name="pre-processed-data" type="462c0819:PsiDirectoryNode" />
-              <item name="mar27_12" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="post-processing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="post-processing" type="462c0819:PsiDirectoryNode" />
-              <item name="pre-processed-data" type="462c0819:PsiDirectoryNode" />
-              <item name="mar27_12" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,16 +309,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="655" y="23" width="929" height="967" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23237886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12718505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3287827" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48568282" weight="0.36746302" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8028634" visible="true" weight="0.35657144" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8028634" weight="0.35657144" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -520,7 +475,7 @@
     <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -534,17 +489,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar25_2/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret column="1195" selection-start-column="1195" selection-end-column="1195" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar25_2/data.json" />
     <entry file="file://$PROJECT_DIR$/plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -564,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kalman_algo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="141">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -599,32 +548,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/00531.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02193.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02191.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02185.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02172.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02170.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02134.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02105.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02080.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/00531.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02193.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02191.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02185.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02172.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02170.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02134.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02105.jpg" />
+    <entry file="file://$PROJECT_DIR$/pre-processed-data/mar27_12/images/02080.jpg" />
   </component>
 </project>
