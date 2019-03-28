@@ -68,6 +68,8 @@ void test_beacon_deployed_callback(const char *name, std::vector<const char *> k
 //    gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());
 //    data_logger::get_instance().save_log_entry(gps_log);
 
+    std::cout << "got location data\n";
+
     nrf_handler *handler = static_cast<nrf_handler*>(args);
     rf_packet rf(packet.get_x(), packet.get_y());
     handler->send_packet(rf);
