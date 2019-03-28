@@ -38,12 +38,12 @@
         <counts>
           <entry key="cpp" value="692" />
           <entry key="h" value="179" />
-          <entry key="txt" value="30" />
+          <entry key="txt" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="30" />
+          <entry key="CMakeLists.txt" value="40" />
           <entry key="ObjectiveC" value="871" />
         </counts>
       </usages-collector>
@@ -72,7 +72,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-470" />
+            <state relative-caret-position="805">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="103" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -88,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="315">
+              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -153,7 +155,6 @@
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/spi_bus.h" />
-        <option value="$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/transmit_gps_packet.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/transmit_gps_packet.cpp" />
@@ -198,6 +199,7 @@
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h" />
+        <option value="$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
       </list>
     </option>
@@ -405,12 +407,12 @@
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
-      <workItem from="1553351964057" duration="10765000" />
+      <workItem from="1553351964057" duration="10985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9446000" />
+    <option name="totallyTimeSpent" value="9666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -636,11 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -648,10 +645,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="315">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>

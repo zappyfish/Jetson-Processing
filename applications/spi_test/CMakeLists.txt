@@ -3,7 +3,7 @@
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
 
-
+ find_library(LIBSOC libsoc.so)
 
  include_directories(
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/gpio
@@ -24,3 +24,5 @@
          )
 
  add_executable( rpi_main rpi_main.cpp ${SOURCE})
+
+ target_link_libraries( rpi_main ${LIBSOC})
