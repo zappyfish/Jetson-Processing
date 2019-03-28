@@ -11,7 +11,7 @@ def generate_plots(data_dir):
     # slam_pose = open(join(data_dir, 'slam', 'poses.txt')).readlines()
     slam = False
     imu_pose = json.load(open(join(data_dir, 'data.json')))
-    pkf = PoseKalmanFilter(data_dir)
+    pkf = PoseKalmanFilter(data_dir, 0.001)
     r_x_n = []
     r_y_n = []
     r_z_n = []
