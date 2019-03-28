@@ -16,13 +16,15 @@
 
  file(GLOB SOURCE
          ../../communications/pixhawk/packets/*.cpp
-         ../../communications/pixhawk/uart/*.cpp
+         ../../communications/pixhawk/uart/uart.cpp
+         ./../communications/pixhawk/uart/rpi_uart.cpp
          ../../communications/rf/*.cpp
          ../../communications/rf/comms/gpio/*.cpp
          ../../communications/rf/comms/spi/*.cpp
          ../../communications/rf/packets/*.cpp
          ../../communications/pixhawk/packets/*.h
-         ../../communications/pixhawk/uart/*.h
+         ../../communications/pixhawk/uart/uart.h
+         ./../communications/pixhawk/uart/rpi_uart.h
          ../../communications/rf/*.h
          ../../communications/rf/comms/gpio/*.h
          ../../communications/rf/comms/spi/*.h
