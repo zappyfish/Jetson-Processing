@@ -1,5 +1,5 @@
  cmake_minimum_required(VERSION 2.8)
- 
+
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
 
@@ -12,7 +12,7 @@
          ${CMAKE_SOURCE_DIR}/../../communications/rf
  )
 
- file(GLOB SOURCE=
+ file(GLOB SOURCE
          ../../communications/rf/*.cpp
          ../../communications/rf/comms/gpio/*.cpp
          ../../communications/rf/comms/spi/*.cpp
