@@ -6,7 +6,7 @@
 #define PROJECT_RF_GPS_H
 
 
-class rf_gps_entry public log_entry {
+class rf_gps_entry : public log_entry {
 
 public:
 
