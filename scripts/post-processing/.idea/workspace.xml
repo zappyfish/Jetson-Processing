@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fbc3b20a-0cf6-4388-85a1-7063817c0de1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kalman_algo.py" beforeDir="false" afterPath="$PROJECT_DIR$/kalman_algo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +35,7 @@
           <entry key="jpg" value="105" />
           <entry key="json" value="40" />
           <entry key="png" value="55" />
-          <entry key="py" value="59" />
+          <entry key="py" value="61" />
           <entry key="txt" value="21" />
           <entry key="yaml" value="1" />
         </counts>
@@ -41,7 +45,7 @@
           <entry key="Image" value="160" />
           <entry key="JSON" value="40" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="59" />
+          <entry key="Python" value="61" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -49,7 +53,7 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="json" value="2" />
-          <entry key="py" value="27068" />
+          <entry key="py" value="27099" />
           <entry key="txt" value="1" />
           <entry key="yaml" value="2" />
         </counts>
@@ -58,7 +62,7 @@
         <counts>
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="27068" />
+          <entry key="Python" value="27099" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
@@ -66,14 +70,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kalman_algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="141">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -128,19 +153,18 @@
         <option value="$PROJECT_DIR$/mode_data.py" />
         <option value="$PROJECT_DIR$/preprocess.py" />
         <option value="$PROJECT_DIR$/plot_accel.py" />
-        <option value="$PROJECT_DIR$/plot.py" />
         <option value="$PROJECT_DIR$/path_plot.py" />
         <option value="$PROJECT_DIR$/pixhawk_data.py" />
-        <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/kalman_algo.py" />
         <option value="$PROJECT_DIR$/visualize.py" />
+        <option value="$PROJECT_DIR$/kalman_algo.py" />
+        <option value="$PROJECT_DIR$/plot.py" />
+        <option value="$PROJECT_DIR$/tests.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="484" />
-    <option name="y" value="68" />
-    <option name="width" value="929" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
     <option name="height" value="967" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plot">
+  <component name="RunManager" selected="Python.tests">
     <configuration name="plot" type="PythonConfigurationType" factoryName="Python">
       <module name="post-processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,7 +224,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot.py" />
-      <option name="PARAMETERS" value="mar25_2" />
+      <option name="PARAMETERS" value="mar27_12" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -292,16 +316,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="484" y="68" width="929" height="967" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23237886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12718505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3287827" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48568282" weight="0.36746302" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8028634" visible="true" weight="0.35657144" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48568282" visible="true" weight="0.36734694" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8028634" weight="0.31836733" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -355,11 +379,6 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/plot.py</url>
-          <line>178</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/optimize.py</url>
           <line>28</line>
           <option name="timeStamp" value="32" />
@@ -370,14 +389,14 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kalman_algo.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/plot.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kalman_algo.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="37" />
+          <line>42</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -442,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/optimize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -463,16 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret column="1195" selection-start-column="1195" selection-end-column="1195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,11 +588,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kalman_algo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="141">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
