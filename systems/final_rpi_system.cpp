@@ -157,7 +157,7 @@ void final_rpi_system::rf_callback(rf_packet packet, void*args) {
 //    system->m_gps_received_by_pixhawk = false;
     std::cout << "informing pixhawk of destination\n";
     gps_values_packet *send_packet = new gps_values_packet(packet.get_gps_x(), packet.get_gps_y());
-    gps_entry *gps_log = new gps_entry(packet.get_gps_x(), packet.get_gps_y());
+    rf_gps_entry *gps_log = new rf_gps_entry(packet.get_gps_x(), packet.get_gps_y());
     data_logger::get_instance().save_log_entry(gps_log);
     packet_manager::get_instance().send_packet(send_packet); // Should probably do ack stuff here but....
 }

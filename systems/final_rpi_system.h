@@ -24,6 +24,7 @@
 #include "accel_mma_8451_pi.h"
 #include "nrf_handler.h"
 #include "gps_entry.h"
+#include "rf_gps_entry.h"
 #include "rf_packet.h"
 #include <atomic>
 #include <chrono>
