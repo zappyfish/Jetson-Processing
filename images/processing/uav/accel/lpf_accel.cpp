@@ -8,7 +8,7 @@
 lpf_accel::lpf_accel(float alpha) : m_alpha(alpha) {
     m_last_filtered_sample.x = 0;
     m_last_filtered_sample.y = 0;
-    m_last_filtered_sample.z = -9.8; // best guesses (in G's)
+    m_last_filtered_sample.z = 0;
 }
 
 lpf_accel::~lpf_accel() {}

@@ -40,7 +40,7 @@ class FlightDataProcessor:
                 if 'y' in key:
                     data['z'] = val
                 elif 'x' in key:
-                    data['x'] = val
+                    data['x'] = -val
                 else:
                     data['y'] = -val # TODO check me for sign
             data[key] = val
