@@ -9,10 +9,6 @@
 #include <string.h>
 #include "test_packet.h"
 
-#if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
-#include "data_logger.h"
-#endif
-
 packet_manager& packet_manager::get_instance() {
     static packet_manager instance;
     return instance;

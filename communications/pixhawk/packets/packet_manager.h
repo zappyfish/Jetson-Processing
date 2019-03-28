@@ -8,10 +8,6 @@
 #include "pixhawk_packet.h"
 #include <queue>
 #include <cstddef>
-#if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
-#include "data_logger.h"
-#include "soft_error_entry.h"
-#endif
 #include "../uart/uart.h"
 
 class packet_manager {
