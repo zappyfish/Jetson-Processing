@@ -10,7 +10,7 @@
 #include "spi_bus.h"
 #include "libsoc_spi.h"
 // #include "data_logger.h"
-#include "soft_error_entry.h"
+// #include "soft_error_entry.h"
 
 class rpi_spi : public spi_bus {
 
