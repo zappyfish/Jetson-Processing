@@ -13,6 +13,7 @@
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/gpio
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/spi
          ${CMAKE_SOURCE_DIR}/../../communications/rf/packets
+         ${CMAKE_SOURCE_DIR}/../../communications/rf
  )
 
  file(GLOB SOURCE=
