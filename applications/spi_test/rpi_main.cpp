@@ -64,7 +64,7 @@ void callback(rf_packet packet, void *args) {
 
 void test_beacon_deployed_callback(const char *name, std::vector<const char *> keys,
                                                 std::vector<const char *> values, void *args) {
-//    gps_values_packet packet(keys, values);
+    gps_values_packet packet(keys, values);
 //    gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());
 //    data_logger::get_instance().save_log_entry(gps_log);
 
