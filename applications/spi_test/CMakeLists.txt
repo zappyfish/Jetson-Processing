@@ -1,9 +1,5 @@
  cmake_minimum_required(VERSION 2.8)
-
- if(UNIX AND NOT APPLE)
-     set(LINUX TRUE)
- endif()
-
+ 
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
 
@@ -28,5 +24,3 @@
          )
 
  add_executable( rpi_main rpi_main.cpp ${SOURCE})
-
- target_link_libraries( rpi_main)
