@@ -18,4 +18,4 @@ class S2dDataParser:
         cur = splt[1].split(",")
         nxt = [(self.last_line_rot[i] + float(cur[i + 3])) / 2 for i in range(3)]
         self.last_line_rot = [float(splt[2].split(",")[i + 3]) for i in range(3)]
-        return {'yaw': nxt[1], 'roll': nxt[2], 'pitch': nxt[0]}
+        return {'yaw': nxt[1], 'roll': -nxt[2], 'pitch': nxt[0]}

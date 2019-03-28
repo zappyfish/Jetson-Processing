@@ -44,7 +44,7 @@ def generate_plots(data_dir):
             ind = len(r_x_n) - 1
             r_x_n.append(float(s[3]) + r_x_n[ind])
             r_y_n.append(float(s[4]) + r_y_n[ind])
-            r_z_n.append(float(s[5]) + r_z_n[ind])
+            r_z_n.append(-float(s[5]) + r_z_n[ind])
 
             pkf_vals, raw_imu = pkf.kalman_step()
 

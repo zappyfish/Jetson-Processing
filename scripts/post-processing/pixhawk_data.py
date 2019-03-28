@@ -36,7 +36,6 @@ class FlightDataProcessor:
             if key == 'accel_z':
                 val *= -1  # TODO: delet
             if 'accel' in key:
-                val = self.accel_lpf[key] + self.alphas[key] * (val - self.accel_lpf[key])
                 if 'y' in key:
                     data['z'] = val
                 elif 'x' in key:

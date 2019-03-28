@@ -39,7 +39,7 @@ class PoseKalmanFilter:
         delta_time = cur_time - self.last_time
         self.last_time = cur_time
         self.covariance += (self.p_error_cov_sqrd * delta_time)
-        measurement_error = 0.99 / accuracy
+        measurement_error = 1 - accuracy
         kalman_gain = self.covariance / (self.covariance + measurement_error)
        #  print("step: %d, accuracy squared: %f, kalman gain: %f" % (self.ind, accuracy * accuracy, kalman_gain))
         for key in self.value:
@@ -50,5 +50,4 @@ class PoseKalmanFilter:
     @staticmethod
     def accuracy(x, y, z):
         diff = abs(9.8 - sqrt((x * x) + (y * y) + (z * z)))
-        # return pow((1 / (diff + 1)), 2) * 0.99
-        return diff
+        return (1 / (diff + 1)) * 0.99
