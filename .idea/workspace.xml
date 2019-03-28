@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/images/processing/target/target_processor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -27,40 +27,49 @@
         <counts>
           <entry key="cpp" value="7" />
           <entry key="h" value="3" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="1" />
+          <entry key="CMakeLists.txt" value="2" />
           <entry key="ObjectiveC" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="674" />
+          <entry key="cpp" value="692" />
           <entry key="h" value="151" />
-          <entry key="txt" value="28" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="28" />
-          <entry key="ObjectiveC" value="825" />
+          <entry key="CMakeLists.txt" value="29" />
+          <entry key="ObjectiveC" value="843" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="285">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
-                <marker date="1553721966146" expanded="true" signature="4250:4746" ph="..." />
+                <marker date="1553728171562" expanded="true" signature="4266:4762" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -79,15 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -157,7 +157,6 @@
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/dummy_spi.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/dummy_gpio.h" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.h" />
-        <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.cpp" />
@@ -202,6 +201,7 @@
         <option value="$PROJECT_DIR$/logging/mode_entry.h" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
+        <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -400,12 +400,12 @@
       <workItem from="1553191606248" duration="11091000" />
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
-      <workItem from="1553351964057" duration="9309000" />
+      <workItem from="1553351964057" duration="10136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7990000" />
+    <option name="totallyTimeSpent" value="8817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -572,11 +572,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="285">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
-            <marker date="1553721966146" expanded="true" signature="4250:4746" ph="..." />
+            <marker date="1553728171562" expanded="true" signature="4266:4762" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>

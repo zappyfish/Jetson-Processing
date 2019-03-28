@@ -17,7 +17,7 @@ const double target_processor::TRIAL_KP = 1.5;
 const double target_processor::TRIAL_KI = 0;
 const double target_processor::TRIAL_KD = 4;
 
-const double target_processor::LANDING_THRESHOLD = 0.5;
+const double target_processor::LANDING_THRESHOLD = 0.5; // TODO: adjust
 
 target_processor::target_processor() : m_is_processing(false), m_saw_target(false), m_processing_thread(nullptr),
 m_pid_controller(TRIAL_KP, TRIAL_KI, TRIAL_KD),
