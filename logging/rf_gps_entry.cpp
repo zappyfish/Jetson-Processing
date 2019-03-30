@@ -4,7 +4,7 @@
 
 #include "rf_gps_entry.h"
 
-const std::string rf_gps_entry::ENTRY_ID = "rf_gps";
+const std::string rf_gps_entry::ENTRY_ID = "rf_received_gps";
 
 rf_gps_entry::rf_gps_entry(int x, int y) {
     add_data("x", x);
