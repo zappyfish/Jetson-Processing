@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/post-processing/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/visualize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +23,7 @@
     <session id="-634406172">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="22" />
+          <entry key="cpp" value="27" />
           <entry key="h" value="10" />
           <entry key="txt" value="2" />
         </counts>
@@ -35,12 +31,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="2" />
-          <entry key="ObjectiveC" value="32" />
+          <entry key="ObjectiveC" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="908" />
+          <entry key="cpp" value="935" />
           <entry key="h" value="216" />
           <entry key="txt" value="29" />
         </counts>
@@ -48,7 +44,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="29" />
-          <entry key="ObjectiveC" value="1124" />
+          <entry key="ObjectiveC" value="1151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -61,11 +57,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="60">
+              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="157" column="4" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/systems/flight_system.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/gps_entry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -77,46 +114,6 @@
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/processing/target/reference_frame.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/processing/target/pid_angle_controller.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="54" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding>
-                <marker date="1553872933006" expanded="true" signature="4264:4760" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/processing/target/reference_frame.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/flight_packet.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -184,7 +181,6 @@
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
-        <option value="$PROJECT_DIR$/logging/gps_entry.cpp" />
         <option value="$PROJECT_DIR$/logging/gps_entry.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp" />
@@ -202,13 +198,14 @@
         <option value="$PROJECT_DIR$/logging/rf_gps.h" />
         <option value="$PROJECT_DIR$/logging/rf_gps.cpp" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
-        <option value="$PROJECT_DIR$/logging/rf_gps_entry.cpp" />
         <option value="$PROJECT_DIR$/logging/rf_gps_entry.h" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/pid_angle_controller.cpp" />
-        <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
+        <option value="$PROJECT_DIR$/logging/gps_entry.cpp" />
+        <option value="$PROJECT_DIR$/logging/rf_gps_entry.cpp" />
+        <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
       </list>
     </option>
   </component>
@@ -424,12 +421,12 @@
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
-      <workItem from="1553884585300" duration="956000" />
+      <workItem from="1553884585300" duration="2804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16493000" />
+    <option name="totallyTimeSpent" value="18341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
@@ -621,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging/gps_entry.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -663,24 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -741,10 +717,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/gps_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/flight_system.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="60">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="157" column="4" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
