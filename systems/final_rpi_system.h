@@ -81,7 +81,7 @@ private:
     std::atomic<bool> m_should_sample_accel;
     accel_mma8451_pi m_lpf_accel;
     Vector3 m_last_accel;
-    std::thread m_accel_thread;
+    std::thread *m_accel_thread;
 
     int m_destination_x;
     int m_destination_y;

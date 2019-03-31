@@ -5,15 +5,13 @@
 #include "final_jetson_system.h"
 
 final_jetson_system::final_jetson_system() : m_is_armed(false), m_lpf_accel(0, 0.05), m_should_sample_accel(true),
-                                       m_accel_thread(&final_jetson_system::sample_accel_thread, this),
                                        m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, nullptr),
                                        m_beacon_deployed(false) {
     m_nrf_handler.verify_spi();
 }
 
 final_jetson_system::~final_jetson_system() {
-    m_should_sample_accel = false;
-    m_accel_thread.join();
+
 }
 
 void final_jetson_system::setup_packet_manager() {
@@ -54,6 +52,9 @@ void final_jetson_system::flight_setup() {
 
     packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
 
+    // Start the accelerometer thread
+    m_accel_thread = new std::thread(&final_jetson_system::sample_accel_thread, this);
+
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
 }
@@ -69,6 +70,11 @@ void final_jetson_system::flight_teardown() {
     m_flight_camera.end_capture();
     // Reset clock in case we want to take off again
     time_manager::get_instance().reset_clock();
+
+    // Finish the accelerometer thread
+    m_should_sample_accel = false;
+    m_accel_thread->join();
+    delete m_accel_thread;
 }
 
 void final_jetson_system::perform_flight() {

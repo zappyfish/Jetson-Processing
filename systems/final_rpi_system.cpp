@@ -5,7 +5,6 @@
 #include "final_rpi_system.h"
 
 final_rpi_system::final_rpi_system() : m_is_armed(false), m_lpf_accel(1, 0.05), m_should_sample_accel(true),
-                                       m_accel_thread(&final_rpi_system::sample_accel_thread, this),
                                        m_has_received_destination(false),
                                        m_nrf_handler(nrf_handler::board_type::rpi, nrf_handler::mode::RX, 25, &m_rf_callback) {
     m_nrf_handler.verify_spi();
@@ -52,6 +51,9 @@ void final_rpi_system::flight_setup() {
     m_gps_received_callback.callback = &final_rpi_system::gps_received_callback;
     packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
 
+    // Start accelerometer thread
+    m_accel_thread = new std::thread(&final_rpi_system::sample_accel_thread, this);
+
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
 }
@@ -67,6 +69,12 @@ void final_rpi_system::flight_teardown() {
     m_flight_camera.end_capture();
     // Reset clock in case we want to take off again
     time_manager::get_instance().reset_clock();
+
+    // Finish up accelerometer thread
+    // Finish the accelerometer thread
+    m_should_sample_accel = false;
+    m_accel_thread->join();
+    delete m_accel_thread;
 }
 
 void final_rpi_system::perform_flight() {
