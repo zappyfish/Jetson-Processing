@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/final_jetson/vadl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +26,7 @@
         <counts>
           <entry key="cpp" value="28" />
           <entry key="h" value="13" />
+          <entry key="sh" value="1" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -32,12 +34,14 @@
         <counts>
           <entry key="CMakeLists.txt" value="2" />
           <entry key="ObjectiveC" value="41" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="1116" />
           <entry key="h" value="297" />
+          <entry key="sh" value="94" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
@@ -45,6 +49,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="29" />
           <entry key="ObjectiveC" value="1413" />
+          <entry key="PLAIN_TEXT" value="94" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -66,11 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
+            <state relative-caret-position="1005">
               <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiments/final_jetson/vadl.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -79,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -137,15 +151,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -161,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/communications/rf/comms/gpio/uav_gpio.h" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/gpio/jetson_gpio.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h" />
@@ -212,6 +216,7 @@
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
+        <option value="$PROJECT_DIR$/experiments/final_jetson/vadl.sh" />
       </list>
     </option>
   </component>
@@ -433,12 +438,12 @@
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
-      <workItem from="1553884585300" duration="4914000" />
+      <workItem from="1553884585300" duration="5187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20451000" />
+    <option name="totallyTimeSpent" value="20724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
@@ -773,7 +778,7 @@
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
@@ -786,8 +791,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
+        <state relative-caret-position="1005">
           <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/final_jetson/vadl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
         </state>
       </provider>
     </entry>
