@@ -48,9 +48,9 @@ void final_rpi_system::flight_setup() {
     packet_manager::get_instance().set_packet_callback(&m_mode_callback);
 
     // Last callback: beacon deployment
-    m_beacon_deployed_callback.name = gps_values_packet::PACKET_NAME;
-    m_beacon_deployed_callback.callback = &final_rpi_system::beacon_deployed_callback;
-    packet_manager::get_instance().set_packet_callback(&m_beacon_deployed_callback);
+    m_gps_received_callback.name = gps_values_packet::PACKET_NAME;
+    m_gps_received_callback.callback = &final_rpi_system::gps_received_callback;
+    packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
 
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
@@ -162,7 +162,7 @@ void final_rpi_system::rf_callback(rf_packet packet, void*args) {
     packet_manager::get_instance().send_packet(send_packet); // Should probably do ack stuff here but....
 }
 
-void final_rpi_system::beacon_deployed_callback(const char *name, std::vector<const char *> keys,
+void final_rpi_system::gps_received_callback(const char *name, std::vector<const char *> keys,
                                                 std::vector<const char *> values, void *args) {
     gps_values_packet packet(keys, values);
     gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());

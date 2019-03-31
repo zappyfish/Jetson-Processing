@@ -57,7 +57,7 @@ private:
     static void arming_callback(const char *packet_type, std::vector<const char *> keys, std::vector<const char *> values, void *args);
     static void flight_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
     static void mode_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
-    static void beacon_deployed_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
+    static void gps_received_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
 
     /**
      * Member variables
@@ -77,7 +77,7 @@ private:
     packet_manager::packet_callback m_arming_packet_callback;
     packet_manager::packet_callback m_flight_data_callback;
     packet_manager::packet_callback m_mode_callback;
-    packet_manager::packet_callback m_beacon_deployed_callback;
+    packet_manager::packet_callback m_gps_received_callback;
 
 };
 
