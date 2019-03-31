@@ -93,7 +93,7 @@ private:
     packet_manager::packet_callback m_mode_callback;
     packet_manager::packet_callback m_gps_ack_callback;
 
-    packet_manager::packet_callback gps_received_callback;
+    packet_manager::packet_callback m_gps_received_callback;
 
 };
 

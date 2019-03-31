@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/systems/final_rpi_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_rpi_system.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -40,14 +37,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="1116" />
-          <entry key="h" value="295" />
+          <entry key="h" value="297" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="29" />
-          <entry key="ObjectiveC" value="1411" />
+          <entry key="ObjectiveC" value="1413" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -60,19 +57,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            <state relative-caret-position="492">
+              <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
+            <state relative-caret-position="467">
               <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
             </state>
           </provider>
@@ -90,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            <state relative-caret-position="557">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -213,8 +210,8 @@
         <option value="$PROJECT_DIR$/images/capture/jetson_camera.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
-        <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
+        <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
       </list>
     </option>
   </component>
@@ -436,12 +433,12 @@
       <workItem from="1553277201393" duration="18404000" />
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
-      <workItem from="1553884585300" duration="4694000" />
+      <workItem from="1553884585300" duration="4914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20231000" />
+    <option name="totallyTimeSpent" value="20451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
@@ -766,17 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        <state relative-caret-position="492">
+          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -787,10 +777,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        <state relative-caret-position="557">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
         </state>
       </provider>
     </entry>
