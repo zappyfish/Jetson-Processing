@@ -164,6 +164,8 @@ void final_jetson_system::beacon_deployed_callback(const char *name, std::vector
                                                    std::vector<const char *> values, void *args) {
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
 
+    std::cout << "beacon deployed\n";
+
     rf_packet rf(system->m_destination_x, system->m_destination_y);
     system->m_setting_radio_coords = true; // Don't resend packets if we're sending a new type of payload for the first time
     system->m_nrf_handler.send_packet(rf);
