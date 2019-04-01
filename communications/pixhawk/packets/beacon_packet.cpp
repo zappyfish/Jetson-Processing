@@ -4,7 +4,7 @@
 
 #include "beacon_packet.h"
 
-const char* beacon_packet::PACKET_NAME = "beacon";
+const char* beacon_packet::PACKET_NAME = "beacon_deploy";
 
 beacon_packet::beacon_packet() {
 }
