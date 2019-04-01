@@ -12,7 +12,7 @@ final_rpi_system::final_rpi_system() : m_is_armed(false), m_lpf_accel(1, 0.05), 
 }
 
 final_rpi_system::~final_rpi_system() {
-    
+
 }
 
 void final_rpi_system::setup_packet_manager() {
