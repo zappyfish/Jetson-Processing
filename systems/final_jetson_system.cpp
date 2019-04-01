@@ -165,11 +165,11 @@ void final_jetson_system::beacon_deployed_callback(const char *name, std::vector
                                                    std::vector<const char *> values, void *args) {
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
 
-    if (m_destination_x != 0 || m_destination_y != 0) {
-        rf_packet rf(m_destination_x, m_destination_y);
-        m_setting_radio_coords = true; // Don't resend packets if we're sending a new type of payload for the first time
+    if (system->m_destination_x != 0 || system->m_destination_y != 0) {
+        rf_packet rf(system->m_destination_x, system->m_destination_y);
+        system->m_setting_radio_coords = true; // Don't resend packets if we're sending a new type of payload for the first time
         system->m_nrf_handler.send_packet(rf);
-        m_setting_radio_coords = false;
+        system->m_setting_radio_coords = false;
         system->m_beacon_deployed = true; // We can now start resending packets
     }
 
