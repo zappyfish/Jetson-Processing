@@ -60,7 +60,7 @@ void final_jetson_system::flight_setup() {
     m_beacon_deployed_callback.callback = &final_jetson_system::beacon_deployed_callback;
     m_beacon_deployed_callback.args = this;
 
-    packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
+    packet_manager::get_instance().set_packet_callback(&m_beacon_deployed_callback);
 
     // Start the accelerometer thread
     m_accel_thread = new std::thread(&final_jetson_system::sample_accel_thread, this);
