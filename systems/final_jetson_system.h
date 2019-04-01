@@ -76,6 +76,7 @@ private:
     std::thread *m_accel_thread;
 
     std::atomic<bool> m_beacon_deployed;
+    std::atomic<bool> m_setting_radio_coords;
     int m_destination_x;
     int m_destination_y;
 
