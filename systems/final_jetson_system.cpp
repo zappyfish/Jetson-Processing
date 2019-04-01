@@ -6,7 +6,6 @@
 
 final_jetson_system::final_jetson_system() : m_is_armed(false), m_lpf_accel(0, 0.05), m_should_sample_accel(true),
                                        m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, nullptr),
-                                       m_beacon_deployed(false),
                                        m_destination_x(0),
                                        m_destination_y(0),
                                        m_beacon_deployed(false),
@@ -156,8 +155,8 @@ void final_jetson_system::gps_received_callback(const char *name, std::vector<co
     data_logger::get_instance().save_log_entry(gps_log);
 
     // save it
-    m_destination_x = packet.get_x();
-    m_destination_y = packet.get_y();
+    system->m_destination_x = packet.get_x();
+    system->m_destination_y = packet.get_y();
     // system->m_beacon_deployed = true;
 }
 
