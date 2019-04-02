@@ -8,6 +8,7 @@
 #include <cstring>
 #include <string.h>
 #include "test_packet.h"
+#include <iostream>
 
 #if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
 #include "data_logger.h"
@@ -151,6 +152,7 @@ bool packet_manager::parse_for_packet_data() {
  * @param values the values collected
  */
 void packet_manager::handle_packet(const char* packet_type, std::vector<const char*> keys, std::vector<const char*> values) {
+    std::cout << packet_type << std::endl;
     for (size_t i = 0; i < m_packet_callbacks.size(); i++) {
         packet_callback *p_callback = m_packet_callbacks.data()[i];
         if (std::strcmp(p_callback->name, packet_type) == 0) { // This callback is assigned to this packet_type, so invoke its callback

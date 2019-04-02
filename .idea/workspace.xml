@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +39,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2381" />
+          <entry key="cpp" value="2446" />
           <entry key="h" value="557" />
           <entry key="sh" value="94" />
           <entry key="txt" value="29" />
@@ -46,7 +48,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="29" />
-          <entry key="ObjectiveC" value="2938" />
+          <entry key="ObjectiveC" value="3003" />
           <entry key="PLAIN_TEXT" value="94" />
         </counts>
       </usages-collector>
@@ -71,20 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+            <state relative-caret-position="203">
+              <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -209,12 +211,12 @@
         <option value="$PROJECT_DIR$/experiments/final_jetson/vadl.sh" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h" />
-        <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp" />
         <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
         <option value="$PROJECT_DIR$/logging/beacon_entry.h" />
         <option value="$PROJECT_DIR$/logging/beacon_entry.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" />
       </list>
     </option>
@@ -504,12 +506,12 @@
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
       <workItem from="1553884585300" duration="8663000" />
-      <workItem from="1554156716823" duration="4482000" />
+      <workItem from="1554156716823" duration="4793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28682000" />
+    <option name="totallyTimeSpent" value="28993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
@@ -831,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logging/beacon_entry.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -855,7 +850,14 @@
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="154" column="42" selection-start-line="154" selection-start-column="42" selection-end-line="154" selection-end-column="42" />
         </state>
       </provider>
     </entry>
