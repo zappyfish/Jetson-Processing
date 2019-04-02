@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/applications/jetson_spi/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/applications/jetson_spi/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,31 +24,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="c" value="2" />
-          <entry key="cpp" value="55" />
+          <entry key="cpp" value="56" />
           <entry key="h" value="30" />
           <entry key="sh" value="1" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="2" />
-          <entry key="ObjectiveC" value="87" />
+          <entry key="CMakeLists.txt" value="3" />
+          <entry key="ObjectiveC" value="88" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2820" />
+          <entry key="cpp" value="2825" />
           <entry key="h" value="557" />
           <entry key="sh" value="94" />
-          <entry key="txt" value="29" />
+          <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="29" />
-          <entry key="ObjectiveC" value="3377" />
+          <entry key="CMakeLists.txt" value="32" />
+          <entry key="ObjectiveC" value="3382" />
           <entry key="PLAIN_TEXT" value="94" />
         </counts>
       </usages-collector>
@@ -78,15 +78,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/ack_packet.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -130,14 +121,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/jetson_spi/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="36" column="32" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="110">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
               <folding>
                 <marker date="1554222658435" expanded="true" signature="254:645" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -150,15 +159,6 @@
               <folding>
                 <element signature="e#107#2661#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/pixhawk_packet.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -195,7 +195,6 @@
         <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h" />
         <option value="$PROJECT_DIR$/experiments/rpi_final/main.cpp" />
         <option value="$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
         <option value="$PROJECT_DIR$/logging/gps_entry.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h" />
@@ -210,7 +209,6 @@
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.h" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.cpp" />
         <option value="$PROJECT_DIR$/logging/mode_entry.h" />
-        <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/logging/rf_gps.h" />
         <option value="$PROJECT_DIR$/logging/rf_gps.cpp" />
         <option value="$PROJECT_DIR$/logging/rf_gps_entry.h" />
@@ -233,6 +231,8 @@
         <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/pixhawk_uart.cpp" />
         <option value="$PROJECT_DIR$/applications/jetson_spi/main.cpp" />
+        <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
+        <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -521,12 +521,12 @@
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
       <workItem from="1553884585300" duration="8663000" />
-      <workItem from="1554156716823" duration="7811000" />
+      <workItem from="1554156716823" duration="8116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32011000" />
+    <option name="totallyTimeSpent" value="32316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
@@ -560,20 +560,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/communications/rf/comms/gpio/rpi_gpio.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="119" column="6" selection-start-line="124" selection-end-line="124" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/rpi_uart.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -875,11 +861,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/jetson_spi/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="110">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
           <folding>
             <marker date="1554222658435" expanded="true" signature="254:645" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>

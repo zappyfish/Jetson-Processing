@@ -28,4 +28,4 @@
 
  add_executable( rpi_main rpi_main.cpp ${SOURCE})
 
- target_link_libraries( rpi_main)
+ target_link_libraries( rpi_main librf24.so )
