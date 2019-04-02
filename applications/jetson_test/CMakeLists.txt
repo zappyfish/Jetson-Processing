@@ -54,5 +54,5 @@
 
  add_executable( main main.cpp ${SOURCE})
 
- target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+ target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} )
 

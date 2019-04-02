@@ -45,7 +45,13 @@ int main() {
 
     RF24 radio(25,0);
 
+    // Setup and configure rf radio
+    radio.begin();
 
+    // optionally, increase the delay between retries & # of retries
+    radio.setRetries(15,15);
+    // Dump the configuration of the rf unit for debugging
+    radio.printDetails();
 }
 
 //void callback(rf_packet packet, void *args) {

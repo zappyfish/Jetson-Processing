@@ -83,7 +83,7 @@
  add_executable( main main.cpp ${SOURCE})
 
  if(LINUX)
-     target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${LIBSOC})
+     target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${LIBSOC} librf24.so )
  else()
      target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES})
  endif()
