@@ -95,6 +95,10 @@ bool packet_manager::parse_for_packet_data() {
                     char *token = get_token_copy(next_token);
                     values.push_back(token); // Guaranteed to be a value if it's the last token
                     // Validate checksum here
+                    if (!m_buffer_data.empty())
+                    {
+                        std::cout << "checksum: " << unsigned(m_buffer_data.front()) << std::endl;
+                    }
                     if (m_buffer_data.empty() || m_buffer_data.front() != checksum) {
                         std::cout << "checksum failed\n";
 #if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
