@@ -7,7 +7,8 @@
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
 
- find_package(OpenCV)
+ find_package(OpenCV REQUIRED )
+ find_package(Boost COMPONENTS system filesystem REQUIRED)
 
  include_directories(
          ${OpenCV_INCLUDE_DIRS}
