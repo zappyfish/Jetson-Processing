@@ -5,6 +5,7 @@
 #include "nrf_handler.h"
 #include <iostream>
 
+
 const int nrf_handler::TAG_LENGTH = 4;
 const char* nrf_handler::TAG = "vadl";
 const int nrf_handler::CE_PULSE_TIME = 1; // pulse for 1 ms to transmit packets
