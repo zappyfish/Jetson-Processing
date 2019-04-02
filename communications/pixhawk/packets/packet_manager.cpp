@@ -8,7 +8,6 @@
 #include <cstring>
 #include <string.h>
 #include "test_packet.h"
-#include <iostream>
 
 #if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
 #include "data_logger.h"
@@ -74,10 +73,8 @@ bool packet_manager::parse_for_packet_data() {
     bool got_name = false;
     bool is_key = true;
     char c;
-    std::cout << std::endl;
     while (!m_buffer_data.empty()) {
         c = m_buffer_data.front();
-        std::cout << c;
         m_buffer_data.pop();
         if (!got_name) {
             if (c != pixhawk_packet::PACKET_START) {
@@ -88,19 +85,10 @@ bool packet_manager::parse_for_packet_data() {
         } else {
             switch (c) {
                 case pixhawk_packet::END_OF_TOKENS: {
-                    for (int m = 0; m < packet_name.size(); m++) {
-                        std::cout << packet_name.at(m);
-                    }
-                    std::cout << std::endl;
                     char *token = get_token_copy(next_token);
                     values.push_back(token); // Guaranteed to be a value if it's the last token
                     // Validate checksum here
-                    if (!m_buffer_data.empty())
-                    {
-                        std::cout << "checksum: " << unsigned(m_buffer_data.front()) << std::endl;
-                    }
                     if (m_buffer_data.empty() || m_buffer_data.front() != checksum) {
-                        std::cout << "checksum failed\n";
 #if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
 //                        std::string category = "packet_manager";
 //                        std::string description = "checksum did not match";
