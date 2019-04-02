@@ -19,6 +19,7 @@
          ${CMAKE_SOURCE_DIR}/../../logging
          ${CMAKE_SOURCE_DIR}/../../logging/files
          ${CMAKE_SOURCE_DIR}/../../logging/time
+         ${CMAKE_SOURCE_DIR}/../../images
  )
 
  file(GLOB SOURCE=
@@ -36,7 +37,6 @@
          ../../communications/rf/comms/gpio/*.h
          ../../communications/rf/comms/spi/*.h
          ../../images/image.h
-
          )
 
  add_executable( rpi_main rpi_main.cpp ${SOURCE})
