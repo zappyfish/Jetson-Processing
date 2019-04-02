@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systems/final_jetson_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/systems/final_jetson_system.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1226">
-              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+            <state relative-caret-position="604">
+              <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -109,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="147">
+              <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding>
                 <element signature="e#2531#3073#0" expanded="true" />
               </folding>
@@ -226,10 +226,10 @@
         <option value="$PROJECT_DIR$/logging/beacon_entry.h" />
         <option value="$PROJECT_DIR$/logging/beacon_entry.cpp" />
         <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
-        <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/uart/pixhawk_uart.cpp" />
         <option value="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" />
+        <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
       </list>
     </option>
   </component>
@@ -518,12 +518,12 @@
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
       <workItem from="1553884585300" duration="8663000" />
-      <workItem from="1554156716823" duration="6337000" />
+      <workItem from="1554156716823" duration="6700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30537000" />
+    <option name="totallyTimeSpent" value="30900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
@@ -813,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1226">
-          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/ack_packet.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -867,11 +860,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="147">
+          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
             <element signature="e#2531#3073#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
         </state>
       </provider>
     </entry>
