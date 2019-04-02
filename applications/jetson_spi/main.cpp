@@ -10,7 +10,7 @@
 
 #include <RF24/RF24.h>
 
-void callback(rf_packet packet, void *args);
+//void callback(rf_packet packet, void *args);
 
 int main() {
 
@@ -46,7 +46,7 @@ int main() {
 
 }
 
-void callback(rf_packet packet, void *args) {
-    std::cout << "callback on a packet\n";
-    std::cout << packet.get_gps_x() << ", " << packet.get_gps_y() << std::endl;
-}
+//void callback(rf_packet packet, void *args) {
+//    std::cout << "callback on a packet\n";
+//    std::cout << packet.get_gps_x() << ", " << packet.get_gps_y() << std::endl;
+//}
