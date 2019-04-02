@@ -28,12 +28,15 @@
          ../../communications/rf/packets/*.cpp
          ../../communications/rf/comms/gpio/*.cpp
          ../../communications/rf/comms/spi/*.cpp
+         ../../images/image.cpp
          ../../communications/rf/*.h
          ../../communications/rf/comms/gpio/*.h
          ../../communications/rf/comms/spi/*.h
          ../../communications/rf/packets/*.h
          ../../communications/rf/comms/gpio/*.h
          ../../communications/rf/comms/spi/*.h
+         ../../images/image.h
+
          )
 
  add_executable( rpi_main rpi_main.cpp ${SOURCE})
