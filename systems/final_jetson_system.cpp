@@ -5,7 +5,7 @@
 #include "final_jetson_system.h"
 
 final_jetson_system::final_jetson_system() : m_is_armed(false), m_lpf_accel(0, 0.05), m_should_sample_accel(true),
-                                       m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, nullptr),
+                                       m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 389, nullptr),
                                        m_destination_x(0),
                                        m_destination_y(0),
                                        m_beacon_deployed(false),
