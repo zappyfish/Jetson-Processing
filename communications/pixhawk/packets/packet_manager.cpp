@@ -88,10 +88,12 @@ bool packet_manager::parse_for_packet_data() {
         } else {
             switch (c) {
                 case pixhawk_packet::END_OF_TOKENS: {
+                    std::cout << packet_name << std::endl;
                     char *token = get_token_copy(next_token);
                     values.push_back(token); // Guaranteed to be a value if it's the last token
                     // Validate checksum here
                     if (m_buffer_data.empty() || m_buffer_data.front() != checksum) {
+                        std::cout << "checksum failed\n";
 #if defined(__linux__)|| defined(_WIN32) || defined(__APPLE__)
 //                        std::string category = "packet_manager";
 //                        std::string description = "checksum did not match";
