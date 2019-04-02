@@ -34,8 +34,7 @@ int main() {
 //    }
 
 // Setup for GPIO 15 CE and CE0 CSN with SPI Speed @ 8Mhz
-    RF24 radio(RPI_V2_GPIO_P1_15, RPI_V2_GPIO_P1_24, BCM2835_SPI_SPEED_8MHZ);
-
+    RF24 radio(254,3);
 
     // Setup and configure rf radio
     radio.begin();
