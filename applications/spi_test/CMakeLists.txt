@@ -10,6 +10,8 @@
  find_package(OpenCV)
 
  include_directories(
+         ${OpenCV_INCLUDE_DIRS}
+         ${Boost_INCLUDE_DIR}
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/gpio
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/spi
          ${CMAKE_SOURCE_DIR}/../../communications/rf/packets
@@ -39,6 +41,6 @@
          ../../images/image.h
          )
 
- add_executable( rpi_main rpi_main.cpp ${SOURCE} ${OpenCV_LIBS})
+ add_executable( rpi_main rpi_main.cpp ${SOURCE} ${OpenCV_LIBS} ${Boost_LIBRARIES})
 
  target_link_libraries( rpi_main librf24.so )
