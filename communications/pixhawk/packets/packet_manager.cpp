@@ -74,8 +74,10 @@ bool packet_manager::parse_for_packet_data() {
     bool got_name = false;
     bool is_key = true;
     char c;
+    std::cout << std::endl;
     while (!m_buffer_data.empty()) {
         c = m_buffer_data.front();
+        std::cout << c;
         m_buffer_data.pop();
         if (!got_name) {
             if (c != pixhawk_packet::PACKET_START) {
@@ -152,7 +154,6 @@ bool packet_manager::parse_for_packet_data() {
  * @param values the values collected
  */
 void packet_manager::handle_packet(const char* packet_type, std::vector<const char*> keys, std::vector<const char*> values) {
-    std::cout << packet_type << std::endl;
     for (size_t i = 0; i < m_packet_callbacks.size(); i++) {
         packet_callback *p_callback = m_packet_callbacks.data()[i];
         if (std::strcmp(p_callback->name, packet_type) == 0) { // This callback is assigned to this packet_type, so invoke its callback
