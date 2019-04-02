@@ -88,7 +88,10 @@ bool packet_manager::parse_for_packet_data() {
         } else {
             switch (c) {
                 case pixhawk_packet::END_OF_TOKENS: {
-                    std::cout << packet_name << std::endl;
+                    for (int m = 0; m < packet_name.size(); m++) {
+                        std::cout << packet_name.at(m);
+                    }
+                    std::cout << std::endl;
                     char *token = get_token_copy(next_token);
                     values.push_back(token); // Guaranteed to be a value if it's the last token
                     // Validate checksum here
