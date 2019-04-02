@@ -7,7 +7,7 @@
  project( rpi_main )
  set (CMAKE_CXX_STANDARD 11)
 
-
+ find_package(OpenCV)
 
  include_directories(
          ${CMAKE_SOURCE_DIR}/../../communications/rf/comms/gpio
@@ -39,6 +39,6 @@
          ../../images/image.h
          )
 
- add_executable( rpi_main rpi_main.cpp ${SOURCE})
+ add_executable( rpi_main rpi_main.cpp ${SOURCE} ${OpenCV_LIBS})
 
  target_link_libraries( rpi_main librf24.so )
