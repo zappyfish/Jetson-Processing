@@ -27,6 +27,7 @@
 #include "rf_gps_entry.h"
 #include "rf_packet.h"
 #include <atomic>
+#include <mutex>
 #include <chrono>
 #include <thread>
 

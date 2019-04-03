@@ -89,8 +89,10 @@ void final_jetson_system::flight_teardown() {
 
 void final_jetson_system::perform_flight() {
     while (m_is_armed.load()) {
-        if (m_beacon_deployed.load() && !m_setting_radio_coords.load()) {
+        if (m_beacon_deployed.load()) {
+            m_radio_lock.lock();
             m_nrf_handler.resend_last_packet();
+            m_radio_lock.unlock();
         }
         image_ptr img = m_image_buffer.retrieve_image();
         data_logger::get_instance().log_image(img);
@@ -165,9 +167,9 @@ void final_jetson_system::beacon_deployed_callback(const char *name, std::vector
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
 
     rf_packet rf(system->m_destination_x, system->m_destination_y);
-    system->m_setting_radio_coords = true; // Don't resend packets if we're sending a new type of payload for the first time
+    system->m_radio_lock.lock();
     system->m_nrf_handler.send_packet(rf);
-    system->m_setting_radio_coords = false;
+    system->m_radio_lock.unlock();
     system->m_beacon_deployed = true; // We can now start resending packets
 
     beacon_entry* beacon_log = new beacon_entry();
