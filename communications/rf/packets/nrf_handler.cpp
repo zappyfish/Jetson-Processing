@@ -57,7 +57,6 @@ void nrf_handler::check_packets() {
         set_mode(mode::RX); // Won't have anything, so end here
     } else {
         if (data_available()) {
-            std::cout << "data available\n";
             uint8_t write[1 + PIPE_SIZE];
             write[0] = R_RX_PAYLOAD;
             for(uint8_t i = 1; i < 1 + PIPE_SIZE; ++i) {
@@ -71,17 +70,25 @@ void nrf_handler::check_packets() {
 
             reset_irq();
 
-            for (int i = 0; i < 10; i++) {
-                std::cout << read_buf[i];
-            }
-
-            std::cout << std::endl;
+//            for (int i = 0; i < 10; i++) {
+//                std::cout << read_buf[i];
+//            }
+//
+//            std::cout << std::endl;
 
             // first, verify that it is PRIMO VADL CERTIFIED:
             for (int i = 1; i < 5; i++) {
                 if (read_buf[i] != nrf_handler::TAG[i - 1]) {
                     return; // fuck off uncc
                 }
+            }
+            uint8_t checksum = 0;
+            for (int i = 5; i < 13; i++) {
+                checksum = checksum ^ read_buf[i];
+            }
+
+            if (checksum != read_buf[13]) {
+                return; // checksum failure
             }
 
             // Create rf_packet, invoke callback
@@ -97,6 +104,7 @@ void nrf_handler::send_packet(rf_packet &packet) {
     vector<uint8_t> serialized = packet.serialize();
     uint16_t len = serialized.size();
     if (len + TAG_LENGTH < PIPE_SIZE) {
+        uint8_t checksum = 0;
         for (uint16_t i = 1; i <= len; i++) {
             m_send_buf[i + TAG_LENGTH] = serialized.at(i - 1);
         }

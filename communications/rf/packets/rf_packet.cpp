@@ -17,15 +17,19 @@ rf_packet::rf_packet(uint8_t *buf_data, uint8_t len) {
 rf_packet::~rf_packet() {}
 
 vector<uint8_t> rf_packet::serialize() {
+    uint8_t checksum = 0;
     std::vector<uint8_t> serialized;
     for (int i = 0; i < 4; i++) {
         uint8_t b = ((m_x >> (8 * i)) & 0xff);
+        checksum = checksum ^ b;
         serialized.push_back(b);
     }
     for (int i = 0; i < 4; i++) {
         uint8_t b = ((m_y >> (8 * i)) & 0xff);
+        checksum = checksum ^ b;
         serialized.push_back(b);
     }
+    serialized.push_back(checksum);
     return serialized;
 }
 
