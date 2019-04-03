@@ -8,8 +8,7 @@ final_jetson_system::final_jetson_system() : m_is_armed(false), m_lpf_accel(0, 0
                                        m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 389, nullptr),
                                        m_destination_x(0),
                                        m_destination_y(0),
-                                       m_beacon_deployed(false),
-                                       m_setting_radio_coords(false) {
+                                       m_beacon_deployed(false) {
     m_nrf_handler.verify_spi();
 }
 
