@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 import sys
 import numpy as np
 from kalman_algo import PoseKalmanFilter
+from s2d_data import S2dDataParser
 
 def generate_plots(data_dir):
-    net_pose = open(join(data_dir, 'net', 's2d', 'egomotion.txt')).readlines()
+    net_pose = S2dDataParser(data_dir)
     # slam_pose = open(join(data_dir, 'slam', 'poses.txt')).readlines()
     slam = False
     imu_pose = json.load(open(join(data_dir, 'data.json')))
@@ -31,7 +32,8 @@ def generate_plots(data_dir):
     r_z_i = []
     initial = imu_pose['0']
     offset = 0
-    for i in range(len(net_pose)):
+    i = 0
+    while net_pose.has_next():
 
         data_point = imu_pose[str(i - offset)]
         r_y_i.append((data_point['yaw'] - initial['yaw']) * math.pi / 180)
@@ -39,12 +41,10 @@ def generate_plots(data_dir):
         r_x_i.append((data_point['pitch'] - initial['pitch']) * math.pi / 180)
 
         if i >= 1:
-            line = net_pose[i]
-            s = line.strip().split(" ")[1].split(",")
-            ind = len(r_x_n) - 1
-            r_x_n.append(float(s[3]) + r_x_n[ind])
-            r_y_n.append(float(s[4]) + r_y_n[ind])
-            r_z_n.append(-float(s[5]) + r_z_n[ind])
+            localized = net_pose.get_next()
+            r_x_n.append(localized['roll'])
+            r_y_n.append(localized['yaw'])
+            r_z_n.append(localized['pitch'])
 
             pkf_vals, raw_imu = pkf.kalman_step()
 
@@ -73,6 +73,7 @@ def generate_plots(data_dir):
                 r_z_s.append(float(slam_line[2]))
 
 
+        i += 1
     max_frame = 0
     max = 0
     for i, x, in enumerate(r_x_k):
@@ -124,9 +125,9 @@ def generate_plots(data_dir):
     r_y_n = get_normalized(r_y_n)
     r_z_n = get_normalized(r_z_n)
 
-    generate_plot(r_x_i, r_x_n, 'Pitch', r_x_k)
+    generate_plot(r_x_i, r_x_n, 'Pitch')
     generate_plot(r_y_i, r_y_n, 'Yaw')
-    generate_plot(r_z_i, r_z_n, 'Roll', r_z_k)
+    generate_plot(r_z_i, r_z_n, 'Roll')
 
     plot_error(r_x_i, r_x_n, 'Pitch')
     plot_error(r_y_i, r_y_n, 'Yaw')

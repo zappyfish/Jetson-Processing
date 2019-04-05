@@ -71,7 +71,6 @@ def get_image_data(image_time, flight_data):
         closest_data = flight_data.get_next()
     return closest_data
 
-
 if __name__ == '__main__':
     script, path, name = sys.argv
     preprocess(path, name)
