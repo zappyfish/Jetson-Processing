@@ -93,6 +93,7 @@ def play_flight(flight_name, save):
             else:
                 frame_time = int(flight_data[str(i + 1)]['time']) - int(flight_data[str(i)]['time'])
                 # frame_time = 0
+                frame_time = 10
                 #view_frame(flight_name, str(i), flight_data, frame_time, egoline)
                 frame = get_frame(flight_name, str(i), flight_data, egomotion)
                 cv2.imshow('Flight', frame)

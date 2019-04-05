@@ -6,6 +6,8 @@
 #define PROJECT_ACCEL_H
 
 #include "vector_3.h"
+#include "data_logger.h"
+#include "raw_accel_entry.h"
 
 class lpf_accel {
 

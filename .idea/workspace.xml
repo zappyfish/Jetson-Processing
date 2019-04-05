@@ -10,8 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logging/raw_accel_entry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logging/raw_accel_entry.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h" beforeDir="false" afterPath="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/post-processing/path_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/path_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/post-processing/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/post-processing/visualize.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +30,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="c" value="2" />
-          <entry key="cpp" value="67" />
-          <entry key="h" value="39" />
+          <entry key="cpp" value="73" />
+          <entry key="h" value="45" />
           <entry key="sh" value="1" />
           <entry key="txt" value="9" />
         </counts>
@@ -34,14 +39,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="9" />
-          <entry key="ObjectiveC" value="108" />
+          <entry key="ObjectiveC" value="120" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3492" />
-          <entry key="h" value="662" />
+          <entry key="cpp" value="3799" />
+          <entry key="h" value="808" />
           <entry key="sh" value="94" />
           <entry key="txt" value="102" />
         </counts>
@@ -49,7 +54,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="102" />
-          <entry key="ObjectiveC" value="4154" />
+          <entry key="ObjectiveC" value="4607" />
           <entry key="PLAIN_TEXT" value="94" />
         </counts>
       </usages-collector>
@@ -65,88 +70,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_24_handler.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+        <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1824">
-              <caret line="90" column="43" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+            <state relative-caret-position="270">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
+        <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/data_logger.cpp">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
+        <entry file="file://$PROJECT_DIR$/logging/data_logger.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+            <state relative-caret-position="-1191" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#94#673#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_24_handler.h">
+        <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-355">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="135">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -170,9 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/communications/pixhawk/packets/transmit_gps_packet.cpp" />
-        <option value="$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.cpp" />
-        <option value="$PROJECT_DIR$/experiments/final_jetson/main.cpp" />
         <option value="$PROJECT_DIR$/experiments/final_jetson/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp" />
         <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h" />
@@ -192,7 +187,6 @@
         <option value="$PROJECT_DIR$/logging/rf_gps.h" />
         <option value="$PROJECT_DIR$/logging/rf_gps.cpp" />
         <option value="$PROJECT_DIR$/logging/rf_gps_entry.h" />
-        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
         <option value="$PROJECT_DIR$/images/processing/target/pid_angle_controller.cpp" />
         <option value="$PROJECT_DIR$/logging/gps_entry.cpp" />
@@ -221,6 +215,10 @@
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
         <option value="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" />
         <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" />
+        <option value="$PROJECT_DIR$/logging/raw_accel_entry.h" />
+        <option value="$PROJECT_DIR$/logging/raw_accel_entry.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" />
       </list>
     </option>
   </component>
@@ -509,12 +507,12 @@
       <workItem from="1553342786899" duration="87000" />
       <workItem from="1553351964057" duration="10136000" />
       <workItem from="1553884585300" duration="8663000" />
-      <workItem from="1554156716823" duration="13272000" />
+      <workItem from="1554156716823" duration="14502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37472000" />
+    <option name="totallyTimeSpent" value="38702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
@@ -548,76 +546,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logging/data_logger.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/data_logger.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/arming_entry.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3237">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/target/reference_frame.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/target/pid_angle_controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/capture/jetson_camera.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/capture/arducam.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#94#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,9 +561,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/arming_packet.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/log_entry.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logging/gps_entry.h">
@@ -820,7 +751,7 @@
     <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -835,13 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -878,8 +802,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1824">
-          <caret line="90" column="43" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+        <state relative-caret-position="471">
+          <caret line="243" column="21" selection-start-line="243" selection-start-column="21" selection-end-line="243" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/log_entry.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#94#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1191" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/data_logger.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/data_logger.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
