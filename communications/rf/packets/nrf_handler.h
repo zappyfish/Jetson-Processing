@@ -56,7 +56,7 @@ public:
     static const int TAG_LENGTH;
     static const char* TAG;
     static const int CE_PULSE_TIME;
-    static const uint8_t ADDRESS[5] = {0xAB, 0xCD, 0xAB, 0xCD, 0x88};
+    static constexpr uint8_t ADDRESS[5] = {0xAB, 0xCD, 0xAB, 0xCD, 0x88};
 
     enum board_type {
         dummy = 2,
