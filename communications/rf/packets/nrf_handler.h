@@ -56,7 +56,6 @@ public:
     static const int TAG_LENGTH;
     static const char* TAG;
     static const int CE_PULSE_TIME;
-    const uint8_t ADDRESS[] = {0xAB, 0xCD, 0xAB, 0xCD, 0x88};
 
     enum board_type {
         dummy = 2,
@@ -95,6 +94,9 @@ private:
 
     uint8_t m_send_buf[PIPE_SIZE + 1];
     uint8_t m_dummy_buf[PIPE_SIZE];
+
+    uint8_t address[5];
+
     nrf_handler::mode m_mode;
 
     void pulse_CE();

@@ -11,7 +11,7 @@ const char* nrf_handler::TAG = "vadl";
 const int nrf_handler::CE_PULSE_TIME = 1; // pulse for 1 ms to transmit packets
 
 nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, rf_callback *callback) :
-m_mode(md) {
+m_mode(md), address {0xAB, 0xCD, 0xAB, 0xCD, 0x88} {
     if (board == jetson) {
 #ifdef __linux__
         // TODO: create jetson_spi
@@ -138,7 +138,7 @@ void nrf_handler::init() {
 
     rxaddr[0] = (RX_ADDR_P0 & REGISTER_MASK) | W_MASK;
     for (uint8_t i = 0; i < 5; i++) {
-        rxaddr[i + 1] = ADDRESS[i];
+        rxaddr[i + 1] = address[i];
     }
     m_spi->write_read_bytes(rxaddr, d, 6);
 
@@ -213,7 +213,7 @@ void nrf_handler::set_mode(nrf_handler::mode md) {
         uint8_t d[6];
         tx_addr_set[0] = (TX_ADDR & REGISTER_MASK) | W_MASK;
         for (uint8_t i = 0; i < 5; i++) {
-            tx_addr_set[i + 1] = nrf_handler::ADDRESS[i];
+            tx_addr_set[i + 1] = address[i];
         }
         m_spi->write_read_bytes(tx_addr_set, d, 6); // This is disgusting
     }
