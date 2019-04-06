@@ -89,7 +89,7 @@ def play_flight(flight_name, save):
                 print("Last frame. Hit any key to end.")
                 frame = get_frame(flight_name, str(i), flight_data, egomotion)
                 cv2.imshow('Flight', frame)
-                cv2.waitKey(0)
+                cv2.waitKey(10)
             else:
                 frame_time = int(flight_data[str(i + 1)]['time']) - int(flight_data[str(i)]['time'])
                 # frame_time = 0
@@ -145,6 +145,7 @@ if __name__ == '__main__':
         script, path, save_arg = sys.argv
         save = save_arg == 'capture'
     else:
-        save = False
-        script, path = sys.argv
-    play_flight(path, save)
+        while True:
+            save = False
+            script, path = sys.argv
+            play_flight(path, save)

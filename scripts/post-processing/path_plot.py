@@ -21,7 +21,7 @@ def plot_path_xyz(data_dir):
     mapping = {0: 'x', 1: 'y', 2: 'z'}
 
     cnt = 0
-    while net.has_next():
+    while net.has_next() and cnt < 3200:
         nxt = net.get_next()
         for i in range(3):
             k = mapping[i]
@@ -102,10 +102,10 @@ def plot_axes(coords, gt_coords):
     ax.set_ylabel('unit')
 
     plt.plot(np.array(coords[0]), marker='', color='pink', linewidth=2, label='ML_x')
-    plt.plot(np.array(coords[1]), marker='', color='blue', linewidth=2, label='ML_y')
+    #plt.plot(np.array(coords[1]), marker='', color='blue', linewidth=2, label='ML_y')
 
     plt.plot(np.array(gt_coords[0]), marker='', color='red', linewidth=2, label='GT_x')
-    plt.plot(np.array(gt_coords[1]), marker='', color='green', linewidth=2, label='GT_y')
+    #plt.plot(np.array(gt_coords[1]), marker='', color='green', linewidth=2, label='GT_y')
     # plt.plot(np.array(coords[2]), marker='', color='blue', linewidth=2, label='z')
 
     plt.draw()

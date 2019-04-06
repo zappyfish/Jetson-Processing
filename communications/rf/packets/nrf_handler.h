@@ -35,6 +35,9 @@
 #define STATUS 0x07
 #define RETRY 0x04
 #define RF_SETUP 0x06
+#define RF_CH 0x05
+#define RX_ADDR_P0 0x0A
+#define TX_ADDR 0x10
 
 
 #define READ_MODE 0x01
@@ -53,6 +56,7 @@ public:
     static const int TAG_LENGTH;
     static const char* TAG;
     static const int CE_PULSE_TIME;
+    static const uint8_t ADDRESS;
 
     enum board_type {
         dummy = 2,
@@ -98,6 +102,7 @@ private:
     void reset_irq();
     void flush_tx();
     void flush_rx();
+    void write_reg(uint8_t reg, uint8_t val);
     void init();
     uint8_t get_bytes_available();
 
