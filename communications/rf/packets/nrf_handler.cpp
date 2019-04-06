@@ -9,7 +9,7 @@
 const int nrf_handler::TAG_LENGTH = 4;
 const char* nrf_handler::TAG = "vadl";
 const int nrf_handler::CE_PULSE_TIME = 1; // pulse for 1 ms to transmit packets
-const uint8_t ADDRESS = {0xAB, 0xCD, 0xAB, 0xCD, 0x88};
+const uint8_t ADDRESS[6] = {0xAB, 0xCD, 0xAB, 0xCD, 0x88};
 
 nrf_handler::nrf_handler(nrf_handler::board_type board, nrf_handler::mode md, unsigned int ce_pin, rf_callback *callback) :
 m_mode(md) {

@@ -14,9 +14,6 @@ class rf_packet {
 
 public:
 
-    /**
-     * NOTE: these should be scaled -100 to 100
-     */
     rf_packet(int gps_x, int gps_y);
     rf_packet(uint8_t *buf_data, uint8_t len);
     ~rf_packet();
