@@ -28,6 +28,7 @@ cmake_minimum_required(VERSION 3.10)
          ${CMAKE_SOURCE_DIR}/../logging
          ${CMAKE_SOURCE_DIR}/../logging/files
          ${CMAKE_SOURCE_DIR}/../logging/time
+         ${CMAKE_SOURCE_DIR}/../communications/rf/packets
          ${CMAKE_SOURCE_DIR}/./communications/pixhawk/packets
          ${CMAKE_SOURCE_DIR}/./communications/pixhawk/uart
          ${CMAKE_SOURCE_DIR}/./images
@@ -44,6 +45,7 @@ cmake_minimum_required(VERSION 3.10)
          ../communications/pixhawk/packets/*.cpp
          ../communications/pixhawk/uart/*.cpp
          ../communications/rf/*.cpp
+         ../communications/rf/packets*.cpp
          ../images/*.cpp
          ../images/buffer/*.cpp
          ../images/capture/*.cpp
@@ -56,6 +58,7 @@ cmake_minimum_required(VERSION 3.10)
          ../communications/pixhawk/packets/*.h
          ../communications/pixhawk/uart/*.h
          ../communications/rf/*.h
+         ../communications/rf/packets*.h
          ../images/*.h
          ../images/buffer/*.h
          ../images/capture/*.h

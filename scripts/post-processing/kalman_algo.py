@@ -5,7 +5,7 @@ from math import atan2, sqrt, pow, exp
 
 class PoseKalmanFilter:
 
-    PROCESS_ERROR_COVARIANCE = 0.1 # TODO: fine tune this
+    PROCESS_ERROR_COVARIANCE = 0.0 # TODO: fine tune this
 
     def __init__(self, processed_folder, process_error=PROCESS_ERROR_COVARIANCE):
         self.imu_data = json.load(open(join(processed_folder, 'data.json')))
@@ -26,7 +26,7 @@ class PoseKalmanFilter:
     def accel_to_euler(x, y, z):
         roll = atan2(-y, -z)
         pitch = atan2(x, sqrt((y * y) + (z * z)))
-        return {'roll': -roll, 'pitch': pitch} #  TODO: delet negative sign
+        return {'roll': roll, 'pitch': pitch} #  TODO: delet negative sign
 
     def is_done(self):
         return self.ind >= len(self.imu_data) or not self.s2d_data.has_next()
@@ -37,10 +37,9 @@ class PoseKalmanFilter:
         accuracy, measurement = self.get_next_imu()
         cur_time = float(self.imu_data[str(self.ind)]['time'])
         delta_time = cur_time - self.last_time
-        delta_time = 30
         self.last_time = cur_time
         self.covariance += (self.p_error_cov_sqrd * delta_time)
-        measurement_error = exp(1 - accuracy) - 1
+        measurement_error = 1 - accuracy
         kalman_gain = self.covariance / (self.covariance + measurement_error)
        #  print("step: %d, accuracy squared: %f, kalman gain: %f" % (self.ind, accuracy * accuracy, kalman_gain))
         for key in self.value:
@@ -51,5 +50,4 @@ class PoseKalmanFilter:
     @staticmethod
     def accuracy(x, y, z):
         diff = abs(9.8 - sqrt((x * x) + (y * y) + (z * z)))
-        # return pow((1 / (diff + 1)), 2) * 0.99
-        return 1
+        return (1 / (diff + 1)) * 0.99

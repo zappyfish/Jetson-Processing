@@ -13,11 +13,11 @@ using namespace std;
 using namespace cv;
 
 const int target_processor::MIN_FRAMES_BEFORE_SEARCH = 30; // Play around with me
-const double target_processor::TRIAL_KP = 1.5;
+const double target_processor::TRIAL_KP = 2;
 const double target_processor::TRIAL_KI = 0;
 const double target_processor::TRIAL_KD = 4;
 
-const double target_processor::LANDING_THRESHOLD = 0.5;
+const double target_processor::LANDING_THRESHOLD = 0.5; // TODO: adjust
 
 target_processor::target_processor() : m_is_processing(false), m_saw_target(false), m_processing_thread(nullptr),
 m_pid_controller(TRIAL_KP, TRIAL_KI, TRIAL_KD),
@@ -116,26 +116,42 @@ void target_processor::handle_target_error_data(double error_x, double error_y, 
 
 bool target_processor::find_target(cv::Mat &img) {
 
-    Mat gray_img;
+//    Mat gray_img;
+//
+//    cv::cvtColor(img, gray_img, cv::COLOR_RGB2GRAY);
+//
+//    cv::Mat ret, blur;
+//
+//    cv::GaussianBlur(gray_img, blur, Size(5,5), 0);
+//    cv::threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
+//
+//
+//    cv::Mat structure_element1 = cv::getStructuringElement(MORPH_RECT,Size(20,20));
+//    cv::Mat structure_element2 = cv::getStructuringElement(MORPH_RECT,Size(10,10));
+//    cv::dilate(ret, ret, structure_element2);
+//    cv::erode(ret, ret, structure_element1);
 
-    cvtColor(img, gray_img, CV_BGR2GRAY);
+    cv::Mat lab_space_img;
+    cv::cvtColor(img, lab_space_img, cv::COLOR_BGR2Lab);
+    std::vector<cv::Mat> lab_split;
+    cv::split(lab_space_img, lab_split);
 
-    Mat ret, blur;
+    cv::Mat thresh1, thresh2, ret;
+    threshold(lab_split.at(0), thresh1, 0, 255, THRESH_BINARY | THRESH_OTSU);
+    threshold(lab_split.at(2), thresh2, 0, 255, THRESH_BINARY | THRESH_OTSU);
 
-    GaussianBlur(gray_img, blur, Size(5,5), 0);
-    threshold(blur, ret, 0, 255, THRESH_BINARY+THRESH_OTSU);
-
+    bitwise_and(thresh1, thresh2, ret);
 
     Mat structure_element1 = getStructuringElement(MORPH_RECT,Size(20,20));
-    Mat structure_element2 = getStructuringElement(MORPH_RECT,Size(10,10));
+    Mat structure_element2 = getStructuringElement(MORPH_RECT,Size(7, 7));
     dilate(ret, ret, structure_element2);
     erode(ret, ret, structure_element1);
 
-    vector<vector<Point> >contours;
-    vector<Vec4i>hierarchy;
+    std::vector<std::vector<cv::Point> >contours;
+    std::vector<cv::Vec4i>hierarchy;
     int savedContour = -1;
     double maxArea = 0.0;
-    findContours(ret, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
+    cv::findContours(ret, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
 
     for (int i = 0; i< contours.size(); i++)
     {
@@ -147,17 +163,21 @@ bool target_processor::find_target(cv::Mat &img) {
         }
     }
 
+    if (savedContour < 0) {
+        return false;
+    }
+
     double epsilon = 0.1*arcLength(contours[savedContour], true);
-    Mat approx;
-    approxPolyDP(contours[savedContour],approx,epsilon,true);
+    cv::Mat approx;
+    cv::approxPolyDP(contours[savedContour],approx,epsilon,true);
     if (approx.rows == 4 && contours.size() < 5) {
-        polylines(ret, approx, true, Scalar(0,0,255), 2);
-        Moments m = moments(contours[savedContour]);
-        Point2f cpt = Point2f( m.m10/m.m00 , m.m01/m.m00 );
+        cv::polylines(ret, approx, true, Scalar(0,0,255), 2);
+        cv::Moments m = cv::moments(contours[savedContour]);
+        cv::Point2f cpt = cv::Point2f( m.m10/m.m00 , m.m01/m.m00 );
         double r_center = img.rows/2;
         double c_center = img.cols/2;
-        m_last_location[0] = r_center - cpt.x;
-        m_last_location[1] = cpt.y - c_center;
+        m_last_location[0] = cpt.x - c_center;
+        m_last_location[1] = r_center - cpt.y;
         return true;
     } else {
         return false;

@@ -8,6 +8,8 @@
 #include <thread>
 #include "rf_packet.h"
 
+#include <RF24/RF24.h>
+
 void callback(rf_packet packet, void *args);
 
 int main() {
@@ -31,7 +33,16 @@ int main() {
         // handler.check_packets();
     }
 
+// Setup for GPIO 15 CE and CE0 CSN with SPI Speed @ 8Mhz
+    RF24 radio(254,3);
 
+    // Setup and configure rf radio
+    radio.begin();
+
+    // optionally, increase the delay between retries & # of retries
+    radio.setRetries(15,15);
+    // Dump the configuration of the rf unit for debugging
+    radio.printDetails();
 
 }
 

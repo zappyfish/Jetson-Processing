@@ -5,7 +5,6 @@
 #include "final_rpi_system.h"
 
 final_rpi_system::final_rpi_system() : m_is_armed(false), m_lpf_accel(1, 0.05), m_should_sample_accel(true),
-                                       m_accel_thread(&final_rpi_system::sample_accel_thread, this),
                                        m_has_received_destination(false),
                                        m_nrf_handler(nrf_handler::board_type::rpi, nrf_handler::mode::RX, 25, &m_rf_callback) {
     m_nrf_handler.verify_spi();
@@ -13,8 +12,7 @@ final_rpi_system::final_rpi_system() : m_is_armed(false), m_lpf_accel(1, 0.05), 
 }
 
 final_rpi_system::~final_rpi_system() {
-    m_should_sample_accel = false;
-    m_accel_thread.join();
+
 }
 
 void final_rpi_system::setup_packet_manager() {
@@ -48,8 +46,12 @@ void final_rpi_system::flight_setup() {
     packet_manager::get_instance().set_packet_callback(&m_mode_callback);
 
     // Last callback: beacon deployment
-    m_beacon_deployed_callback.name = gps_values_packet::PACKET_NAME;
-    m_beacon_deployed_callback.callback = &final_rpi_system::beacon_deployed_callback;
+    m_gps_received_callback.name = gps_values_packet::PACKET_NAME;
+    m_gps_received_callback.callback = &final_rpi_system::gps_received_callback;
+    packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
+
+    // Start accelerometer thread
+    m_accel_thread = new std::thread(&final_rpi_system::sample_accel_thread, this);
 
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
@@ -66,6 +68,12 @@ void final_rpi_system::flight_teardown() {
     m_flight_camera.end_capture();
     // Reset clock in case we want to take off again
     time_manager::get_instance().reset_clock();
+
+    // Finish up accelerometer thread
+    // Finish the accelerometer thread
+    m_should_sample_accel = false;
+    m_accel_thread->join();
+    delete m_accel_thread;
 }
 
 void final_rpi_system::perform_flight() {
@@ -138,7 +146,7 @@ void final_rpi_system::flight_packet_callback(const char *name, std::vector<cons
 void final_rpi_system::mode_packet_callback(const char *name, std::vector<const char *> keys,
                                             std::vector<const char *> values, void *args) {
     mode_packet packet(keys, values);
-    mode_entry* entry = new mode_entry(packet.get_is_autonomous());
+    mode_entry* entry = new mode_entry(packet.get_is_autonomous(), packet.get_is_target());
     data_logger::get_instance().save_log_entry(entry);
 }
 
@@ -156,14 +164,14 @@ void final_rpi_system::rf_callback(rf_packet packet, void*args) {
 //    system->m_gps_received_by_pixhawk = false;
     std::cout << "informing pixhawk of destination\n";
     gps_values_packet *send_packet = new gps_values_packet(packet.get_gps_x(), packet.get_gps_y());
-    gps_entry *gps_log = new gps_entry(packet.get_gps_x(), packet.get_gps_y());
+    rf_gps_entry *gps_log = new rf_gps_entry(packet.get_gps_x(), packet.get_gps_y());
     data_logger::get_instance().save_log_entry(gps_log);
     packet_manager::get_instance().send_packet(send_packet); // Should probably do ack stuff here but....
 }
 
-void final_rpi_system::beacon_deployed_callback(const char *name, std::vector<const char *> keys,
+void final_rpi_system::gps_received_callback(const char *name, std::vector<const char *> keys,
                                                 std::vector<const char *> values, void *args) {
-//    gps_values_packet packet(keys, values);
-//    gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());
-//    data_logger::get_instance().save_log_entry(gps_log);
+    gps_values_packet packet(keys, values);
+    gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());
+    data_logger::get_instance().save_log_entry(gps_log);
 }

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-634406172">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="c" value="2" />
+          <entry key="cpp" value="78" />
+          <entry key="h" value="48" />
+          <entry key="sh" value="1" />
+          <entry key="txt" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="10" />
+          <entry key="ObjectiveC" value="128" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="5108" />
+          <entry key="h" value="1034" />
+          <entry key="sh" value="94" />
+          <entry key="txt" value="146" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="146" />
+          <entry key="ObjectiveC" value="6142" />
+          <entry key="PLAIN_TEXT" value="94" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/data_logger.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>beacon_deplo</find>
+      <find>beacon</find>
+      <find>sample_Accel_thread</find>
+      <find>str</find>
+      <find>len</find>
+      <find>cout</find>
+      <find>rf</find>
+      <find>address</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h" />
+        <option value="$PROJECT_DIR$/experiments/rpi_final/main.cpp" />
+        <option value="$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/logging/gps_entry.h" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.h" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/mma8451_pi.c" />
+        <option value="$PROJECT_DIR$/experiments/subscale2/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/logging/mode_entry.cpp" />
+        <option value="$PROJECT_DIR$/systems/subscale_2_system.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.h" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/mode_packet.cpp" />
+        <option value="$PROJECT_DIR$/logging/mode_entry.h" />
+        <option value="$PROJECT_DIR$/logging/rf_gps.h" />
+        <option value="$PROJECT_DIR$/logging/rf_gps.cpp" />
+        <option value="$PROJECT_DIR$/logging/rf_gps_entry.h" />
+        <option value="$PROJECT_DIR$/images/processing/target/target_processor.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/target/pid_angle_controller.cpp" />
+        <option value="$PROJECT_DIR$/logging/gps_entry.cpp" />
+        <option value="$PROJECT_DIR$/logging/rf_gps_entry.cpp" />
+        <option value="$PROJECT_DIR$/images/capture/jetson_camera.h" />
+        <option value="$PROJECT_DIR$/images/capture/jetson_camera.cpp" />
+        <option value="$PROJECT_DIR$/experiments/final_jetson/vadl.sh" />
+        <option value="$PROJECT_DIR$/systems/final_rpi_system.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h" />
+        <option value="$PROJECT_DIR$/logging/beacon_entry.h" />
+        <option value="$PROJECT_DIR$/logging/beacon_entry.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp" />
+        <option value="$PROJECT_DIR$/communications/pixhawk/uart/pixhawk_uart.cpp" />
+        <option value="$PROJECT_DIR$/applications/jetson_test/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/applications/jetson_spi/main.cpp" />
+        <option value="$PROJECT_DIR$/applications/spi_test/rpi_main.cpp" />
+        <option value="$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp" />
+        <option value="$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/applications/spi_test/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/systems/final_rpi_system.h" />
+        <option value="$PROJECT_DIR$/systems/final_jetson_system.h" />
+        <option value="$PROJECT_DIR$/systems/final_jetson_system.cpp" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp" />
+        <option value="$PROJECT_DIR$/logging/raw_accel_entry.h" />
+        <option value="$PROJECT_DIR$/logging/raw_accel_entry.cpp" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h" />
+        <option value="$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/rf_24_handler.h" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/rf_24_handler.cpp" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/rf_packet.h" />
+        <option value="$PROJECT_DIR$/tests/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.h" />
+        <option value="$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="967" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="jetson_spi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="jetson_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi-pixhawk_communications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi-pixhawk_communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi_logging_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi_logging_test_no_buffer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="spi_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="stub_logging_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="stub_logging_test_no_buffer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
+              <item name="packets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="pixhawk" type="462c0819:PsiDirectoryNode" />
+              <item name="uart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rf" type="462c0819:PsiDirectoryNode" />
+              <item name="comms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rf" type="462c0819:PsiDirectoryNode" />
+              <item name="comms" type="462c0819:PsiDirectoryNode" />
+              <item name="gpio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rf" type="462c0819:PsiDirectoryNode" />
+              <item name="comms" type="462c0819:PsiDirectoryNode" />
+              <item name="spi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="communications" type="462c0819:PsiDirectoryNode" />
+              <item name="rf" type="462c0819:PsiDirectoryNode" />
+              <item name="packets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="final_jetson" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="rpi_final" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="subscale2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="buffer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="capture" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
+              <item name="uav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
+              <item name="uav" type="462c0819:PsiDirectoryNode" />
+              <item name="accel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
+              <item name="time" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="systems" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nvidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nvidia" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="beee7ebe-02ee-47eb-9465-687e304349aa" name="Default Changelist" comment="" />
+      <created>1550177899415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550177899415</updated>
+      <workItem from="1550177900844" duration="622000" />
+      <workItem from="1550504358372" duration="12829000" />
+      <workItem from="1550600007691" duration="23627000" />
+      <workItem from="1551031410980" duration="21621000" />
+      <workItem from="1551655397208" duration="479000" />
+      <workItem from="1551883131872" duration="100000" />
+      <workItem from="1552494676072" duration="7679000" />
+      <workItem from="1552603527545" duration="9659000" />
+      <workItem from="1552887536774" duration="8340000" />
+      <workItem from="1553191606248" duration="11091000" />
+      <workItem from="1553277201393" duration="18404000" />
+      <workItem from="1553342786899" duration="87000" />
+      <workItem from="1553351964057" duration="10136000" />
+      <workItem from="1553884585300" duration="8663000" />
+      <workItem from="1554156716823" duration="19694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="43894000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="969" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16605617" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/gps_values_packet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/arming_packet.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/gps_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/gps_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/beacon_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/directions_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/flight_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/beacon_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/pixhawk_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/ack_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/ack_packet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/beacon_packet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/jetson_uart.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-745">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#107#2661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/packets/packet_manager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding>
+            <element signature="e#2531#3073#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/pixhawk/uart/pixhawk_uart.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/jetson_test/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/stub_logging_test_no_buffer/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/jetson_test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="30" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/jetson_spi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#121#579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/spi_test/rpi_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#115#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/comms/spi/rpi_spi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/jetson_spi/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <marker date="1554240406437" expanded="true" signature="242:599" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/jetson_spi/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/spi_test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rpi_final/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/log_entry.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/rf_gps_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/accel_mma_8451_pi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#94#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/target/target_processor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1191" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/processing/uav/accel/lpf_accel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/data_logger.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/data_logger.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/raw_accel_entry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_jetson_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systems/final_rpi_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_24_handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_24_handler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/rf_packet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/communications/rf/packets/nrf_handler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

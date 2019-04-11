@@ -4,7 +4,7 @@
 
 #include "subscale_2_system.h"
 
-subscale2_system::subscale2_system() : m_is_armed(false), m_lpf_accel(0.05), m_should_sample_accel(true),
+subscale2_system::subscale2_system() : m_is_armed(false), m_lpf_accel(1, 0.05), m_should_sample_accel(true),
 m_accel_thread(&subscale2_system::sample_accel_thread, this) {
 }
 
@@ -113,6 +113,6 @@ void subscale2_system::flight_packet_callback(const char *name, std::vector<cons
 void subscale2_system::mode_packet_callback(const char *name, std::vector<const char *> keys,
                                             std::vector<const char *> values, void *args) {
     mode_packet packet(keys, values);
-    mode_entry* entry = new mode_entry(packet.get_is_autonomous());
+    mode_entry* entry = new mode_entry(packet.get_is_autonomous(), packet.get_is_target());
     data_logger::get_instance().save_log_entry(entry);
 }

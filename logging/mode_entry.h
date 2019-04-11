@@ -11,7 +11,7 @@ class mode_entry : public log_entry {
 
 public:
 
-    mode_entry(bool is_autonomous);
+    mode_entry(bool is_autonomous, bool is_target);
     ~mode_entry();
 
     std::string get_name();
@@ -22,6 +22,7 @@ private:
     static const std::string MODE_KEY;
     static const std::string AUTONOMOUS;
     static const std::string MANUAL;
+    static const std::string GPS;
 };
 
 

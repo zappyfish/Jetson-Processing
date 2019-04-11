@@ -7,10 +7,15 @@
 const std::string mode_entry::ENTRY_ID = "mode";
 const std::string mode_entry::AUTONOMOUS = "autonomous";
 const std::string mode_entry::MANUAL = "manual";
+const std::string mode_entry::GPS = "gps";
 
-mode_entry::mode_entry(bool is_autonomous) {
+mode_entry::mode_entry(bool is_autonomous, bool is_target) {
     if (is_autonomous) {
-        add_data(ENTRY_ID, AUTONOMOUS);
+        if (is_target) {
+            add_data(ENTRY_ID, AUTONOMOUS);
+        } else {
+            add_data(ENTRY_ID, GPS);
+        }
     } else {
         add_data(ENTRY_ID, MANUAL);
     }

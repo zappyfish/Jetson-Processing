@@ -7,7 +7,7 @@
 lpf_accel::lpf_accel(float alpha) : m_alpha(alpha) {
     m_last_filtered_sample.x = 0;
     m_last_filtered_sample.y = 0;
-    m_last_filtered_sample.z = -9.8; // best guesses (in G's)
+    m_last_filtered_sample.z = 0;
 }
 
 lpf_accel::~lpf_accel() {}
@@ -18,6 +18,10 @@ void lpf_accel::get_accel(Vector3 &vect) {
 }
 
 void lpf_accel::lpf_sample(Vector3 &sample) {
+    // Log the raw sample here for post-processing:
+    raw_accel_entry *raw_accel = new raw_accel_entry(sample.x, sample.y, sample.z);
+    data_logger::get_instance().save_log_entry(raw_accel);
+
     m_last_filtered_sample.x = m_alpha * (sample.x - m_last_filtered_sample.x) + m_last_filtered_sample.x;
     m_last_filtered_sample.y = m_alpha * (sample.y - m_last_filtered_sample.y) + m_last_filtered_sample.y;
     m_last_filtered_sample.z = m_alpha * (sample.z - m_last_filtered_sample.z) + m_last_filtered_sample.z;

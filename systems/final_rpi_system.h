@@ -24,8 +24,10 @@
 #include "accel_mma_8451_pi.h"
 #include "nrf_handler.h"
 #include "gps_entry.h"
+#include "rf_gps_entry.h"
 #include "rf_packet.h"
 #include <atomic>
+#include <mutex>
 #include <chrono>
 #include <thread>
 
@@ -61,7 +63,7 @@ private:
     static void flight_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
     static void mode_packet_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
     static void gps_ack_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
-    static void beacon_deployed_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
+    static void gps_received_callback(const char *name, std::vector<const char *> keys, std::vector <const char *> values, void *args);
 
     // RF Callback
     static void rf_callback(rf_packet packet, void *args);
@@ -80,7 +82,7 @@ private:
     std::atomic<bool> m_should_sample_accel;
     accel_mma8451_pi m_lpf_accel;
     Vector3 m_last_accel;
-    std::thread m_accel_thread;
+    std::thread *m_accel_thread;
 
     int m_destination_x;
     int m_destination_y;
@@ -92,7 +94,7 @@ private:
     packet_manager::packet_callback m_mode_callback;
     packet_manager::packet_callback m_gps_ack_callback;
 
-    packet_manager::packet_callback m_beacon_deployed_callback;
+    packet_manager::packet_callback m_gps_received_callback;
 
 };
 

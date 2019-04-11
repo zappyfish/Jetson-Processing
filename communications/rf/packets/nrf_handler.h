@@ -35,6 +35,9 @@
 #define STATUS 0x07
 #define RETRY 0x04
 #define RF_SETUP 0x06
+#define RF_CH 0x05
+#define RX_ADDR_P0 0x0A
+#define TX_ADDR 0x10
 
 
 #define READ_MODE 0x01
@@ -91,6 +94,9 @@ private:
 
     uint8_t m_send_buf[PIPE_SIZE + 1];
     uint8_t m_dummy_buf[PIPE_SIZE];
+
+    uint8_t address[5];
+
     nrf_handler::mode m_mode;
 
     void pulse_CE();
@@ -98,6 +104,7 @@ private:
     void reset_irq();
     void flush_tx();
     void flush_rx();
+    void write_reg(uint8_t reg, uint8_t val);
     void init();
     uint8_t get_bytes_available();
 

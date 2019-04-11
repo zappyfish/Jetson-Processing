@@ -44,7 +44,6 @@
  file(GLOB SOURCE
          ../../communications/pixhawk/packets/*.cpp
          ../../communications/pixhawk/uart/*.cpp
-         ../../communications/rf/*.cpp
          ../../images/*.cpp
          ../../images/buffer/*.cpp
          ../../images/capture/*.cpp
@@ -57,7 +56,6 @@
          ../../logging/time/*.cpp
          ../../communications/pixhawk/packets/*.h
          ../../communications/pixhawk/uart/*.h
-         ../../communications/rf/*.h
          ../../images/*.h
          ../../images/buffer/*.h
          ../../images/capture/*.h
@@ -67,8 +65,10 @@
          ../../logging/*.h
          ../../logging/files/*.h
          ../../logging/time/*.h
-         ../../systems/*.h
-         ../../systems/*.cpp
+         ../../systems/flight_system.h
+         ../../systems/subscale_2_system.h
+         ../../systems/flight_system.cpp
+         ../../systems/subscale_2_system.cpp
          )
 
  add_executable( main main.cpp ${SOURCE})

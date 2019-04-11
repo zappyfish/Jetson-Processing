@@ -10,6 +10,7 @@
 #include "spi_bus.h"
 #include "nrf_handler.h"
 #include "rf_packet.h"
+#include <RF24/RF24.h>
 
 void callback(rf_packet packet, void *args);
 
@@ -26,11 +27,11 @@ int main() {
     handler.verify_spi();
 
     std::cout << "starting loop\n";
-
-//    rf_packet test_packet(-5, 1);
 //
-//    handler.send_packet(test_packet);
-
+////    rf_packet test_packet(-5, 1);
+////
+////    handler.send_packet(test_packet);
+//
     while (true) {
         handler.check_packets();
         std::this_thread::sleep_for(std::chrono::milliseconds(50)); // let it settle
@@ -38,10 +39,19 @@ int main() {
         // handler.resend_last_packet();
     }
 
-    handler.set_mode(nrf_handler::mode::RX);
+//    handler.set_mode(nrf_handler::mode::RX);
+//
+//    handler.check_packets();
 
-    handler.check_packets();
+    RF24 radio(25,0);
 
+    // Setup and configure rf radio
+    radio.begin();
+
+    // optionally, increase the delay between retries & # of retries
+    radio.setRetries(15,15);
+    // Dump the configuration of the rf unit for debugging
+    radio.printDetails();
 }
 
 void callback(rf_packet packet, void *args) {

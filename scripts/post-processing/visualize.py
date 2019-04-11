@@ -11,14 +11,14 @@ import numpy as np
 PRE_PROCESSED_FOLDER = "pre-processed-data"
 
 
-def create_frame(image, x, y, z, roll, pitch, yaw, time, mode,target, ego=None, initial=None):
+def create_frame(image, x_uav, y_uav, z, roll, pitch, yaw, time, mode,target, ego=None, initial=None):
     font = cv2.FONT_HERSHEY_SIMPLEX
     h, w, d = image.shape
     w = w / 2
     h = h / 2
 
     y = 50
-    text = "TIME: %d, height: %d ft" % (time, z * 0.0328084 - 5)
+    text = "TIME: %d, height: %d ft, x: %d, y: %d" % (time, z * 0.0328084, x_uav, y_uav)
     cv2.putText(image, text, (20, y), font, 0.6, (0, 0, 255), 3, cv2.LINE_AA)
     y+=50
     text = "roll: % f, pitch: % f, yaw: % f" % (roll, pitch, yaw)
@@ -89,9 +89,10 @@ def play_flight(flight_name, save):
                 print("Last frame. Hit any key to end.")
                 frame = get_frame(flight_name, str(i), flight_data, egomotion)
                 cv2.imshow('Flight', frame)
-                cv2.waitKey(0)
+                cv2.waitKey(10)
             else:
                 frame_time = int(flight_data[str(i + 1)]['time']) - int(flight_data[str(i)]['time'])
+                # frame_time = 0
                 frame_time = 10
                 #view_frame(flight_name, str(i), flight_data, frame_time, egoline)
                 frame = get_frame(flight_name, str(i), flight_data, egomotion)
@@ -144,6 +145,7 @@ if __name__ == '__main__':
         script, path, save_arg = sys.argv
         save = save_arg == 'capture'
     else:
-        save = False
-        script, path = sys.argv
-    play_flight(path, save)
+        while True:
+            save = False
+            script, path = sys.argv
+            play_flight(path, save)

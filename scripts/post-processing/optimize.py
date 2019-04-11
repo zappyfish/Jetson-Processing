@@ -22,9 +22,9 @@ class PKFOptimizer:
             for key in min_err_degrees:
                 if local_max[key] < min_err_degrees[key]:
                     min_err_degrees[key] = local_max[key]
-                    optimal_process_error[key] = process_error
                 if local_avg[key] < min_avg_err_degrees[key]:
                     min_avg_err_degrees[key] = local_avg[key]
+                    optimal_process_error[key] = process_error
             process_error += step_size
         print("optimal process error:")
         print(optimal_process_error)

@@ -5,15 +5,15 @@
 #include "final_jetson_system.h"
 
 final_jetson_system::final_jetson_system() : m_is_armed(false), m_lpf_accel(0, 0.05), m_should_sample_accel(true),
-                                       m_accel_thread(&final_jetson_system::sample_accel_thread, this),
-                                       m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 254, nullptr),
+                                       m_nrf_handler(nrf_handler::board_type::jetson, nrf_handler::mode::TX, 389, nullptr),
+                                       m_destination_x(0),
+                                       m_destination_y(0),
                                        m_beacon_deployed(false) {
     m_nrf_handler.verify_spi();
 }
 
 final_jetson_system::~final_jetson_system() {
-    m_should_sample_accel = false;
-    m_accel_thread.join();
+
 }
 
 void final_jetson_system::setup_packet_manager() {
@@ -47,12 +47,22 @@ void final_jetson_system::flight_setup() {
 
     packet_manager::get_instance().set_packet_callback(&m_mode_callback);
 
-    // Last callback: beacon deployment
-    m_beacon_deployed_callback.name = gps_values_packet::PACKET_NAME;
+    // Last callback: gps received
+    m_gps_received_callback.name = gps_values_packet::PACKET_NAME;
+    m_gps_received_callback.callback = &final_jetson_system::gps_received_callback;
+    m_gps_received_callback.args = this;
+
+    packet_manager::get_instance().set_packet_callback(&m_gps_received_callback);
+
+    // Last callback: gps received
+    m_beacon_deployed_callback.name = beacon_packet::PACKET_NAME;
     m_beacon_deployed_callback.callback = &final_jetson_system::beacon_deployed_callback;
     m_beacon_deployed_callback.args = this;
 
     packet_manager::get_instance().set_packet_callback(&m_beacon_deployed_callback);
+
+    // Start the accelerometer thread
+    m_accel_thread = new std::thread(&final_jetson_system::sample_accel_thread, this);
 
     // Setup camera
     m_flight_camera.start_capture(&m_image_buffer);
@@ -69,19 +79,25 @@ void final_jetson_system::flight_teardown() {
     m_flight_camera.end_capture();
     // Reset clock in case we want to take off again
     time_manager::get_instance().reset_clock();
+
+    // Finish the accelerometer thread
+    m_should_sample_accel = false;
+    m_accel_thread->join();
+    delete m_accel_thread;
 }
 
 void final_jetson_system::perform_flight() {
     while (m_is_armed.load()) {
-        if (m_beacon_deployed.load()) { // TODO: check this
+        if (m_beacon_deployed.load()) {
+            m_radio_lock.lock();
             m_nrf_handler.resend_last_packet();
-        } else {
-            image_ptr img = m_image_buffer.retrieve_image();
-            data_logger::get_instance().log_image(img);
-            cv::Mat copy = img->get_mat_copy();
-            // TODO: Image processing here
-            m_target_detector.send_for_processing(copy, img->get_timestamp());
+            m_radio_lock.unlock();
         }
+        image_ptr img = m_image_buffer.retrieve_image();
+        data_logger::get_instance().log_image(img);
+        cv::Mat copy = img->get_mat_copy();
+        // TODO: Image processing here
+        m_target_detector.send_for_processing(copy, img->get_timestamp());
     }
 }
 
@@ -126,11 +142,11 @@ void final_jetson_system::flight_packet_callback(const char *name, std::vector<c
 void final_jetson_system::mode_packet_callback(const char *name, std::vector<const char *> keys,
                                             std::vector<const char *> values, void *args) {
     mode_packet packet(keys, values);
-    mode_entry* entry = new mode_entry(packet.get_is_autonomous());
+    mode_entry* entry = new mode_entry(packet.get_is_autonomous(), packet.get_is_target());
     data_logger::get_instance().save_log_entry(entry);
 }
 
-void final_jetson_system::beacon_deployed_callback(const char *name, std::vector<const char *> keys,
+void final_jetson_system::gps_received_callback(const char *name, std::vector<const char *> keys,
                                                    std::vector<const char *> values, void *args) {
     final_jetson_system* system = static_cast<final_jetson_system*>(args);
     gps_values_packet packet(keys, values);
@@ -139,8 +155,22 @@ void final_jetson_system::beacon_deployed_callback(const char *name, std::vector
     gps_entry* gps_log = new gps_entry(packet.get_x(), packet.get_y());
     data_logger::get_instance().save_log_entry(gps_log);
 
-    // RF transmit it
-    rf_packet send_packet(packet.get_x(), packet.get_y());
-    system->m_nrf_handler.send_packet(send_packet);
-    system->m_beacon_deployed = true;
+    // save it
+    system->m_destination_x = packet.get_x();
+    system->m_destination_y = packet.get_y();
+    // system->m_beacon_deployed = true;
+}
+
+void final_jetson_system::beacon_deployed_callback(const char *name, std::vector<const char *> keys,
+                                                   std::vector<const char *> values, void *args) {
+    final_jetson_system* system = static_cast<final_jetson_system*>(args);
+
+    rf_packet rf(system->m_destination_x, system->m_destination_y);
+    system->m_radio_lock.lock();
+    system->m_nrf_handler.send_packet(rf);
+    system->m_radio_lock.unlock();
+    system->m_beacon_deployed = true; // We can now start resending packets
+
+    beacon_entry* beacon_log = new beacon_entry();
+    data_logger::get_instance().save_log_entry(beacon_log);
 }

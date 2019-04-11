@@ -15,6 +15,8 @@ public:
     static const int DEFAULT_HEIGHT;
     static const int DEFAULT_FPS;
 
+    static const std::string DEFAULT_CAMERA;
+
     jetson_camera(int width, int height, int fps);
     jetson_camera();
     ~jetson_camera();
@@ -27,6 +29,7 @@ private:
         return "nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)" + std::to_string(width) + ", height=(int)" +
                std::to_string(height) + ", format=(string)I420, framerate=(fraction)" + std::to_string(fps) +
                "/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink";
+        // return "/dev/video0";
     }
 
     cv::VideoCapture m_capture_camera;

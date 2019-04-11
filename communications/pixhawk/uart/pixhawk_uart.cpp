@@ -20,7 +20,7 @@ void pixhawk_uart::read_buffer(std::vector<char> &read_data) {
 }
 
 void pixhawk_uart::write_buffer(std::vector<char> &data) {
-    hal.uartD->write(reinterpret_cast<char*>(data.data()));
+    hal.uartD->write(reinterpret_cast<uint8_t*>(data.data()), data.size());
 }
 
 #endif
